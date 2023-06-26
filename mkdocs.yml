@@ -1,7 +1,7 @@
 site_name: Hyper-spectral Imaging Group
-site_url: https://wairas.github.io/his-website/
+site_url: https://wairas.github.io/hsi-website/
 site_description: Website for hyper-spectral imaging group at the University of Waikato.
-repo_url: https://github.com/wairas/his-website
+repo_url: https://github.com/wairas/hsi-website
 edit_uri: edit/main/docs/
 theme:
     name: material
