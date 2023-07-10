@@ -342,17 +342,51 @@
     Prerequisites
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#binbash" class="md-nav__link">
-    !/bin/bash
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directories" class="md-nav__link">
+    Directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pretrained-models" class="md-nav__link">
+    Pretrained models
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launching-docker-and-redis-under-wls2" class="md-nav__link">
+    Launching Docker and Redis under WLS2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#launching-docker-and-redis-under-wls2" class="md-nav__link">
+  <a href="#launching-docker-and-redis-under-wls2_1" class="md-nav__link">
     Launching Docker and Redis under WLS2
   </a>
   
@@ -439,17 +473,51 @@
     Prerequisites
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#binbash" class="md-nav__link">
-    !/bin/bash
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directories" class="md-nav__link">
+    Directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pretrained-models" class="md-nav__link">
+    Pretrained models
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launching-docker-and-redis-under-wls2" class="md-nav__link">
+    Launching Docker and Redis under WLS2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#launching-docker-and-redis-under-wls2" class="md-nav__link">
+  <a href="#launching-docker-and-redis-under-wls2_1" class="md-nav__link">
     Launching Docker and Redis under WLS2
   </a>
   
@@ -488,59 +556,45 @@
 are pretrained models that perform image segmentation on RGB images and can aid
 the human in the annotation process.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
+<h3 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">#</a></h3>
 <ul>
-<li>Linux</li>
 <li>docker</li>
-<li>
-<p>redis-server</p>
-</li>
-<li>
-<p>Windows</p>
-</li>
-<li>
-<p>WSL2 using Ubuntu 20.04 or 22.04</p>
+<li>redis-server</li>
+</ul>
+<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">#</a></h3>
 <ul>
+<li>WSL2 using Ubuntu 20.04 or 22.04</li>
 <li>docker (<a href="https://www.data-mining.co.nz/applied-deep-learning/windows/">instructions</a>)</li>
 <li>redis-server</li>
 </ul>
-</li>
-<li>
-<p>Directories</p>
-</li>
-</ul>
-<p><code>sam
-  |
-  +-- cache    # cache directory for Pytorch-related files 
-  |
-  +-- models   # for storing the</code></p>
-<p><code>bash
-  mkdir -p sam/cache \
-  mkdir -p sam/models</code></p>
-<ul>
-<li>
+<h3 id="directories">Directories<a class="headerlink" href="#directories" title="Permanent link">#</a></h3>
+<pre><code>sam
+|
++-- cache    # cache directory for Pytorch-related files 
+|
++-- models   # for storing the  
+</code></pre>
+<p>You can create the structure using the following command:</p>
+<pre><code class="language-bash">mkdir -p sam/cache \
+mkdir -p sam/models 
+</code></pre>
+<h3 id="pretrained-models">Pretrained models<a class="headerlink" href="#pretrained-models" title="Permanent link">#</a></h3>
 <p>Pretrained models can be downloaded from <a href="https://github.com/facebookresearch/segment-anything">here</a>,
-  with the medium-sized <a href="https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth">vit_l</a> 
-  being the recommended one (requires &lt;6GB GPU RAM). <code>vit_l</code> is used in the commands below.</p>
-</li>
-<li>
-<p>Launching Docker and Redis under WLS2</p>
+with the medium-sized <a href="https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth">vit_l</a> 
+being the recommended one (requires &lt;6GB GPU RAM). <code>vit_l</code> is used in the commands below.</p>
+<h3 id="launching-docker-and-redis-under-wls2">Launching Docker and Redis under WLS2<a class="headerlink" href="#launching-docker-and-redis-under-wls2" title="Permanent link">#</a></h3>
 <ul>
-<li>
-<p>Create a bash script <code>happy_sam.sh</code> in <code>/usr/local/bin</code> with the following content:</p>
-<p>```bash</p>
-<h2 id="binbash">!/bin/bash<a class="headerlink" href="#binbash" title="Permanent link">#</a></h2>
-<p>redis-server &amp;
+<li>Create a bash script <code>happy_sam.sh</code> in <code>/usr/local/bin</code> with the following content:</li>
+</ul>
+<pre><code class="language-bash">#!/bin/bash
+redis-server &amp;
 dockerd &amp;
-seq 10 | xargs -I{} sh -c "echo waiting...; sleep 1;"
-```</p>
-</li>
-<li>
-<p>Make the script executable with <code>chmod a+x happy_sam.sh</code></p>
-</li>
+seq 10 | xargs -I{} sh -c &quot;echo waiting...; sleep 1;&quot;
+</code></pre>
+<ul>
+<li>Make the script executable with <code>chmod a+x happy_sam.sh</code></li>
 </ul>
-</li>
-</ul>
-<h2 id="launching-docker-and-redis-under-wls2">Launching Docker and Redis under WLS2<a class="headerlink" href="#launching-docker-and-redis-under-wls2" title="Permanent link">#</a></h2>
+<h2 id="launching-docker-and-redis-under-wls2_1">Launching Docker and Redis under WLS2<a class="headerlink" href="#launching-docker-and-redis-under-wls2_1" title="Permanent link">#</a></h2>
 <pre><code class="language-bash">sudo /usr/bin/happy_sam.sh
 </code></pre>
 <p>Wait till the <code>Waiting...</code> output stops, which waits for about 10 seconds
