@@ -399,6 +399,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#stopping-sam" class="md-nav__link">
+    Stopping SAM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-docker-and-redis-under-wls2" class="md-nav__link">
+    Stopping Docker and Redis under WLS2
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -530,6 +544,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#stopping-sam" class="md-nav__link">
+    Stopping SAM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-docker-and-redis-under-wls2" class="md-nav__link">
+    Stopping Docker and Redis under WLS2
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -584,7 +612,7 @@ with the medium-sized <a href="https://dl.fbaipublicfiles.com/segment_anything/s
 being the recommended one (requires &lt;6GB GPU RAM). <code>vit_l</code> is used in the commands below.</p>
 <h3 id="launching-docker-and-redis-under-wls2">Launching Docker and Redis under WLS2<a class="headerlink" href="#launching-docker-and-redis-under-wls2" title="Permanent link">#</a></h3>
 <ul>
-<li>Create a bash script <code>happy_sam.sh</code> in <code>/usr/local/bin</code> with the following content:</li>
+<li>Create a bash script <code>happy_sam_start.sh</code> in <code>/usr/local/bin</code> with the following content:</li>
 </ul>
 <pre><code class="language-bash">#!/bin/bash
 redis-server &amp;
@@ -592,10 +620,22 @@ dockerd &amp;
 seq 10 | xargs -I{} sh -c &quot;echo waiting...; sleep 1;&quot;
 </code></pre>
 <ul>
-<li>Make the script executable with <code>chmod a+x happy_sam.sh</code></li>
+<li>
+<p>Make the script executable with <code>chmod a+x happy_sam_start.sh</code></p>
+</li>
+<li>
+<p>Create a bash script <code>happy_sam_stop.sh</code> in <code>/usr/local/bin</code> with the following content:</p>
+</li>
+</ul>
+<pre><code class="language-bash">#!/bin/bash
+killall redis-server
+killall dockerd
+</code></pre>
+<ul>
+<li>Make the script executable with <code>chmod a+x happy_sam_stop.sh</code></li>
 </ul>
 <h2 id="launching-docker-and-redis-under-wls2_1">Launching Docker and Redis under WLS2<a class="headerlink" href="#launching-docker-and-redis-under-wls2_1" title="Permanent link">#</a></h2>
-<pre><code class="language-bash">sudo /usr/bin/happy_sam.sh
+<pre><code class="language-bash">sudo /usr/bin/happy_sam_start.sh
 </code></pre>
 <p>Wait till the <code>Waiting...</code> output stops, which waits for about 10 seconds
 after the Docker daemon starts in the background.</p>
@@ -614,6 +654,11 @@ Redis channels):</p>
   --model /workspace/models/sam_vit_l_0b3195.pth \
   --model_type vit_l \
   --verbose
+</code></pre>
+<h2 id="stopping-sam">Stopping SAM<a class="headerlink" href="#stopping-sam" title="Permanent link">#</a></h2>
+<p>Simply CTRL+C the process in the terminal it is running in.</p>
+<h2 id="stopping-docker-and-redis-under-wls2">Stopping Docker and Redis under WLS2<a class="headerlink" href="#stopping-docker-and-redis-under-wls2" title="Permanent link">#</a></h2>
+<pre><code class="language-bash">sudo /usr/bin/happy_sam_stop.sh
 </code></pre>
 
 
