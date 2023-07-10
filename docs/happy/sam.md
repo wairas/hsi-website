@@ -4,46 +4,51 @@ the human in the annotation process.
 
 # Prerequisites
 
-* Linux
-  * docker
+## Linux
+
+* docker
+* redis-server
+  
+## Windows
+* WSL2 using Ubuntu 20.04 or 22.04
+  * docker ([instructions](https://www.data-mining.co.nz/applied-deep-learning/windows/))
   * redis-server
-  
-* Windows
-  * WSL2 using Ubuntu 20.04 or 22.04
-    * docker ([instructions](https://www.data-mining.co.nz/applied-deep-learning/windows/))
-    * redis-server
 
-*  Directories
+## Directories
   
-  ```
-  sam
-  |
-  +-- cache    # cache directory for Pytorch-related files 
-  |
-  +-- models   # for storing the  
-  ```
+```
+sam
+|
++-- cache    # cache directory for Pytorch-related files 
+|
++-- models   # for storing the  
+```
+
+You can create the structure using the following command:
   
-  ```bash
-  mkdir -p sam/cache \
-  mkdir -p sam/models 
-  ```
+```bash
+mkdir -p sam/cache \
+mkdir -p sam/models 
+```
 
-* Pretrained models can be downloaded from [here](https://github.com/facebookresearch/segment-anything),
-  with the medium-sized [vit_l](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth) 
-  being the recommended one (requires <6GB GPU RAM). `vit_l` is used in the commands below.
+## Pretrained models
 
-* Launching Docker and Redis under WLS2
+Pretrained models can be downloaded from [here](https://github.com/facebookresearch/segment-anything),
+with the medium-sized [vit_l](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth) 
+being the recommended one (requires <6GB GPU RAM). `vit_l` is used in the commands below.
+
+## Launching Docker and Redis under WLS2
     
-    * Create a bash script `happy_sam.sh` in `/usr/local/bin` with the following content:
-        
-        ```bash
-        #!/bin/bash
-        redis-server &
-        dockerd &
-        seq 10 | xargs -I{} sh -c "echo waiting...; sleep 1;"
-        ```
+* Create a bash script `happy_sam.sh` in `/usr/local/bin` with the following content:
     
-    * Make the script executable with `chmod a+x happy_sam.sh`
+```bash
+#!/bin/bash
+redis-server &
+dockerd &
+seq 10 | xargs -I{} sh -c "echo waiting...; sleep 1;"
+```
+    
+* Make the script executable with `chmod a+x happy_sam.sh`
 
 
 # Launching Docker and Redis under WLS2
