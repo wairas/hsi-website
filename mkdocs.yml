@@ -18,7 +18,9 @@ plugins:
     - table-reader
 nav:
   - 'Home': index.md
-  - 'HAPPy': happy.md
+  - 'HAPPy':
+      - 'Introduction': index.md
+      - 'SAM': sam.md
   - 'Publications': publications.md
   - 'People': people.md
 
