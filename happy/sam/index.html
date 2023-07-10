@@ -656,10 +656,11 @@ Redis channels):</p>
   --verbose
 </code></pre>
 <h2 id="stopping-sam">Stopping SAM<a class="headerlink" href="#stopping-sam" title="Permanent link">#</a></h2>
-<p>Simply CTRL+C the process in the terminal it is running in.</p>
+<p>Find the process ID of the Python process for SAM and use <code>kill -9 PID</code>.</p>
 <h2 id="stopping-docker-and-redis-under-wls2">Stopping Docker and Redis under WLS2<a class="headerlink" href="#stopping-docker-and-redis-under-wls2" title="Permanent link">#</a></h2>
 <pre><code class="language-bash">sudo /usr/bin/happy_sam_stop.sh
 </code></pre>
+<p>NB: This will also stop any running SAM process. </p>
 
 
 
