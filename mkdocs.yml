@@ -19,8 +19,11 @@ plugins:
 nav:
   - 'Home': index.md
   - 'HAPPy':
-      - 'Introduction': index.md
-      - 'SAM': sam.md
+      - 'Introduction': happy/index.md
+      - 'ADAMS': happy/adams.md
+      - 'Docker images': happy/docker_images.md
+      - 'happy-tools': happy/happy_tools.md
+      - 'SAM': happy/sam.md
   - 'Publications': publications.md
   - 'People': people.md
 
