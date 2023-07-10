@@ -39,7 +39,7 @@ being the recommended one (requires <6GB GPU RAM). `vit_l` is used in the comman
 
 ## Launching Docker and Redis under WLS2
     
-* Create a bash script `happy_sam.sh` in `/usr/local/bin` with the following content:
+* Create a bash script `happy_sam_start.sh` in `/usr/local/bin` with the following content:
     
 ```bash
 #!/bin/bash
@@ -48,13 +48,23 @@ dockerd &
 seq 10 | xargs -I{} sh -c "echo waiting...; sleep 1;"
 ```
     
-* Make the script executable with `chmod a+x happy_sam.sh`
+* Make the script executable with `chmod a+x happy_sam_start.sh`
+
+* Create a bash script `happy_sam_stop.sh` in `/usr/local/bin` with the following content:
+
+```bash
+#!/bin/bash
+killall redis-server
+killall dockerd
+```
+    
+* Make the script executable with `chmod a+x happy_sam_stop.sh`
 
 
 # Launching Docker and Redis under WLS2
 
 ```bash
-sudo /usr/bin/happy_sam.sh
+sudo /usr/bin/happy_sam_start.sh
 ```
 
 Wait till the `Waiting...` output stops, which waits for about 10 seconds
@@ -79,4 +89,15 @@ docker run --pull always --rm \
   --model /workspace/models/sam_vit_l_0b3195.pth \
   --model_type vit_l \
   --verbose
+```
+
+# Stopping SAM
+
+Simply CTRL+C the process in the terminal it is running in.
+
+
+# Stopping Docker and Redis under WLS2
+
+```bash
+sudo /usr/bin/happy_sam_stop.sh
 ```
