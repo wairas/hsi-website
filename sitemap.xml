@@ -2,22 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://wairas.github.io/hsi-website/</loc>
-         <lastmod>2023-06-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wairas.github.io/hsi-website/happy/</loc>
-         <lastmod>2023-06-26</lastmod>
+         <lastmod>2023-07-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wairas.github.io/hsi-website/people/</loc>
-         <lastmod>2023-06-26</lastmod>
+         <lastmod>2023-07-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wairas.github.io/hsi-website/publications/</loc>
-         <lastmod>2023-06-26</lastmod>
+         <lastmod>2023-07-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wairas.github.io/hsi-website/happy/</loc>
+         <lastmod>2023-07-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wairas.github.io/hsi-website/happy/adams/</loc>
+         <lastmod>2023-07-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wairas.github.io/hsi-website/happy/docker_images/</loc>
+         <lastmod>2023-07-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wairas.github.io/hsi-website/happy/happy-tools/</loc>
+         <lastmod>2023-07-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wairas.github.io/hsi-website/happy/sam/</loc>
+         <lastmod>2023-07-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
