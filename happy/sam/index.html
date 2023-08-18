@@ -713,7 +713,9 @@ Redis channels):</p>
 </code></pre>
 <h2 id="stopping-services">Stopping services<a class="headerlink" href="#stopping-services" title="Permanent link">#</a></h2>
 <h3 id="sam_1">SAM<a class="headerlink" href="#sam_1" title="Permanent link">#</a></h3>
-<p>Find the process ID (PID) of the Python process for SAM and use <code>kill -9 PID</code>.</p>
+<p>Find the process ID (PID) of the Python process for SAM and use <code>kill -9 PID</code>:</p>
+<pre><code class="language-bash">ids=`ps a | grep [s]am_predict_redis | sed s/&quot;^[ ]*&quot;//g | cut -f1 -d&quot; &quot;`; for id in $ids; do kill -9 $id; done;
+</code></pre>
 <h3 id="docker-and-redis-wsl2-without-docker-desktop-ui_1">Docker and Redis (WSL2 without Docker Desktop UI)<a class="headerlink" href="#docker-and-redis-wsl2-without-docker-desktop-ui_1" title="Permanent link">#</a></h3>
 <pre><code class="language-bash">sudo /usr/local/bin/happy_sam_stop.sh
 </code></pre>
