@@ -37,6 +37,12 @@ Pretrained models can be downloaded from [here](https://github.com/facebookresea
 with the medium-sized [vit_l](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth) 
 being the recommended one (requires <6GB GPU RAM). `vit_l` is used in the commands below.
 
+From within the `sam/models` directory, run the following command:
+
+```bash
+wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
+```
+
 ## Launching Docker and Redis under WLS2 (without Docker Desktop UI)
     
 * Create a bash script `happy_sam_start.sh` in `/usr/local/bin` with the following content:
