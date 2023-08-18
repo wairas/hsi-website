@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation" class="md-skip">
+        <a href="#prerequisites" class="md-skip">
           Skip to content
         </a>
       
@@ -324,6 +324,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
@@ -421,6 +428,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
@@ -458,10 +472,22 @@
 
 <p><a href="https://github.com/wairas/happy-tools">happy-tools</a> contains several command-line 
 utilities and a graphical viewer for HSI ENVI files.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
+<ul>
+<li>Python</li>
+<li>Virtual environments</li>
+</ul>
+<pre><code class="language-bash">sudo apt install virtualenv python3-tk
+</code></pre>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
-<pre><code class="language-bash">pip install git+https://github.com/wairas/happy-tools.git
+<p>In the home directory, create a Python virtual environment in directory <code>happy</code> 
+with access to the system-wide installed libraries:</p>
+<pre><code class="language-bash">virtualenv --system-site-packages -p /usr/bin/python3 happy
+</code></pre>
+<pre><code class="language-bash">./happy/bin/pip install git+https://github.com/wairas/happy-tools.git
 </code></pre>
 <h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">#</a></h2>
+<p>The following tools are available (located in <code>./happy/bin</code>):</p>
 <ul>
 <li><code>happy-hsi2csv</code> - converts HSI images into CSV</li>
 <li><code>happy-hsi2rbg</code> - generates fake RGB PNG files from HSI images</li>
