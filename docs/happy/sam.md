@@ -43,7 +43,9 @@ From within the `sam/models` directory, run the following command:
 wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
 ```
 
-## Launching Docker and Redis under WLS2 (without Docker Desktop UI)
+## WSL2 without Docker Desktop UI
+
+### Scripts
     
 * Create a bash script `happy_sam_start.sh` in `/usr/local/bin` with the following content:
     
@@ -67,7 +69,7 @@ killall dockerd
 * Make the script executable with `sudo chmod a+x happy_sam_stop.sh`
 
 
-# Launching Docker and Redis under WLS2 (without Docker Desktop UI)
+### Launching Docker and Redis
 
 ```bash
 sudo /usr/local/bin/happy_sam_start.sh
@@ -102,7 +104,9 @@ docker run --pull always --rm \
 Find the process ID (PID) of the Python process for SAM and use `kill -9 PID`.
 
 
-# Stopping Docker and Redis under WLS2 (without Docker Desktop UI)
+# WSL2 without Docker Desktop UI
+
+## Stopping Docker and Redis
 
 ```bash
 sudo /usr/local/bin/happy_sam_stop.sh
