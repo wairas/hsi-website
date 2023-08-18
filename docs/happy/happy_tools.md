@@ -19,6 +19,8 @@ with access to the system-wide installed libraries:
 virtualenv --system-site-packages -p /usr/bin/python3 happy
 ```
 
+Install the happy-tools straight from the repository:
+
 ```bash
 ./happy/bin/pip install git+https://github.com/wairas/happy-tools.git
 ```
