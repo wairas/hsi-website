@@ -89,7 +89,8 @@ Redis channels):
 ```bash
 docker run --pull always --rm \
   -u $(id -u):$(id -g) -e USER=$USER \
-  -v `pwd`/cache:/.cache -v `pwd`:/workspace \
+  -v `pwd`/cache:/.cache \
+  -v `pwd`:/workspace \
   --gpus=all --net=host \
   -t waikatodatamining/pytorch-sam:2023-04-16_cuda11.6 \
   sam_predict_redis \
