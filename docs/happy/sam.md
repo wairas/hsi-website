@@ -10,6 +10,7 @@ the human in the annotation process.
 * redis-server (`sudo apt install redis-server`)
   
 ## Windows
+
 * WSL2 using Ubuntu 20.04 or 22.04
   * docker ([instructions](https://www.data-mining.co.nz/applied-deep-learning/windows/))
   * redis-server (`sudo apt install redis-server`)
@@ -43,10 +44,8 @@ From within the `sam/models` directory, run the following command:
 wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
 ```
 
-## WSL2 without Docker Desktop UI
-
-### Scripts
-    
+## Scripts (WSL2 without Docker Desktop UI)
+  
 * Create a bash script `happy_sam_start.sh` in `/usr/local/bin` with the following content:
     
 ```bash
@@ -69,7 +68,9 @@ killall dockerd
 * Make the script executable with `sudo chmod a+x happy_sam_stop.sh`
 
 
-### Launching Docker and Redis
+# Launching services
+
+## Docker and Redis (WSL2 without Docker Desktop UI)
 
 ```bash
 sudo /usr/local/bin/happy_sam_start.sh
@@ -79,7 +80,7 @@ Wait till the `Waiting...` output stops, which waits for about 10 seconds
 after the Docker daemon starts in the background.
 
 
-# Launching SAM
+## SAM
 
 In a terminal, run the following command from within the `sam` directory to
 launch the SAM model (which communicates via the `sam_in` and `sam_out`
@@ -99,14 +100,14 @@ docker run --pull always --rm \
   --verbose
 ```
 
-# Stopping SAM
+# Stopping services
+
+## SAM
 
 Find the process ID (PID) of the Python process for SAM and use `kill -9 PID`.
 
 
-# WSL2 without Docker Desktop UI
-
-## Stopping Docker and Redis
+## Docker and Redis (WSL2 without Docker Desktop UI)
 
 ```bash
 sudo /usr/local/bin/happy_sam_stop.sh
