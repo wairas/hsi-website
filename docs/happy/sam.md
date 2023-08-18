@@ -7,12 +7,12 @@ the human in the annotation process.
 ## Linux
 
 * docker
-* redis-server
+* redis-server (`sudo apt install redis-server`)
   
 ## Windows
 * WSL2 using Ubuntu 20.04 or 22.04
   * docker ([instructions](https://www.data-mining.co.nz/applied-deep-learning/windows/))
-  * redis-server
+  * redis-server (`sudo apt install redis-server`)
 
 ## Directories
   
@@ -37,7 +37,7 @@ Pretrained models can be downloaded from [here](https://github.com/facebookresea
 with the medium-sized [vit_l](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth) 
 being the recommended one (requires <6GB GPU RAM). `vit_l` is used in the commands below.
 
-## Launching Docker and Redis under WLS2
+## Launching Docker and Redis under WLS2 (without Docker Desktop UI)
     
 * Create a bash script `happy_sam_start.sh` in `/usr/local/bin` with the following content:
     
@@ -48,7 +48,7 @@ dockerd &
 seq 10 | xargs -I{} sh -c "echo waiting...; sleep 1;"
 ```
     
-* Make the script executable with `chmod a+x happy_sam_start.sh`
+* Make the script executable with `sudo chmod a+x happy_sam_start.sh`
 
 * Create a bash script `happy_sam_stop.sh` in `/usr/local/bin` with the following content:
 
@@ -58,13 +58,13 @@ killall redis-server
 killall dockerd
 ```
     
-* Make the script executable with `chmod a+x happy_sam_stop.sh`
+* Make the script executable with `sudo chmod a+x happy_sam_stop.sh`
 
 
-# Launching Docker and Redis under WLS2
+# Launching Docker and Redis under WLS2 (without Docker Desktop UI)
 
 ```bash
-sudo /usr/bin/happy_sam_start.sh
+sudo /usr/local/bin/happy_sam_start.sh
 ```
 
 Wait till the `Waiting...` output stops, which waits for about 10 seconds
@@ -93,13 +93,13 @@ docker run --pull always --rm \
 
 # Stopping SAM
 
-Find the process ID of the Python process for SAM and use `kill -9 PID`.
+Find the process ID (PID) of the Python process for SAM and use `kill -9 PID`.
 
 
-# Stopping Docker and Redis under WLS2
+# Stopping Docker and Redis under WLS2 (without Docker Desktop UI)
 
 ```bash
 sudo /usr/bin/happy_sam_stop.sh
 ```
 
-NB: This will also stop any running SAM process. 
+**NB:** This will also stop any running SAM process. 
