@@ -104,7 +104,11 @@ docker run --pull always --rm \
 
 ## SAM
 
-Find the process ID (PID) of the Python process for SAM and use `kill -9 PID`.
+Find the process ID (PID) of the Python process for SAM and use `kill -9 PID`:
+
+```bash
+ids=`ps a | grep [s]am_predict_redis | sed s/"^[ ]*"//g | cut -f1 -d" "`; for id in $ids; do kill -9 $id; done;
+```
 
 
 ## Docker and Redis (WSL2 without Docker Desktop UI)
