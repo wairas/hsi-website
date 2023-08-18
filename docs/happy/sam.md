@@ -44,7 +44,7 @@ From within the `sam/models` directory, run the following command:
 wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
 ```
 
-## Scripts (WSL2 without Docker Desktop UI)
+## Service scripts (WSL2 without Docker Desktop UI)
   
 * Create a bash script `happy_sam_start.sh` in `/usr/local/bin` with the following content:
     
@@ -67,6 +67,45 @@ killall dockerd
     
 * Make the script executable with `sudo chmod a+x happy_sam_stop.sh`
 
+## SAM scripts
+
+In the `sam` directory, create script `start.sh` with the following content:
+
+```bash
+#!/bin/bash
+
+scriptdir=`dirname -- "$0";`
+
+docker run --pull always --rm \
+  -u $(id -u):$(id -g) -e USER=$USER \
+  -v $scriptdir/cache:/.cache \
+  -v $scriptdir:/workspace \
+  --gpus=all --net=host \
+  -t waikatodatamining/pytorch-sam:2023-04-16_cuda11.6 \
+  sam_predict_redis \
+  --redis_in sam_in \
+  --redis_out sam_out \
+  --model /workspace/models/sam_vit_l_0b3195.pth \
+  --model_type vit_l \
+  --verbose
+```
+
+And make executable with `chmod a+x start.sh`.
+
+Next, create a script called `stop.sh` with the following content:
+
+```bash
+#!/bin/bash
+
+ids=`ps a | grep [s]am_predict_redis | sed s/"^[ ]*"//g | cut -f1 -d" "`
+for id in $ids
+do
+  kill -9 $id
+done
+```
+
+And make executable with `chmod a+x stop.sh`.
+
 
 # Launching services
 
@@ -79,38 +118,15 @@ sudo /usr/local/bin/happy_sam_start.sh
 Wait till the `Waiting...` output stops, which waits for about 10 seconds
 after the Docker daemon starts in the background.
 
-
 ## SAM
 
-In a terminal, run the following command from within the `sam` directory to
-launch the SAM model (which communicates via the `sam_in` and `sam_out`
-Redis channels):
-
-```bash
-docker run --pull always --rm \
-  -u $(id -u):$(id -g) -e USER=$USER \
-  -v `pwd`/cache:/.cache \
-  -v `pwd`:/workspace \
-  --gpus=all --net=host \
-  -t waikatodatamining/pytorch-sam:2023-04-16_cuda11.6 \
-  sam_predict_redis \
-  --redis_in sam_in \
-  --redis_out sam_out \
-  --model /workspace/models/sam_vit_l_0b3195.pth \
-  --model_type vit_l \
-  --verbose
-```
+In the `sam` directory, execute the `start.sh` script.
 
 # Stopping services
 
 ## SAM
 
-Find the process ID (PID) of the Python process for SAM and use `kill -9 PID`:
-
-```bash
-ids=`ps a | grep [s]am_predict_redis | sed s/"^[ ]*"//g | cut -f1 -d" "`; for id in $ids; do kill -9 $id; done;
-```
-
+In the `sam` directory, execute the `stop.sh` script.
 
 ## Docker and Redis (WSL2 without Docker Desktop UI)
 
