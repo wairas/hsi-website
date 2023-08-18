@@ -374,8 +374,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#launching-docker-and-redis-under-wls2" class="md-nav__link">
-    Launching Docker and Redis under WLS2
+  <a href="#launching-docker-and-redis-under-wls2-without-docker-desktop-ui" class="md-nav__link">
+    Launching Docker and Redis under WLS2 (without Docker Desktop UI)
   </a>
   
 </li>
@@ -386,8 +386,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#launching-docker-and-redis-under-wls2_1" class="md-nav__link">
-    Launching Docker and Redis under WLS2
+  <a href="#launching-docker-and-redis-under-wls2-without-docker-desktop-ui_1" class="md-nav__link">
+    Launching Docker and Redis under WLS2 (without Docker Desktop UI)
   </a>
   
 </li>
@@ -407,8 +407,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stopping-docker-and-redis-under-wls2" class="md-nav__link">
-    Stopping Docker and Redis under WLS2
+  <a href="#stopping-docker-and-redis-under-wls2-without-docker-desktop-ui" class="md-nav__link">
+    Stopping Docker and Redis under WLS2 (without Docker Desktop UI)
   </a>
   
 </li>
@@ -519,8 +519,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#launching-docker-and-redis-under-wls2" class="md-nav__link">
-    Launching Docker and Redis under WLS2
+  <a href="#launching-docker-and-redis-under-wls2-without-docker-desktop-ui" class="md-nav__link">
+    Launching Docker and Redis under WLS2 (without Docker Desktop UI)
   </a>
   
 </li>
@@ -531,8 +531,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#launching-docker-and-redis-under-wls2_1" class="md-nav__link">
-    Launching Docker and Redis under WLS2
+  <a href="#launching-docker-and-redis-under-wls2-without-docker-desktop-ui_1" class="md-nav__link">
+    Launching Docker and Redis under WLS2 (without Docker Desktop UI)
   </a>
   
 </li>
@@ -552,8 +552,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stopping-docker-and-redis-under-wls2" class="md-nav__link">
-    Stopping Docker and Redis under WLS2
+  <a href="#stopping-docker-and-redis-under-wls2-without-docker-desktop-ui" class="md-nav__link">
+    Stopping Docker and Redis under WLS2 (without Docker Desktop UI)
   </a>
   
 </li>
@@ -587,13 +587,13 @@ the human in the annotation process.</p>
 <h3 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">#</a></h3>
 <ul>
 <li>docker</li>
-<li>redis-server</li>
+<li>redis-server (<code>sudo apt install redis-server</code>)</li>
 </ul>
 <h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">#</a></h3>
 <ul>
 <li>WSL2 using Ubuntu 20.04 or 22.04</li>
 <li>docker (<a href="https://www.data-mining.co.nz/applied-deep-learning/windows/">instructions</a>)</li>
-<li>redis-server</li>
+<li>redis-server (<code>sudo apt install redis-server</code>)</li>
 </ul>
 <h3 id="directories">Directories<a class="headerlink" href="#directories" title="Permanent link">#</a></h3>
 <pre><code>sam
@@ -610,7 +610,7 @@ mkdir -p sam/models
 <p>Pretrained models can be downloaded from <a href="https://github.com/facebookresearch/segment-anything">here</a>,
 with the medium-sized <a href="https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth">vit_l</a> 
 being the recommended one (requires &lt;6GB GPU RAM). <code>vit_l</code> is used in the commands below.</p>
-<h3 id="launching-docker-and-redis-under-wls2">Launching Docker and Redis under WLS2<a class="headerlink" href="#launching-docker-and-redis-under-wls2" title="Permanent link">#</a></h3>
+<h3 id="launching-docker-and-redis-under-wls2-without-docker-desktop-ui">Launching Docker and Redis under WLS2 (without Docker Desktop UI)<a class="headerlink" href="#launching-docker-and-redis-under-wls2-without-docker-desktop-ui" title="Permanent link">#</a></h3>
 <ul>
 <li>Create a bash script <code>happy_sam_start.sh</code> in <code>/usr/local/bin</code> with the following content:</li>
 </ul>
@@ -621,7 +621,7 @@ seq 10 | xargs -I{} sh -c &quot;echo waiting...; sleep 1;&quot;
 </code></pre>
 <ul>
 <li>
-<p>Make the script executable with <code>chmod a+x happy_sam_start.sh</code></p>
+<p>Make the script executable with <code>sudo chmod a+x happy_sam_start.sh</code></p>
 </li>
 <li>
 <p>Create a bash script <code>happy_sam_stop.sh</code> in <code>/usr/local/bin</code> with the following content:</p>
@@ -632,10 +632,10 @@ killall redis-server
 killall dockerd
 </code></pre>
 <ul>
-<li>Make the script executable with <code>chmod a+x happy_sam_stop.sh</code></li>
+<li>Make the script executable with <code>sudo chmod a+x happy_sam_stop.sh</code></li>
 </ul>
-<h2 id="launching-docker-and-redis-under-wls2_1">Launching Docker and Redis under WLS2<a class="headerlink" href="#launching-docker-and-redis-under-wls2_1" title="Permanent link">#</a></h2>
-<pre><code class="language-bash">sudo /usr/bin/happy_sam_start.sh
+<h2 id="launching-docker-and-redis-under-wls2-without-docker-desktop-ui_1">Launching Docker and Redis under WLS2 (without Docker Desktop UI)<a class="headerlink" href="#launching-docker-and-redis-under-wls2-without-docker-desktop-ui_1" title="Permanent link">#</a></h2>
+<pre><code class="language-bash">sudo /usr/local/bin/happy_sam_start.sh
 </code></pre>
 <p>Wait till the <code>Waiting...</code> output stops, which waits for about 10 seconds
 after the Docker daemon starts in the background.</p>
@@ -656,11 +656,11 @@ Redis channels):</p>
   --verbose
 </code></pre>
 <h2 id="stopping-sam">Stopping SAM<a class="headerlink" href="#stopping-sam" title="Permanent link">#</a></h2>
-<p>Find the process ID of the Python process for SAM and use <code>kill -9 PID</code>.</p>
-<h2 id="stopping-docker-and-redis-under-wls2">Stopping Docker and Redis under WLS2<a class="headerlink" href="#stopping-docker-and-redis-under-wls2" title="Permanent link">#</a></h2>
+<p>Find the process ID (PID) of the Python process for SAM and use <code>kill -9 PID</code>.</p>
+<h2 id="stopping-docker-and-redis-under-wls2-without-docker-desktop-ui">Stopping Docker and Redis under WLS2 (without Docker Desktop UI)<a class="headerlink" href="#stopping-docker-and-redis-under-wls2-without-docker-desktop-ui" title="Permanent link">#</a></h2>
 <pre><code class="language-bash">sudo /usr/bin/happy_sam_stop.sh
 </code></pre>
-<p>NB: This will also stop any running SAM process. </p>
+<p><strong>NB:</strong> This will also stop any running SAM process. </p>
 
 
 
