@@ -374,8 +374,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#scripts-wsl2-without-docker-desktop-ui" class="md-nav__link">
-    Scripts (WSL2 without Docker Desktop UI)
+  <a href="#service-scripts-wsl2-without-docker-desktop-ui" class="md-nav__link">
+    Service scripts (WSL2 without Docker Desktop UI)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sam-scripts" class="md-nav__link">
+    SAM scripts
   </a>
   
 </li>
@@ -545,8 +552,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#scripts-wsl2-without-docker-desktop-ui" class="md-nav__link">
-    Scripts (WSL2 without Docker Desktop UI)
+  <a href="#service-scripts-wsl2-without-docker-desktop-ui" class="md-nav__link">
+    Service scripts (WSL2 without Docker Desktop UI)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sam-scripts" class="md-nav__link">
+    SAM scripts
   </a>
   
 </li>
@@ -665,7 +679,7 @@ being the recommended one (requires &lt;6GB GPU RAM). <code>vit_l</code> is used
 <p>From within the <code>sam/models</code> directory, run the following command:</p>
 <pre><code class="language-bash">wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
 </code></pre>
-<h3 id="scripts-wsl2-without-docker-desktop-ui">Scripts (WSL2 without Docker Desktop UI)<a class="headerlink" href="#scripts-wsl2-without-docker-desktop-ui" title="Permanent link">#</a></h3>
+<h3 id="service-scripts-wsl2-without-docker-desktop-ui">Service scripts (WSL2 without Docker Desktop UI)<a class="headerlink" href="#service-scripts-wsl2-without-docker-desktop-ui" title="Permanent link">#</a></h3>
 <ul>
 <li>Create a bash script <code>happy_sam_start.sh</code> in <code>/usr/local/bin</code> with the following content:</li>
 </ul>
@@ -689,20 +703,16 @@ killall dockerd
 <ul>
 <li>Make the script executable with <code>sudo chmod a+x happy_sam_stop.sh</code></li>
 </ul>
-<h2 id="launching-services">Launching services<a class="headerlink" href="#launching-services" title="Permanent link">#</a></h2>
-<h3 id="docker-and-redis-wsl2-without-docker-desktop-ui">Docker and Redis (WSL2 without Docker Desktop UI)<a class="headerlink" href="#docker-and-redis-wsl2-without-docker-desktop-ui" title="Permanent link">#</a></h3>
-<pre><code class="language-bash">sudo /usr/local/bin/happy_sam_start.sh
-</code></pre>
-<p>Wait till the <code>Waiting...</code> output stops, which waits for about 10 seconds
-after the Docker daemon starts in the background.</p>
-<h3 id="sam">SAM<a class="headerlink" href="#sam" title="Permanent link">#</a></h3>
-<p>In a terminal, run the following command from within the <code>sam</code> directory to
-launch the SAM model (which communicates via the <code>sam_in</code> and <code>sam_out</code>
-Redis channels):</p>
-<pre><code class="language-bash">docker run --pull always --rm \
+<h3 id="sam-scripts">SAM scripts<a class="headerlink" href="#sam-scripts" title="Permanent link">#</a></h3>
+<p>In the <code>sam</code> directory, create script <code>start.sh</code> with the following content:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+scriptdir=`dirname -- &quot;$0&quot;;`
+
+docker run --pull always --rm \
   -u $(id -u):$(id -g) -e USER=$USER \
-  -v `pwd`/cache:/.cache \
-  -v `pwd`:/workspace \
+  -v $scriptdir/cache:/.cache \
+  -v $scriptdir:/workspace \
   --gpus=all --net=host \
   -t waikatodatamining/pytorch-sam:2023-04-16_cuda11.6 \
   sam_predict_redis \
@@ -712,11 +722,28 @@ Redis channels):</p>
   --model_type vit_l \
   --verbose
 </code></pre>
+<p>And make executable with <code>chmod a+x start.sh</code>.</p>
+<p>Next, create a script called <code>stop.sh</code> with the following content:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+ids=`ps a | grep [s]am_predict_redis | sed s/&quot;^[ ]*&quot;//g | cut -f1 -d&quot; &quot;`
+for id in $ids
+do
+  kill -9 $id
+done
+</code></pre>
+<p>And make executable with <code>chmod a+x stop.sh</code>.</p>
+<h2 id="launching-services">Launching services<a class="headerlink" href="#launching-services" title="Permanent link">#</a></h2>
+<h3 id="docker-and-redis-wsl2-without-docker-desktop-ui">Docker and Redis (WSL2 without Docker Desktop UI)<a class="headerlink" href="#docker-and-redis-wsl2-without-docker-desktop-ui" title="Permanent link">#</a></h3>
+<pre><code class="language-bash">sudo /usr/local/bin/happy_sam_start.sh
+</code></pre>
+<p>Wait till the <code>Waiting...</code> output stops, which waits for about 10 seconds
+after the Docker daemon starts in the background.</p>
+<h3 id="sam">SAM<a class="headerlink" href="#sam" title="Permanent link">#</a></h3>
+<p>In the <code>sam</code> directory, execute the <code>start.sh</code> script.</p>
 <h2 id="stopping-services">Stopping services<a class="headerlink" href="#stopping-services" title="Permanent link">#</a></h2>
 <h3 id="sam_1">SAM<a class="headerlink" href="#sam_1" title="Permanent link">#</a></h3>
-<p>Find the process ID (PID) of the Python process for SAM and use <code>kill -9 PID</code>:</p>
-<pre><code class="language-bash">ids=`ps a | grep [s]am_predict_redis | sed s/&quot;^[ ]*&quot;//g | cut -f1 -d&quot; &quot;`; for id in $ids; do kill -9 $id; done;
-</code></pre>
+<p>In the <code>sam</code> directory, execute the <code>stop.sh</code> script.</p>
 <h3 id="docker-and-redis-wsl2-without-docker-desktop-ui_1">Docker and Redis (WSL2 without Docker Desktop UI)<a class="headerlink" href="#docker-and-redis-wsl2-without-docker-desktop-ui_1" title="Permanent link">#</a></h3>
 <pre><code class="language-bash">sudo /usr/local/bin/happy_sam_stop.sh
 </code></pre>
