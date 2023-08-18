@@ -99,7 +99,7 @@ Find the process ID (PID) of the Python process for SAM and use `kill -9 PID`.
 # Stopping Docker and Redis under WLS2 (without Docker Desktop UI)
 
 ```bash
-sudo /usr/bin/happy_sam_stop.sh
+sudo /usr/local/bin/happy_sam_stop.sh
 ```
 
 **NB:** This will also stop any running SAM process. 
