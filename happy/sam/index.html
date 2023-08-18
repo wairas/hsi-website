@@ -610,6 +610,9 @@ mkdir -p sam/models
 <p>Pretrained models can be downloaded from <a href="https://github.com/facebookresearch/segment-anything">here</a>,
 with the medium-sized <a href="https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth">vit_l</a> 
 being the recommended one (requires &lt;6GB GPU RAM). <code>vit_l</code> is used in the commands below.</p>
+<p>From within the <code>sam/models</code> directory, run the following command:</p>
+<pre><code class="language-bash">wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
+</code></pre>
 <h3 id="launching-docker-and-redis-under-wls2-without-docker-desktop-ui">Launching Docker and Redis under WLS2 (without Docker Desktop UI)<a class="headerlink" href="#launching-docker-and-redis-under-wls2-without-docker-desktop-ui" title="Permanent link">#</a></h3>
 <ul>
 <li>Create a bash script <code>happy_sam_start.sh</code> in <code>/usr/local/bin</code> with the following content:</li>
