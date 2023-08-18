@@ -374,8 +374,23 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#launching-docker-and-redis-under-wls2-without-docker-desktop-ui" class="md-nav__link">
-    Launching Docker and Redis under WLS2 (without Docker Desktop UI)
+  <a href="#wsl2-without-docker-desktop-ui" class="md-nav__link">
+    WSL2 without Docker Desktop UI
+  </a>
+  
+    <nav class="md-nav" aria-label="WSL2 without Docker Desktop UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scripts" class="md-nav__link">
+    Scripts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launching-docker-and-redis" class="md-nav__link">
+    Launching Docker and Redis
   </a>
   
 </li>
@@ -384,11 +399,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#launching-docker-and-redis-under-wls2-without-docker-desktop-ui_1" class="md-nav__link">
-    Launching Docker and Redis under WLS2 (without Docker Desktop UI)
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -407,9 +420,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stopping-docker-and-redis-under-wls2-without-docker-desktop-ui" class="md-nav__link">
-    Stopping Docker and Redis under WLS2 (without Docker Desktop UI)
+  <a href="#wsl2-without-docker-desktop-ui_1" class="md-nav__link">
+    WSL2 without Docker Desktop UI
   </a>
+  
+    <nav class="md-nav" aria-label="WSL2 without Docker Desktop UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stopping-docker-and-redis" class="md-nav__link">
+    Stopping Docker and Redis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -519,8 +545,23 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#launching-docker-and-redis-under-wls2-without-docker-desktop-ui" class="md-nav__link">
-    Launching Docker and Redis under WLS2 (without Docker Desktop UI)
+  <a href="#wsl2-without-docker-desktop-ui" class="md-nav__link">
+    WSL2 without Docker Desktop UI
+  </a>
+  
+    <nav class="md-nav" aria-label="WSL2 without Docker Desktop UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scripts" class="md-nav__link">
+    Scripts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launching-docker-and-redis" class="md-nav__link">
+    Launching Docker and Redis
   </a>
   
 </li>
@@ -529,11 +570,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#launching-docker-and-redis-under-wls2-without-docker-desktop-ui_1" class="md-nav__link">
-    Launching Docker and Redis under WLS2 (without Docker Desktop UI)
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -552,9 +591,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stopping-docker-and-redis-under-wls2-without-docker-desktop-ui" class="md-nav__link">
-    Stopping Docker and Redis under WLS2 (without Docker Desktop UI)
+  <a href="#wsl2-without-docker-desktop-ui_1" class="md-nav__link">
+    WSL2 without Docker Desktop UI
   </a>
+  
+    <nav class="md-nav" aria-label="WSL2 without Docker Desktop UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stopping-docker-and-redis" class="md-nav__link">
+    Stopping Docker and Redis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -613,7 +665,8 @@ being the recommended one (requires &lt;6GB GPU RAM). <code>vit_l</code> is used
 <p>From within the <code>sam/models</code> directory, run the following command:</p>
 <pre><code class="language-bash">wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
 </code></pre>
-<h3 id="launching-docker-and-redis-under-wls2-without-docker-desktop-ui">Launching Docker and Redis under WLS2 (without Docker Desktop UI)<a class="headerlink" href="#launching-docker-and-redis-under-wls2-without-docker-desktop-ui" title="Permanent link">#</a></h3>
+<h3 id="wsl2-without-docker-desktop-ui">WSL2 without Docker Desktop UI<a class="headerlink" href="#wsl2-without-docker-desktop-ui" title="Permanent link">#</a></h3>
+<h4 id="scripts">Scripts<a class="headerlink" href="#scripts" title="Permanent link">#</a></h4>
 <ul>
 <li>Create a bash script <code>happy_sam_start.sh</code> in <code>/usr/local/bin</code> with the following content:</li>
 </ul>
@@ -637,7 +690,7 @@ killall dockerd
 <ul>
 <li>Make the script executable with <code>sudo chmod a+x happy_sam_stop.sh</code></li>
 </ul>
-<h2 id="launching-docker-and-redis-under-wls2-without-docker-desktop-ui_1">Launching Docker and Redis under WLS2 (without Docker Desktop UI)<a class="headerlink" href="#launching-docker-and-redis-under-wls2-without-docker-desktop-ui_1" title="Permanent link">#</a></h2>
+<h4 id="launching-docker-and-redis">Launching Docker and Redis<a class="headerlink" href="#launching-docker-and-redis" title="Permanent link">#</a></h4>
 <pre><code class="language-bash">sudo /usr/local/bin/happy_sam_start.sh
 </code></pre>
 <p>Wait till the <code>Waiting...</code> output stops, which waits for about 10 seconds
@@ -660,7 +713,8 @@ Redis channels):</p>
 </code></pre>
 <h2 id="stopping-sam">Stopping SAM<a class="headerlink" href="#stopping-sam" title="Permanent link">#</a></h2>
 <p>Find the process ID (PID) of the Python process for SAM and use <code>kill -9 PID</code>.</p>
-<h2 id="stopping-docker-and-redis-under-wls2-without-docker-desktop-ui">Stopping Docker and Redis under WLS2 (without Docker Desktop UI)<a class="headerlink" href="#stopping-docker-and-redis-under-wls2-without-docker-desktop-ui" title="Permanent link">#</a></h2>
+<h2 id="wsl2-without-docker-desktop-ui_1">WSL2 without Docker Desktop UI<a class="headerlink" href="#wsl2-without-docker-desktop-ui_1" title="Permanent link">#</a></h2>
+<h3 id="stopping-docker-and-redis">Stopping Docker and Redis<a class="headerlink" href="#stopping-docker-and-redis" title="Permanent link">#</a></h3>
 <pre><code class="language-bash">sudo /usr/local/bin/happy_sam_stop.sh
 </code></pre>
 <p><strong>NB:</strong> This will also stop any running SAM process. </p>
