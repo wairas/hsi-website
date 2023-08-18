@@ -107,7 +107,7 @@ done
 And make executable with `chmod a+x stop.sh`.
 
 
-# Launching services
+# Starting
 
 ## Docker and Redis (WSL2 without Docker Desktop UI)
 
@@ -122,7 +122,7 @@ after the Docker daemon starts in the background.
 
 In the `sam` directory, execute the `start.sh` script.
 
-# Stopping services
+# Stopping
 
 ## SAM
 
