@@ -22,7 +22,7 @@ sam
 |
 +-- cache    # cache directory for Pytorch-related files 
 |
-+-- models   # for storing the  
++-- models   # for storing the SAM models
 ```
 
 You can create the structure using the following command:
