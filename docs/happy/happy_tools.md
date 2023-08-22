@@ -25,6 +25,8 @@ Install the happy-tools straight from the repository:
 ./happy/bin/pip install git+https://github.com/wairas/happy-tools.git
 ```
 
+# Updating
+
 Once installed, you can update the library as follows:
 
 ```bash
