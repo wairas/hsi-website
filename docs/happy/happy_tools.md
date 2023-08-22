@@ -31,4 +31,5 @@ The following tools are available (located in `./happy/bin`):
 
 * `happy-hsi2csv` - converts HSI images into CSV
 * `happy-hsi2rbg` - generates fake RGB PNG files from HSI images
+* `happy-opex2happy` - turns annotations (PNG and OPEX JSON) into Happy ENVI format
 * `happy-viewer` - for viewing HSI images
