@@ -330,6 +330,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#preview-browser" class="md-nav__link">
+    Preview browser
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -387,6 +394,62 @@
     <li class="md-nav__item">
       <a href="../happy_tools/installation/" class="md-nav__link">
         Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../happy_tools/envi-viewer/" class="md-nav__link">
+        envi-viewer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../happy_tools/happy-hsi2csv/" class="md-nav__link">
+        happy-hsi2csv
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../happy_tools/happy-hsi2rbg/" class="md-nav__link">
+        happy-hsi2rbg
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../happy_tools/happy-opex2happy/" class="md-nav__link">
+        happy-opex2happy
       </a>
     </li>
   
@@ -509,6 +572,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#preview-browser" class="md-nav__link">
+    Preview browser
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -584,6 +654,45 @@ website, specifically:</p>
 <li><a href="https://www.data-mining.co.nz/applied-deep-learning/object_detection/annotate/">object detection</a></li>
 <li><a href="https://www.data-mining.co.nz/applied-deep-learning/image_segmentation/annotate/">image segmentation</a></li>
 </ul>
+<h2 id="preview-browser">Preview browser<a class="headerlink" href="#preview-browser" title="Permanent link">#</a></h2>
+<p>The <em>Preview browser</em> (from the <em>Visualization</em> menu) can be used for viewing
+PNG/OPEX JSON files that were export from the <a href="../happy_tools/envi-viewer/">envi-viewer</a>
+tool.</p>
+<p>Using the <em>ObjectLocationsFromReport</em> with the <em>OpexObjectLocationsReader</em> you
+can generate an overlay of the annotations like this:</p>
+<p><img alt="ADAMS Preview browser - OPEX annotations" src="../img/adams-previewbrowser1.png" /></p>
+<p>The options used can be seen here:</p>
+<p><img alt="ADAMS Preview browser - options for OPEX annotations" src="../img/adams-previewbrowser2.png" /></p>
+<p>And here as a configuration setup that you can paste via the drop-down button
+in the top-right corner of the options dialog:</p>
+<pre><code># Project: adams
+# Date: 2023-08-23 16:26:05
+# User: fracpete
+# Charset: UTF-8
+# Modules: adams-core,adams-docker,adams-imaging,adams-imaging-ext,adams-json,adams-meta,adams-net,adams-redis,adams-spreadsheet,adams-xml
+#
+adams.gui.tools.previewbrowser.ObjectLocationsFromReport
+    -image-reader
+        adams.data.io.input.JAIImageReader
+    -reader
+        adams.data.io.input.OpexObjectLocationsReader
+    -type-color-provider
+        adams.gui.visualization.core.DefaultColorProvider
+    -label-anchor
+    MIDDLE_CENTER
+    -shape-color-provider
+        adams.gui.visualization.core.TranslucentColorProvider
+            -provider
+                adams.gui.visualization.core.DefaultColorProvider
+    -finder
+        adams.data.objectfinder.AllFinder
+    -overlap-detection
+        adams.data.objectoverlap.AreaRatio
+    -overlap-removal
+        adams.data.overlappingobjectremoval.PassThrough
+    -show-object-panel
+    true
+</code></pre>
 
 
 

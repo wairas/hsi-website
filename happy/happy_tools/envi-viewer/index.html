@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://wairas.github.io/hsi-website/happy/happy_tools/installation/">
+        <link rel="canonical" href="https://wairas.github.io/hsi-website/happy/happy_tools/envi-viewer/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Installation - Hyper-spectral Imaging Group</title>
+        <title>envi-viewer - Hyper-spectral Imaging Group</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#prerequisites" class="md-skip">
+        <a href="#usage" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installation
+              envi-viewer
             
           </span>
         </div>
@@ -320,6 +320,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -330,12 +344,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Installation
+          envi-viewer
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Installation
+        envi-viewer
       </a>
       
         
@@ -352,22 +366,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#usage" class="md-nav__link">
+    Usage
   </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image-tab" class="md-nav__link">
+    Image tab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info-tab" class="md-nav__link">
+    Info tab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options-tab" class="md-nav__link">
+    Options tab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    Annotations
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#polygons" class="md-nav__link">
+    Polygons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sam" class="md-nav__link">
+    SAM
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#updating" class="md-nav__link">
-    Updating
+  <a href="#command-line" class="md-nav__link">
+    Command-line
   </a>
   
 </li>
@@ -376,20 +437,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../envi-viewer/" class="md-nav__link">
-        envi-viewer
-      </a>
     </li>
   
 
@@ -519,22 +566,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#usage" class="md-nav__link">
+    Usage
   </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image-tab" class="md-nav__link">
+    Image tab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info-tab" class="md-nav__link">
+    Info tab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options-tab" class="md-nav__link">
+    Options tab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    Annotations
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#polygons" class="md-nav__link">
+    Polygons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sam" class="md-nav__link">
+    SAM
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#updating" class="md-nav__link">
-    Updating
+  <a href="#command-line" class="md-nav__link">
+    Command-line
   </a>
   
 </li>
@@ -553,33 +647,136 @@
                 
                   
 
-  <a href="https://github.com/wairas/hsi-website/edit/main/docs/happy/happy_tools/installation.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/wairas/hsi-website/edit/main/docs/happy/happy_tools/envi-viewer.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>Installation</h1>
+  <h1>envi-viewer</h1>
 
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">#</a></h2>
+<h3 id="image-tab">Image tab<a class="headerlink" href="#image-tab" title="Permanent link">#</a></h3>
+<p>Via the <em>File</em> menu, you can load an ENVI file representing a sample scan.</p>
+<p>From that menu, you can also select black and white reference ENVI files that
+get automatically applied to the scan:</p>
+<p><img alt="Envi Viewer - scan" src="../img/envi_viewer-scan.png" /></p>
+<p>At the bottom of the window, you get a quick info on what dimensions the
+scan has (width, height and channels). </p>
+<p>The three sliders allow you to select the channels from the hyper-spectral 
+image to act as red, green and blue channel for the fake RGB image that is 
+being displayed. Left-clicking on the label next to the slider, depicting
+the current channel value, pops up a dialog for entering a specific channel.
+If <em>default bands</em> are defined in the ENVI header and <em>auto-detect channels</em>
+is enabled on the <em>Options tab</em>, then these will get used when loading the
+file.</p>
+<h3 id="info-tab">Info tab<a class="headerlink" href="#info-tab" title="Permanent link">#</a></h3>
+<p>On the <em>Info</em> tab, you can see what files are currently loaded and what 
+dimensions these files have:</p>
+<p><img alt="Envi Viewer - info" src="../img/envi_viewer-info.png" /></p>
+<h3 id="options-tab">Options tab<a class="headerlink" href="#options-tab" title="Permanent link">#</a></h3>
+<p>On the <em>Options</em> tab, you can change various view settings, how to connect
+to <a href="../../sam/">SAM</a> and how annotations appear:</p>
+<p><img alt="Envi Viewer - options" src="../img/envi_viewer-options.png" /></p>
+<h3 id="annotations">Annotations<a class="headerlink" href="#annotations" title="Permanent link">#</a></h3>
+<p>The envi-viewer also allows you to annotate images and then export them.
+The image will be exported as PNG using the currently selected channels.
+Any annotations present will get exported as JSON, using the 
+<a href="https://github.com/WaikatoLink2020/objdet-predictions-exchange-format">OPEX format</a>. 
+Such annotations in OPEX format can be viewed in the ADAMS <em>Preview browser</em>.</p>
+<p>General mouse usage:</p>
 <ul>
-<li>Python</li>
-<li>Virtual environments</li>
+<li>Left-clicking on the image sets a marker point.</li>
+<li>Left-clicking while holding the CTRL key removes any marker points.</li>
+<li>Left-clicking on an existing annotation shape while holding the SHIFT key
+  allows you to enter a label for that shape (e.g., <code>white_ref</code> or <code>leaf</code>).</li>
 </ul>
-<pre><code class="language-bash">sudo apt install virtualenv python3-tk
-</code></pre>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
-<p>In the home directory, create a Python virtual environment in directory <code>happy</code> 
-with access to the system-wide installed libraries:</p>
-<pre><code class="language-bash">virtualenv --system-site-packages -p /usr/bin/python3 happy
-</code></pre>
-<p>Install the happy-tools straight from the repository:</p>
-<pre><code class="language-bash">./happy/bin/pip install git+https://github.com/wairas/happy-tools.git
-</code></pre>
-<h2 id="updating">Updating<a class="headerlink" href="#updating" title="Permanent link">#</a></h2>
-<p>Once installed, you can update the library as follows:</p>
-<pre><code class="language-bash">./happy/bin/pip uninstall happy-tools
-./happy/bin/pip install git+https://github.com/wairas/happy-tools.git
+<p>Tools menu:</p>
+<ul>
+<li><em>Clear annotations</em> - removes any annotations</li>
+<li><em>Clear markers</em> - removes all marker points</li>
+<li><em>Remove last annotation</em> - removes the most recent annotation that was added 
+  (can be repeated till there are no more annotations)</li>
+<li><em>Polygon</em> - turns current marker points into polygon</li>
+<li><em>SAM</em> - uses current marker points as prompt points for <a href="../../sam/">SAM</a></li>
+</ul>
+<h4 id="polygons">Polygons<a class="headerlink" href="#polygons" title="Permanent link">#</a></h4>
+<p>The simplest way of annotating that does not require any further tools is by
+using polygons. First define the outline of the object with marker points: </p>
+<p><img alt="Envi Viewer - polygon markers" src="../img/envi_viewer-polygon1.png" /></p>
+<p>Once at least three marker points have been put on the image, selecting 
+<em>Polygon</em> from the <em>Tools</em> menu turns them into a polygon annotation:</p>
+<p><img alt="Envi Viewer - polygon annotation" src="../img/envi_viewer-polygon2.png" /></p>
+<h4 id="sam">SAM<a class="headerlink" href="#sam" title="Permanent link">#</a></h4>
+<p>Using <a href="../../sam/">SAM</a>, you can easily annotate complex shapes accurately.
+Though SAM can run on a CPU, it is recommended to use a computer with a
+NVIDIA GPU as it will speed up the detection process by at least 10 times.</p>
+<p>SAM requires you to at least provide a single marker on the object that you
+want to trace the shape for. Depending on the object and how well it is 
+separated from the background, how much the colors on the object change, you
+may have to provide more than one marker point to better guide the detection:</p>
+<p><img alt="Envi Viewer - polygon markers" src="../img/envi_viewer-sam1.png" /></p>
+<p>The result looks then like this:</p>
+<p><img alt="Envi Viewer - polygon markers" src="../img/envi_viewer-sam2.png" /></p>
+<h2 id="command-line">Command-line<a class="headerlink" href="#command-line" title="Permanent link">#</a></h2>
+<p>Using the command-line options, you can preset the options in the user interface
+and also load scan, black and white reference files:</p>
+<pre><code>usage: envi-viewer [-h] [-s SCAN] [-f BLACK_REFERENCE] [-w WHITE_REFERENCE]
+                   [-r INT] [-g INT] [-b INT] [--autodetect_channels]
+                   [--keep_aspectratio] [--annotation_color HEXCOLOR]
+                   [--redis_host HOST] [--redis_port PORT]
+                   [--redis_pw PASSWORD] [--redis_in CHANNEL]
+                   [--redis_out CHANNEL] [--redis_connect]
+                   [--sam_marker_size INT] [--sam_marker_color HEXCOLOR]
+                   [--sam_min_obj_size INT]
+
+ENVI Hyper-spectral Image Viewer. Offers contour detection using SAM (Segment-
+Anything: https://github.com/waikato-datamining/pytorch/tree/master/segment-
+anything)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s SCAN, --scan SCAN  Path to the scan file (ENVI format) (default: None)
+  -f BLACK_REFERENCE, --black_reference BLACK_REFERENCE
+                        Path to the black reference file (ENVI format)
+                        (default: None)
+  -w WHITE_REFERENCE, --white_reference WHITE_REFERENCE
+                        Path to the white reference file (ENVI format)
+                        (default: None)
+  -r INT, --red INT     the wave length to use for the red channel (default:
+                        0)
+  -g INT, --green INT   the wave length to use for the green channel (default:
+                        0)
+  -b INT, --blue INT    the wave length to use for the blue channel (default:
+                        0)
+  --autodetect_channels
+                        whether to determine the channels from the meta-data
+                        (overrides the manually specified channels) (default:
+                        False)
+  --keep_aspectratio    whether to keep the aspect ratio (default: False)
+  --annotation_color HEXCOLOR
+                        the color to use for the annotations like contours
+                        (hex color) (default: #ff0000)
+  --redis_host HOST     The Redis host to connect to (IP or hostname)
+                        (default: localhost)
+  --redis_port PORT     The port the Redis server is listening on (default:
+                        6379)
+  --redis_pw PASSWORD   The password to use with the Redis server (default:
+                        None)
+  --redis_in CHANNEL    The channel that SAM is receiving images on (default:
+                        sam_in)
+  --redis_out CHANNEL   The channel that SAM is broadcasting the detections on
+                        (default: sam_out)
+  --redis_connect       whether to immediately connect to the Redis host
+                        (default: False)
+  --sam_marker_size INT
+                        The size in pixels for the SAM points (default: 7)
+  --sam_marker_color HEXCOLOR
+                        the color to use for the SAM points (hex color)
+                        (default: #ff0000)
+  --sam_min_obj_size INT
+                        The minimum size that SAM contours need to have (&lt;= 0
+                        for no minimum) (default: -1)
 </code></pre>
 
 
@@ -601,7 +798,7 @@ with access to the system-wide installed libraries:</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tools" rel="prev">
+        <a href="../installation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installation" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -610,20 +807,20 @@ with access to the system-wide installed libraries:</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Tools
+              Installation
             </div>
           </div>
         </a>
       
       
         
-        <a href="../envi-viewer/" class="md-footer__link md-footer__link--next" aria-label="Next: envi-viewer" rel="next">
+        <a href="../happy-hsi2csv/" class="md-footer__link md-footer__link--next" aria-label="Next: happy-hsi2csv" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              envi-viewer
+              happy-hsi2csv
             </div>
           </div>
           <div class="md-footer__button md-icon">
