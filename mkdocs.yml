@@ -22,7 +22,9 @@ nav:
       - 'Introduction': happy/index.md
       - 'ADAMS': happy/adams.md
       - 'Docker images': happy/docker_images.md
-      - 'happy-tools': happy/happy_tools.md
+      - 'happy-tools':
+        - 'Tools': happy/happy_tools/index.md
+        - 'Installation': happy/happy_tools/installation.md
       - 'SAM': happy/sam.md
   - 'Publications': publications.md
   - 'People': people.md
