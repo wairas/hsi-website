@@ -17,7 +17,7 @@
     
     
       
-        <title>happy-tools - Hyper-spectral Imaging Group</title>
+        <title>Tools - Hyper-spectral Imaging Group</title>
       
     
     
@@ -65,11 +65,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#prerequisites" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -99,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              happy-tools
+              Tools
             
           </span>
         </div>
@@ -278,15 +273,29 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../docker_images/" class="md-nav__link">
-        Docker images
-      </a>
-    </li>
   
-
-            
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          happy-tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="happy-tools" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          happy-tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
@@ -301,53 +310,31 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          happy-tools
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        happy-tools
+        Tools
       </a>
       
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+            
+          
+            
+              
   
   
   
+    <li class="md-nav__item">
+      <a href="installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tools" class="md-nav__link">
-    Tools
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -421,35 +408,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tools" class="md-nav__link">
-    Tools
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -462,38 +420,20 @@
                 
                   
 
-  <a href="https://github.com/wairas/hsi-website/edit/main/docs/happy/happy_tools.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/wairas/hsi-website/edit/main/docs/happy/happy_tools/index.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>happy-tools</h1>
+  <h1>Tools</h1>
 
 <p><a href="https://github.com/wairas/happy-tools">happy-tools</a> contains several command-line 
-utilities and a graphical viewer for HSI ENVI files.</p>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
+utilities and graphical viewers for HSI files:</p>
 <ul>
-<li>Python</li>
-<li>Virtual environments</li>
-</ul>
-<pre><code class="language-bash">sudo apt install virtualenv python3-tk
-</code></pre>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
-<p>In the home directory, create a Python virtual environment in directory <code>happy</code> 
-with access to the system-wide installed libraries:</p>
-<pre><code class="language-bash">virtualenv --system-site-packages -p /usr/bin/python3 happy
-</code></pre>
-<p>Install the happy-tools straight from the repository:</p>
-<pre><code class="language-bash">./happy/bin/pip install git+https://github.com/wairas/happy-tools.git
-</code></pre>
-<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">#</a></h2>
-<p>The following tools are available (located in <code>./happy/bin</code>):</p>
-<ul>
+<li><code>envi-viewer</code> - for viewing ENVI HSI images</li>
 <li><code>happy-hsi2csv</code> - converts HSI images into CSV</li>
 <li><code>happy-hsi2rbg</code> - generates fake RGB PNG files from HSI images</li>
-<li><code>happy-opex2happy</code> - turns annotations (PNG and OPEX JSON) into Happy ENVI format</li>
-<li><code>happy-viewer</code> - for viewing HSI images</li>
 </ul>
 
 
@@ -515,7 +455,7 @@ with access to the system-wide installed libraries:</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../docker_images/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docker images" rel="prev">
+        <a href="../adams/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ADAMS" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -524,20 +464,20 @@ with access to the system-wide installed libraries:</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Docker images
+              ADAMS
             </div>
           </div>
         </a>
       
       
         
-        <a href="../sam/" class="md-footer__link md-footer__link--next" aria-label="Next: SAM" rel="next">
+        <a href="installation/" class="md-footer__link md-footer__link--next" aria-label="Next: Installation" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              SAM
+              Installation
             </div>
           </div>
           <div class="md-footer__button md-icon">
