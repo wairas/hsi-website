@@ -22,7 +22,7 @@ nav:
       - 'Introduction': happy/index.md
       - 'ADAMS': happy/adams.md
       - 'happy-tools':
-        - 'Tools': happy/happy_tools/index.md
+        - 'Overview': happy/happy_tools/index.md
         - 'Installation': happy/happy_tools/installation.md
         - 'envi-viewer': happy/happy_tools/envi-viewer.md
         - 'happy-hsi2csv': happy/happy_tools/happy-hsi2csv.md
