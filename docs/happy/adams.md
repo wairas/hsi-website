@@ -1,18 +1,20 @@
-[ADAMS-based](https://adams.cms.waikato.ac.nz/) workflow module.
+[ADAMS-based](https://adams.cms.waikato.ac.nz/) framework that can be used
+for annotating images using its powerful workflow engine.
+
 
 # Requirements
 
 * OpenJDK 11+
 
-  * [Windows](https://adoptium.net/temurin/releases/?version=11)
-  * [Debian/Ubuntu]: `sudo apt install openjdk-11-jdk`
+    * Windows: [adoptium.net/temurin](https://adoptium.net/temurin/releases/?version=11)
+    * Debian/Ubuntu: `sudo apt install openjdk-11-jdk`
   
   
 # Installation
 
 * Download a snapshot (in ZIP format)
 
-  [adams.cms.waikato.ac.nz/snapshots/happy/](https://adams.cms.waikato.ac.nz/snapshots/happy/)
+    [adams.cms.waikato.ac.nz/snapshots/happy/](https://adams.cms.waikato.ac.nz/snapshots/happy/)
   
 * Unzip the ZIP archive and rename the generated directory to `happy-adams`
 
