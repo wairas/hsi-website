@@ -50,3 +50,52 @@ website, specifically:
 
 * [object detection](https://www.data-mining.co.nz/applied-deep-learning/object_detection/annotate/)
 * [image segmentation](https://www.data-mining.co.nz/applied-deep-learning/image_segmentation/annotate/)
+
+
+# Preview browser
+
+The *Preview browser* (from the *Visualization* menu) can be used for viewing
+PNG/OPEX JSON files that were export from the [envi-viewer](happy_tools/envi-viewer.md)
+tool.
+
+Using the *ObjectLocationsFromReport* with the *OpexObjectLocationsReader* you
+can generate an overlay of the annotations like this:
+
+![ADAMS Preview browser - OPEX annotations](img/adams-previewbrowser1.png)
+
+The options used can be seen here:
+
+![ADAMS Preview browser - options for OPEX annotations](img/adams-previewbrowser2.png)
+
+And here as a configuration setup that you can paste via the drop-down button
+in the top-right corner of the options dialog:
+
+```
+# Project: adams
+# Date: 2023-08-23 16:26:05
+# User: fracpete
+# Charset: UTF-8
+# Modules: adams-core,adams-docker,adams-imaging,adams-imaging-ext,adams-json,adams-meta,adams-net,adams-redis,adams-spreadsheet,adams-xml
+#
+adams.gui.tools.previewbrowser.ObjectLocationsFromReport
+	-image-reader
+		adams.data.io.input.JAIImageReader
+	-reader
+		adams.data.io.input.OpexObjectLocationsReader
+	-type-color-provider
+		adams.gui.visualization.core.DefaultColorProvider
+	-label-anchor
+	MIDDLE_CENTER
+	-shape-color-provider
+		adams.gui.visualization.core.TranslucentColorProvider
+			-provider
+				adams.gui.visualization.core.DefaultColorProvider
+	-finder
+		adams.data.objectfinder.AllFinder
+	-overlap-detection
+		adams.data.objectoverlap.AreaRatio
+	-overlap-removal
+		adams.data.overlappingobjectremoval.PassThrough
+	-show-object-panel
+	true
+```
