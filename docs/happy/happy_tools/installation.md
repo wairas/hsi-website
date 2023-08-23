@@ -1,6 +1,3 @@
-[happy-tools](https://github.com/wairas/happy-tools) contains several command-line 
-utilities and a graphical viewer for HSI ENVI files.
-
 # Prerequisites
 
 * Python
@@ -25,10 +22,11 @@ Install the happy-tools straight from the repository:
 ./happy/bin/pip install git+https://github.com/wairas/happy-tools.git
 ```
 
-# Tools
+# Updating
 
-The following tools are available (located in `./happy/bin`):
+Once installed, you can update the library as follows:
 
-* `happy-hsi2csv` - converts HSI images into CSV
-* `happy-hsi2rbg` - generates fake RGB PNG files from HSI images
-* `happy-viewer` - for viewing HSI images
+```bash
+./happy/bin/pip uninstall happy-tools
+./happy/bin/pip install git+https://github.com/wairas/happy-tools.git
+```
