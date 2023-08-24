@@ -1,7 +1,7 @@
 # Prerequisites
 
 **Windows:** install `Ubuntu 2022.04.x` from the Microsoft store 
-(requires up-to-date WSL2 on Windows 10 Build 19044+ or Windows 11).
+(requires up-to-date [WSL2 on Windows 10 Build 19044+ or Windows 11](https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps)).
 
 * Python
 * Virtual environments
