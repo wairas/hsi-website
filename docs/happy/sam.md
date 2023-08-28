@@ -1,4 +1,4 @@
-Facebook's [Segment Anything](https://ai.facebook.com/research/publications/segment-anything/)
+Facebook's [Segment Anything](https://ai.facebook.com/research/publications/segment-anything/) (SAM)
 are pretrained models that perform image segmentation on RGB images and can aid
 the human in the annotation process.
 
