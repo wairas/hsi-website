@@ -29,6 +29,7 @@ nav:
         - 'happy-hsi2rbg': happy/happy_tools/happy-hsi2rbg.md
         - 'happy-opex2happy': happy/happy_tools/happy-opex2happy.md
       - 'SAM': happy/sam.md
+      - 'SAM-HQ': happy/sam-hq.md
   - 'Publications': publications.md
   - 'People': people.md
 
