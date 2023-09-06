@@ -33,3 +33,11 @@ Once installed, you can update the library as follows:
 ./happy/bin/pip uninstall happy-tools
 ./happy/bin/pip install git+https://github.com/wairas/happy-tools.git
 ```
+
+# Uninstall
+
+You can completely remove the tools by simply deleting the `happy` directory:
+
+```bash
+rm -Rf ./happy
+```
