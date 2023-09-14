@@ -30,7 +30,7 @@ Install the happy-tools straight from the repository:
 Once installed, you can update the library as follows:
 
 ```bash
-./happy/bin/pip uninstall happy-tools
+./happy/bin/pip uninstall -y happy-tools
 ./happy/bin/pip install git+https://github.com/wairas/happy-tools.git
 ```
 
