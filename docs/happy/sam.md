@@ -11,9 +11,10 @@ the human in the annotation process.
   
 ## Windows
 
-* WSL2 using Ubuntu 20.04 or 22.04
-  * docker ([instructions](https://www.data-mining.co.nz/applied-deep-learning/windows/))
-  * redis-server (`sudo apt install redis-server`)
+* [WSL2](wsl2.md) using 22.04.x
+  
+    * docker ([instructions](https://www.data-mining.co.nz/applied-deep-learning/windows/))
+    * redis-server (`sudo apt install redis-server`)
 
 ## Directories
   
