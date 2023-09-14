@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#notes-on-wsl2" class="md-skip">
+        <a href="#installation" class="md-skip">
           Skip to content
         </a>
       
@@ -282,8 +282,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#notes-on-wsl2" class="md-nav__link">
-    Notes on WSL2
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
   </a>
   
 </li>
@@ -292,6 +306,34 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wsl2/" class="md-nav__link">
+        WSL2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation/" class="md-nav__link">
+        Installation
+      </a>
     </li>
   
 
@@ -320,18 +362,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_2_3">
+        <label class="md-nav__link" for="__nav_2_5">
           happy-tools
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="happy-tools" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_3">
+        <label class="md-nav__title" for="__nav_2_5">
           <span class="md-nav__icon md-icon"></span>
           happy-tools
         </label>
@@ -517,8 +559,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#notes-on-wsl2" class="md-nav__link">
-    Notes on WSL2
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
   </a>
   
 </li>
@@ -546,30 +602,30 @@
   <h1>Introduction</h1>
 
 <p>Applications, Python libraries and Docker images for hyper-spectral data processing and modelling.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
+<p>The tools have been tested on Linux (Ubuntu/Debian) and under Windows with 
+WSL2 using Ubuntu 22.04.x.</p>
+<ul>
+<li><a href="wsl2/">Notes on WSL2</a></li>
+<li><a href="installation/">Installing the tools</a></li>
+</ul>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">#</a></h2>
+<p>Once installed using the above instructions, you can launch graphical tools
+and Docker images (start/stop) using the <code>happy-launch.sh</code> script from your 
+home directory:</p>
+<pre><code class="language-bash">./happy-launch.sh
+</code></pre>
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">#</a></h2>
+<p>More details on the tools that are available through the HAPPy project can
+be found on the respective tool pages:</p>
 <ul>
 <li><a href="adams/">ADAMS</a></li>
 <li><a href="happy_tools/">happy-tools</a></li>
 <li><a href="sam/">Segment Anything</a></li>
 <li><a href="sam-hq/">Segment Anything in High Quality</a></li>
 </ul>
-<h2 id="notes-on-wsl2">Notes on WSL2<a class="headerlink" href="#notes-on-wsl2" title="Permanent link">#</a></h2>
-<p>The tools are all working under the Windows Subsystem for Linux. But Docker 
-and graphical applications only work as long as you are using version 2 of 
-WSL and your <a href="https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps">Windows 10 is at least build 19044 (no restrictions with 
-Windows 11)</a>.</p>
-<p>Here is how to switch WSL to version 2 as default by running the following
-command:</p>
-<pre><code>wsl --set-default-version 2
-</code></pre>
-<p>You can view all your current images and what WSL version they are using
-with the following command:</p>
-<pre><code>wsl --list -v
-</code></pre>
-<p>If you want to switch an existing image (e.g., <code>Ubuntu-22.04</code>) to version 2,
-then you can run the following command:</p>
-<pre><code>wsl --set-version Ubuntu-22.04 2
-</code></pre>
-<p>Source: <a href="https://stackoverflow.com/a/73164601">https://stackoverflow.com/a/73164601</a></p>
+<p><strong>NB:</strong> These pages also contain detailed instructions on how to install them, 
+which you can ignore if you used the <code>happy-setup.sh</code> installation script.</p>
 
 
 
@@ -606,13 +662,13 @@ then you can run the following command:</p>
       
       
         
-        <a href="adams/" class="md-footer__link md-footer__link--next" aria-label="Next: ADAMS" rel="next">
+        <a href="wsl2/" class="md-footer__link md-footer__link--next" aria-label="Next: WSL2" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              ADAMS
+              WSL2
             </div>
           </div>
           <div class="md-footer__button md-icon">
