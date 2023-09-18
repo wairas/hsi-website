@@ -81,21 +81,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wairas.github.io/hsi-website/happy/happy_tools/happy-keras-pixel-regression-build/</loc>
-         <lastmod>2023-09-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wairas.github.io/hsi-website/happy/happy_tools/happy-keras-segmentation-build/</loc>
-         <lastmod>2023-09-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wairas.github.io/hsi-website/happy/happy_tools/happy-keras-unsupervised-build/</loc>
-         <lastmod>2023-09-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wairas.github.io/hsi-website/happy/happy_tools/happy-mat-info/</loc>
          <lastmod>2023-09-18</lastmod>
          <changefreq>daily</changefreq>
@@ -122,6 +107,31 @@
     </url>
     <url>
          <loc>https://wairas.github.io/hsi-website/happy/happy_tools/installation/</loc>
+         <lastmod>2023-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wairas.github.io/hsi-website/happy/happy_tools_keras/</loc>
+         <lastmod>2023-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wairas.github.io/hsi-website/happy/happy_tools_keras/happy-keras-pixel-regression-build/</loc>
+         <lastmod>2023-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wairas.github.io/hsi-website/happy/happy_tools_keras/happy-keras-segmentation-build/</loc>
+         <lastmod>2023-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wairas.github.io/hsi-website/happy/happy_tools_keras/happy-keras-unsupervised-build/</loc>
+         <lastmod>2023-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wairas.github.io/hsi-website/happy/happy_tools_keras/installation/</loc>
          <lastmod>2023-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
