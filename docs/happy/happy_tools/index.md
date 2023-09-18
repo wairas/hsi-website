@@ -1,10 +1,24 @@
 [happy-tools](https://github.com/wairas/happy-tools) contains several command-line 
 utilities and graphical viewers for HSI files:
 
+* [happy-data-viewer](happy-data-viewer.md) - for viewing HAPPy data folders
 * [happy-envi-viewer](happy-envi-viewer.md) - for viewing ENVI HSI images
+* [happy-generate-image-regions-objects](happy-generate-image-regions-objects.md) - generates datasets as numpy cubes for deep learning
+* [happy-hdr-info](happy-hdr-info.md) - outputs information on ENVI HDR files
 * [happy-hsi2csv](happy-hsi2csv.md) - converts HSI images into CSV
 * [happy-hsi2rbg](happy-hsi2rbg.md) - generates fake RGB PNG files from HSI images
+* [happy-mat-info](happy-mat-info.md) - outputs Matlab struct information
 * [happy-opex2happy](happy-opex2happy.md) - converts OPEX JSON annotations and PNG images into happy data structures
+* [happy-plot-preproc](happy-plot-preproc.md) - plots set of pixels using various preprocessors
+* [happy-scikit-regression-build](happy-scikit-regression-build.md) - evaluates regression models on HAPPy data
+* [happy-scikit-unsupervised-build](happy-scikit-unsupervised-build.md) - evaluates cluster models on HAPPy data
+
+Additional tools utilizing the [Keras](https://keras.io) deep learning library,
+available through [happy-tools-keras]([happy-tools](https://github.com/wairas/happy-tools-keras)):
+
+* [happy-keras-pixel-regression-build](happy-keras-pixel-regression-build.md) - evaluate a Keras-based pixel regression model
+* [happy-keras-segmentation-build](happy-keras-segmentation-build.md) - builds a Keras-based pixel segmentation model
+* [happy-keras-unsupervised-build](happy-keras-unsupervised-build.md) - builds a Keras-based pixel segmentation model
 
 These tools are available from the Python virtual environment that they were
 installed. E.g., when following the installation instructions on this website,
