@@ -26,10 +26,23 @@ nav:
       - 'happy-tools':
         - 'Overview': happy/happy_tools/index.md
         - 'Installation': happy/happy_tools/installation.md
-        - 'envi-viewer': happy/happy_tools/envi-viewer.md
+        - 'happy-data-viewer': happy/happy_tools/happy-data-viewer.md
+        - 'happy-envi-viewer': happy/happy_tools/happy-envi-viewer.md
+        - 'happy-hdr-info': happy/happy_tools/happy-hdr-info.md
         - 'happy-hsi2csv': happy/happy_tools/happy-hsi2csv.md
         - 'happy-hsi2rbg': happy/happy_tools/happy-hsi2rbg.md
+        - 'happy-mat-info': happy/happy_tools/happy-mat-info.md
         - 'happy-opex2happy': happy/happy_tools/happy-opex2happy.md
+        - 'happy-mat-info': happy/happy_tools/happy-mat-info.md
+        - 'happy-plot-preproc': happy/happy_tools/happy-plot-preproc.md
+        - 'happy-scikit-regression-build': happy/happy_tools/happy-scikit-regression-build.md
+        - 'happy-scikit-unsupervised-build': happy/happy_tools/happy-scikit-unsupervised-build.md
+      - 'happy-tools-keras':
+        - 'Overview': happy/happy_tools_keras/index.md
+        - 'Installation': happy/happy_tools_keras/installation.md
+        - 'happy-keras-pixel-regression-build': happy/happy_tools_keras/happy-keras-pixel-regression-build.md
+        - 'happy-keras-segmentation-build': happy/happy_tools_keras/happy-keras-segmentation-build.md
+        - 'happy-keras-unsupervised-build': happy/happy_tools_keras/happy-keras-unsupervised-build.md
       - 'SAM': happy/sam.md
       - 'SAM-HQ': happy/sam-hq.md
   - 'Publications': publications.md
