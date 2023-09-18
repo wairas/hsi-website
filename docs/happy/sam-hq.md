@@ -94,7 +94,7 @@ docker run --pull always --rm \
 And make executable with `chmod a+x start.sh`.
 
 **NB:** This script uses the `sam_in` and `sam_out` Redis channels to make
-it a drop-in replacement for [SAM](sam.md) in the [envi-viewer](./happy_tools/envi-viewer.md).
+it a drop-in replacement for [SAM](sam.md) in the [happy-envi-viewer](happy_tools/happy-envi-viewer.md).
 
 Next, create a script called `stop.sh` with the following content:
 

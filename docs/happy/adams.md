@@ -55,7 +55,7 @@ website, specifically:
 # Preview browser
 
 The *Preview browser* (from the *Visualization* menu) can be used for viewing
-PNG/OPEX JSON files that were export from the [envi-viewer](happy_tools/envi-viewer.md)
+PNG/OPEX JSON files that were export from the [happy-envi-viewer](happy_tools/happy-envi-viewer.md)
 tool.
 
 Using the *ObjectLocationsFromReport* with the *OpexObjectLocationsReader* you
