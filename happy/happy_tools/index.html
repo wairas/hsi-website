@@ -367,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="envi-viewer/" class="md-nav__link">
+      <a href="envi-viewer.md" class="md-nav__link">
         envi-viewer
       </a>
     </li>
@@ -529,10 +529,24 @@
 <p><a href="https://github.com/wairas/happy-tools">happy-tools</a> contains several command-line 
 utilities and graphical viewers for HSI files:</p>
 <ul>
-<li><a href="envi-viewer/">envi-viewer</a> - for viewing ENVI HSI images</li>
+<li><a href="happy-data-viewer/">happy-data-viewer</a> - for viewing HAPPy data folders</li>
+<li><a href="happy-envi-viewer/">happy-envi-viewer</a> - for viewing ENVI HSI images</li>
+<li><a href="happy-generate-image-regions-objects/">happy-generate-image-regions-objects</a> - generates datasets as numpy cubes for deep learning</li>
+<li><a href="happy-hdr-info/">happy-hdr-info</a> - outputs information on ENVI HDR files</li>
 <li><a href="happy-hsi2csv/">happy-hsi2csv</a> - converts HSI images into CSV</li>
 <li><a href="happy-hsi2rbg/">happy-hsi2rbg</a> - generates fake RGB PNG files from HSI images</li>
+<li><a href="happy-mat-info/">happy-mat-info</a> - outputs Matlab struct information</li>
 <li><a href="happy-opex2happy/">happy-opex2happy</a> - converts OPEX JSON annotations and PNG images into happy data structures</li>
+<li><a href="happy-plot-preproc/">happy-plot-preproc</a> - plots set of pixels using various preprocessors</li>
+<li><a href="happy-scikit-regression-build/">happy-scikit-regression-build</a> - evaluates regression models on HAPPy data</li>
+<li><a href="happy-scikit-unsupervised-build/">happy-scikit-unsupervised-build</a> - evaluates cluster models on HAPPy data</li>
+</ul>
+<p>Additional tools utilizing the <a href="https://keras.io">Keras</a> deep learning library,
+available through <a href="[happy-tools](https://github.com/wairas/happy-tools-keras)">happy-tools-keras</a>:</p>
+<ul>
+<li><a href="happy-keras-pixel-regression-build/">happy-keras-pixel-regression-build</a> - evaluate a Keras-based pixel regression model</li>
+<li><a href="happy-keras-segmentation-build/">happy-keras-segmentation-build</a> - builds a Keras-based pixel segmentation model</li>
+<li><a href="happy-keras-unsupervised-build/">happy-keras-unsupervised-build</a> - builds a Keras-based pixel segmentation model</li>
 </ul>
 <p>These tools are available from the Python virtual environment that they were
 installed. E.g., when following the installation instructions on this website,
