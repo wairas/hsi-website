@@ -1,5 +1,7 @@
 Applications, Python libraries and Docker images for hyper-spectral data processing and modelling.
 
+![HAPPy logo](img/logo.png)
+
 # Installation
 
 The tools have been tested on Linux (Ubuntu/Debian) and under Windows with 
