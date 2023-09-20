@@ -1,3 +1,3 @@
-Welcome to Hyper-spectral Imaging Group at the University of Waikato.
+Welcome to the Hyper-spectral Imaging Group at the University of Waikato.
 
-![HyperspectralCube](img/HyperspectralCube.jpg)
+![Cannabis buds](img/cannabis_buds.jpg)
