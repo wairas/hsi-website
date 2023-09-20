@@ -38,6 +38,7 @@ nav:
         - 'happy-plot-preproc': happy/happy_tools/happy-plot-preproc.md
         - 'happy-scikit-regression-build': happy/happy_tools/happy-scikit-regression-build.md
         - 'happy-scikit-unsupervised-build': happy/happy_tools/happy-scikit-unsupervised-build.md
+        - 'happy-splitter': happy/happy_tools/happy-splitter.md
       - 'happy-tools-keras':
         - 'Overview': happy/happy_tools_keras/index.md
         - 'Installation': happy/happy_tools_keras/installation.md
