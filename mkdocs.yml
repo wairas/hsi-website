@@ -22,6 +22,7 @@ nav:
       - 'Introduction': happy/index.md
       - 'WSL2': happy/wsl2.md
       - 'Installation': happy/installation.md
+      - 'Docker': happy/docker.md
       - 'ADAMS': happy/adams.md
       - 'happy-tools':
         - 'Overview': happy/happy_tools/index.md

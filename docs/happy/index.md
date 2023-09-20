@@ -32,3 +32,8 @@ be found on the respective tool pages:
 
 **NB:** These pages also contain detailed instructions on how to install them, 
 which you can ignore if you used the `happy-setup.sh` installation script.
+
+
+# Docker
+
+For available Docker images, please see the [Docker](docker.md) page.
