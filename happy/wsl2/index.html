@@ -772,6 +772,9 @@
 Docker and graphical applications only work as long as you are using version 2 of 
 WSL and your <a href="https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps">Windows 10 is at least build 19044 (no restrictions with 
 Windows 11)</a>.</p>
+<p>First, make sure that your WSL is up-to-date (and supports graphical applications):</p>
+<pre><code>wsl --update
+</code></pre>
 <p>Here is how to switch WSL to version 2 as default by running the following
 command:</p>
 <pre><code>wsl --set-default-version 2
