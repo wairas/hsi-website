@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wairas.github.io/hsi-website/happy/docker/</loc>
+         <lastmod>2023-09-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wairas.github.io/hsi-website/happy/installation/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>

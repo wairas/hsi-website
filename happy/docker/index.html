@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://wairas.github.io/hsi-website/happy/adams/">
+        <link rel="canonical" href="https://wairas.github.io/hsi-website/happy/docker/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>ADAMS - Hyper-spectral Imaging Group</title>
+        <title>Docker - Hyper-spectral Imaging Group</title>
       
     
     
@@ -65,11 +65,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#requirements" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -99,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ADAMS
+              Docker
             
           </span>
         </div>
@@ -292,20 +287,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
-        Docker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -315,74 +296,24 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          ADAMS
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        ADAMS
+        Docker
       </a>
       
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+            
+          
+            
+              
   
   
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#starting-the-application" class="md-nav__link">
-    Starting the application
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#available-flows" class="md-nav__link">
-    Available flows
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tutorials" class="md-nav__link">
-    Tutorials
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preview-browser" class="md-nav__link">
-    Preview browser
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
+    <li class="md-nav__item">
+      <a href="../adams/" class="md-nav__link">
+        ADAMS
+      </a>
     </li>
   
 
@@ -788,56 +719,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#starting-the-application" class="md-nav__link">
-    Starting the application
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#available-flows" class="md-nav__link">
-    Available flows
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tutorials" class="md-nav__link">
-    Tutorials
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preview-browser" class="md-nav__link">
-    Preview browser
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -850,106 +731,24 @@
                 
                   
 
-  <a href="https://github.com/wairas/hsi-website/edit/main/docs/happy/adams.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/wairas/hsi-website/edit/main/docs/happy/docker.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>ADAMS</h1>
+  <h1>Docker</h1>
 
-<p><a href="https://adams.cms.waikato.ac.nz/">ADAMS-based</a> framework that can be used
-for annotating images using its powerful workflow engine.</p>
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h2>
+<p>To make it easier to use the libraries (and avoid any hassle with installing 
+libraries and required dependencies), we also make them available as 
+<a href="https://www.docker.com/">Docker</a> images:</p>
 <ul>
-<li>
-<p>OpenJDK 11+</p>
-<ul>
-<li>Windows: <a href="https://adoptium.net/temurin/releases/?version=11">adoptium.net/temurin</a></li>
-<li>Debian/Ubuntu: <code>sudo apt install openjdk-11-jdk</code></li>
+<li><a href="https://hub.docker.com/r/waikatohappy/happy-tools">happy-tools</a></li>
+<li><a href="https://hub.docker.com/r/waikatohappy/happy-tools-keras">happy-tools-keras</a></li>
 </ul>
-</li>
-</ul>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
-<ul>
-<li>
-<p>Download a snapshot (in ZIP format)</p>
-<p><a href="https://adams.cms.waikato.ac.nz/snapshots/happy/">adams.cms.waikato.ac.nz/snapshots/happy/</a></p>
-</li>
-<li>
-<p>Unzip the ZIP archive and rename the generated directory to <code>happy-adams</code></p>
-</li>
-</ul>
-<h2 id="starting-the-application">Starting the application<a class="headerlink" href="#starting-the-application" title="Permanent link">#</a></h2>
-<ul>
-<li>
-<p>Start the user interface with:</p>
-</li>
-<li>
-<p>Windows: <code>happy-adams\bin\start_gui.bat</code></p>
-</li>
-<li>Linux: <code>happy-adams/bin/start_gui.sh</code></li>
-</ul>
-<h2 id="available-flows">Available flows<a class="headerlink" href="#available-flows" title="Permanent link">#</a></h2>
-<p>Of the flows that are come with the Happy ADAMS framework, the following ones 
-are relevant to the Happy project:</p>
-<ul>
-<li><code>adams-imaging-annotate_objects.flow</code> - generating annotations for 
-  object detection (bounding box or polygon)</li>
-<li><code>adams-imaging-image_segmentation_annotation.flow</code> - generating annotations 
-  for image segmentation (pixel-level classification)</li>
-<li><code>adams-imaging-ext_run-sam.flow</code> - downloads and runs 
-  <a href="https://github.com/waikato-datamining/pytorch/tree/master/segment-anything">SAM (Segment Anything Model)</a> 
-  via Docker (can be used within the above two flows as a separate annotation 
-  tool) </li>
-</ul>
-<h2 id="tutorials">Tutorials<a class="headerlink" href="#tutorials" title="Permanent link">#</a></h2>
-<p>Instructions on how to use these flows are available from the 
-<a href="https://www.data-mining.co.nz/applied-deep-learning/">Applied Deep Learning</a>
-website, specifically:</p>
-<ul>
-<li><a href="https://www.data-mining.co.nz/applied-deep-learning/object_detection/annotate/">object detection</a></li>
-<li><a href="https://www.data-mining.co.nz/applied-deep-learning/image_segmentation/annotate/">image segmentation</a></li>
-</ul>
-<h2 id="preview-browser">Preview browser<a class="headerlink" href="#preview-browser" title="Permanent link">#</a></h2>
-<p>The <em>Preview browser</em> (from the <em>Visualization</em> menu) can be used for viewing
-PNG/OPEX JSON files that were export from the <a href="../happy_tools/happy-envi-viewer/">happy-envi-viewer</a>
-tool.</p>
-<p>Using the <em>ObjectLocationsFromReport</em> with the <em>OpexObjectLocationsReader</em> you
-can generate an overlay of the annotations like this:</p>
-<p><img alt="ADAMS Preview browser - OPEX annotations" src="../img/adams-previewbrowser1.png" /></p>
-<p>The options used can be seen here:</p>
-<p><img alt="ADAMS Preview browser - options for OPEX annotations" src="../img/adams-previewbrowser2.png" /></p>
-<p>And here as a configuration setup that you can paste via the drop-down button
-in the top-right corner of the options dialog:</p>
-<pre><code># Project: adams
-# Date: 2023-08-23 16:26:05
-# User: fracpete
-# Charset: UTF-8
-# Modules: adams-core,adams-docker,adams-imaging,adams-imaging-ext,adams-json,adams-meta,adams-net,adams-redis,adams-spreadsheet,adams-xml
-#
-adams.gui.tools.previewbrowser.ObjectLocationsFromReport
-    -image-reader
-        adams.data.io.input.JAIImageReader
-    -reader
-        adams.data.io.input.OpexObjectLocationsReader
-    -type-color-provider
-        adams.gui.visualization.core.DefaultColorProvider
-    -label-anchor
-    MIDDLE_CENTER
-    -shape-color-provider
-        adams.gui.visualization.core.TranslucentColorProvider
-            -provider
-                adams.gui.visualization.core.DefaultColorProvider
-    -finder
-        adams.data.objectfinder.AllFinder
-    -overlap-detection
-        adams.data.objectoverlap.AreaRatio
-    -overlap-removal
-        adams.data.overlappingobjectremoval.PassThrough
-    -show-object-panel
-    true
-</code></pre>
+<p>If you are not familiar with Docker, please feel free to have a look at
+the <a href="https://www.data-mining.co.nz/docker-for-data-scientists/">Docker for Data Scientists</a>
+introduction.</p>
 
 
 
@@ -970,7 +769,7 @@ adams.gui.tools.previewbrowser.ObjectLocationsFromReport
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../docker/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docker" rel="prev">
+        <a href="../installation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installation" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -979,20 +778,20 @@ adams.gui.tools.previewbrowser.ObjectLocationsFromReport
               <span class="md-footer__direction">
                 Previous
               </span>
-              Docker
+              Installation
             </div>
           </div>
         </a>
       
       
         
-        <a href="../happy_tools/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview" rel="next">
+        <a href="../adams/" class="md-footer__link md-footer__link--next" aria-label="Next: ADAMS" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Overview
+              ADAMS
             </div>
           </div>
           <div class="md-footer__button md-icon">
