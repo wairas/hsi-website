@@ -47,6 +47,7 @@ nav:
         - 'happy-keras-unsupervised-build': happy/happy_tools_keras/happy-keras-unsupervised-build.md
       - 'SAM': happy/sam.md
       - 'SAM-HQ': happy/sam-hq.md
+  - 'Hardware': hardware.md
   - 'Publications': publications.md
   - 'Team': team.md
 
