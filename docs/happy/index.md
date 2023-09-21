@@ -6,7 +6,7 @@ HAPPy, short for "Hyperspectral Application Platform in Python," stands as a pio
 
 At its core, HAPPy seamlessly integrates data acquisition, annotation, analysis, and the exploration of novel statistical machine learning and deep learning approaches. 
 
-Key Features:
+# Key Features
 
 Containerized Algorithm Management: HAPPy simplifies algorithm deployment, ensuring compatibility with open-source machine learning platforms.
 
