@@ -1,6 +1,21 @@
-Applications, Python libraries and Docker images for hyper-spectral data processing and modelling.
+# Overview
 
 ![HAPPy logo](img/logo.png)
+
+HAPPy, short for "Hyperspectral Application Platform in Python," stands as a pioneering platform at the forefront of hyperspectral imaging technology. Designed by the Hyperspectral Imaging Group at the University of Waikato, HAPPy unifies hyperspectral workflows for how hyperspectral images are acquired, processed, and analyzed.
+
+At its core, HAPPy seamlessly integrates data acquisition, annotation, analysis, and the exploration of novel statistical machine learning and deep learning approaches. 
+
+Key Features:
+
+Containerized Algorithm Management: HAPPy simplifies algorithm deployment, ensuring compatibility with open-source machine learning platforms.
+Hardware-Software Calibration Protocols: Real-time machine learning model assessment at the imaging front enhances adaptability.
+Efficiency in Hyperspectral Workflow: Accelerated experimentation allows quick feasibility assessment and method shortlisting for development.
+Empowering Innovation: HAPPy empowers researchers to bridge the gap between hyperspectral data and state-of-the-art machine learning algorithms. It is the tool that fosters quicker experimentation, innovation, and discovery within the dynamic field of hyperspectral imaging.
+Open Source and Collaborative: Committed to the principles of open-source collaboration, we invite researchers, engineers, and enthusiasts from around the world to explore, contribute, and leverage the power of HAPPy. Together, we're driving the evolution of hyperspectral imaging technology.
+
+Get Started:
+Whether you're a seasoned hyperspectral imaging expert or just embarking on your journey, HAPPy is here to simplify, accelerate, and amplify your research efforts. Scroll down for information on installation and usage, as well as access to our tools and publications.
 
 # Installation
 
