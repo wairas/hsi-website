@@ -1,5 +1,5 @@
 # hsi-website
-Website for the Hyper-spectral Imaging Group at the University of Waikato.
+Website for the Hyperspectral Imaging Group at the University of Waikato.
 
 ## Content
 

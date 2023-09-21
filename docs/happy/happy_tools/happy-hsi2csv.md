@@ -5,7 +5,7 @@ usage: happy-hsi2csv [-h] -d DIR -m DIR -s FILE -o DIR
                      [-M [METADATA_VALUES [METADATA_VALUES ...]]] -T
                      TARGETS [TARGETS ...]
 
-Generates CSV files from hyper-spectral images.
+Generates CSV files from hyperspectral images.
 
 optional arguments:
   -h, --help            show this help message and exit

@@ -1,4 +1,4 @@
-The Hyper-spectral imaging team:
+The Hyperspectral imaging team:
 
 ![People](img/people.png)
 

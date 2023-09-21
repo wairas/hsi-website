@@ -12,7 +12,7 @@ get automatically applied to the scan:
 At the bottom of the window, you get a quick info on what dimensions the
 scan has (width, height and channels). 
 
-The three sliders allow you to select the channels from the hyper-spectral 
+The three sliders allow you to select the channels from the hyperspectral 
 image to act as red, green and blue channel for the fake RGB image that is 
 being displayed. Left-clicking on the label next to the slider, depicting
 the current channel value, pops up a dialog for entering a specific channel.
@@ -108,7 +108,7 @@ usage: happy-envi-viewer [-h] [-s SCAN] [-f BLACK_REFERENCE]
                          [--redis_connect] [--marker_size INT]
                          [--marker_color HEXCOLOR] [--min_obj_size INT]
 
-ENVI Hyper-spectral Image Viewer. Offers contour detection using SAM (Segment-
+ENVI Hyperspectral Image Viewer. Offers contour detection using SAM (Segment-
 Anything: https://github.com/waikato-datamining/pytorch/tree/master/segment-
 anything)
 
