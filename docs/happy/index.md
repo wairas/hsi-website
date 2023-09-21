@@ -1,6 +1,8 @@
 # Overview
 
-![HAPPy logo](img/logo.png)
+<p align="center">
+  <img src="img/logo.png" alt="HAPPy logo">
+</p>
 
 HAPPy, short for "Hyperspectral Application Platform in Python," stands as a pioneering platform at the forefront of hyperspectral imaging technology. Designed by the Hyperspectral Imaging Group at the University of Waikato, HAPPy unifies hyperspectral workflows for how hyperspectral images are acquired, processed, and analyzed.
 
