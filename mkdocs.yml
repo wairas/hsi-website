@@ -5,6 +5,8 @@ repo_url: https://github.com/wairas/hsi-website
 edit_uri: edit/main/docs/
 theme:
     name: material
+    logo: logo.png
+    favicon: favicon.ico
 markdown_extensions:
     - toc:
         baselevel: 2
