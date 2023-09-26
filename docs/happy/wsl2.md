@@ -34,3 +34,9 @@ wsl --set-version Ubuntu-22.04 2
 ```
 
 Source: [https://stackoverflow.com/a/73164601](https://stackoverflow.com/a/73164601)
+
+
+# Advanced configuration
+
+For more information on how to configure WSL2, please see 
+[here](https://learn.microsoft.com/en-us/windows/wsl/wsl-config).
