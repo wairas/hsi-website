@@ -818,27 +818,34 @@
   <h1>happy-scikit-unsupervised-build</h1>
 
 <h2 id="command-line">Command-line<a class="headerlink" href="#command-line" title="Permanent link">#</a></h2>
-<pre><code>usage: happy-scikit-unsupervised-build [-h] [--repeat_num REPEAT_NUM]
-                                       data_folder clusterer_name
-                                       clusterer_params target_value
-                                       happy_splitter_file output_folder
+<pre><code>usage: happy-scikit-unsupervised-build [-h] -d DATA_FOLDER
+                                       [-m CLUSTERER_METHOD]
+                                       [-p CLUSTERER_PARAMS] -s
+                                       HAPPY_SPLITTER_FILE -o OUTPUT_FOLDER
+                                       [-r REPEAT_NUM]
 
 Evaluate clustering on hyperspectral data using specified clusterer and pixel
 selector.
 
-positional arguments:
-  data_folder           Directory containing the hyperspectral data
-  clusterer_name        Clusterer name (e.g., kmeans, agglomerative, spectral,
-                        dbscan, meanshift)
-  clusterer_params      JSON string containing clusterer parameters
-  target_value          Target value column name
-  happy_splitter_file   Happy Splitter file
-  output_folder         Output JSON file to store the predictions
-
 optional arguments:
   -h, --help            show this help message and exit
-  --repeat_num REPEAT_NUM
-                        Repeat number (default: 1) (default: 0)
+  -d DATA_FOLDER, --data_folder DATA_FOLDER
+                        Directory containing the hyperspectral data (default:
+                        None)
+  -m CLUSTERER_METHOD, --clusterer_method CLUSTERER_METHOD
+                        Clusterer name (e.g.,
+                        kmeans,agglomerative,spectral,dbscan,meanshift) or
+                        full class name (default: kmeans)
+  -p CLUSTERER_PARAMS, --clusterer_params CLUSTERER_PARAMS
+                        JSON string containing clusterer parameters (default:
+                        {})
+  -s HAPPY_SPLITTER_FILE, --happy_splitter_file HAPPY_SPLITTER_FILE
+                        Happy Splitter file (default: None)
+  -o OUTPUT_FOLDER, --output_folder OUTPUT_FOLDER
+                        Output JSON file to store the predictions (default:
+                        None)
+  -r REPEAT_NUM, --repeat_num REPEAT_NUM
+                        Repeat number (default: 0) (default: 0)
 </code></pre>
 
 
