@@ -5,7 +5,6 @@ utilities and graphical viewers for HSI files:
 * [happy-envi-viewer](happy-envi-viewer.md) - for viewing ENVI HSI images
 * [happy-generate-image-regions-objects](happy-generate-image-regions-objects.md) - generates datasets as numpy cubes for deep learning
 * [happy-hdr-info](happy-hdr-info.md) - outputs information on ENVI HDR files
-* [happy-hsi2csv](happy-hsi2csv.md) - converts HSI images into CSV
 * [happy-hsi2rbg](happy-hsi2rbg.md) - generates fake RGB PNG files from HSI images
 * [happy-mat-info](happy-mat-info.md) - outputs Matlab struct information
 * [happy-opex2happy](happy-opex2happy.md) - converts OPEX JSON annotations and PNG images into happy data structures
