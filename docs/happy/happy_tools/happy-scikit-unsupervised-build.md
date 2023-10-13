@@ -1,7 +1,8 @@
 # Command-line
 
 ```
-usage: happy-scikit-unsupervised-build [-h] -d DATA_FOLDER
+usage: happy-scikit-unsupervised-build [-h] -d DATA_FOLDER [-P PREPROCESSORS]
+                                       [-S PIXEL_SELECTORS]
                                        [-m CLUSTERER_METHOD]
                                        [-p CLUSTERER_PARAMS] -s
                                        HAPPY_SPLITTER_FILE -o OUTPUT_FOLDER
@@ -15,6 +16,13 @@ optional arguments:
   -d DATA_FOLDER, --data_folder DATA_FOLDER
                         Directory containing the hyperspectral data (default:
                         None)
+  -P PREPROCESSORS, --preprocessors PREPROCESSORS
+                        The preprocessors to apply to the data (default:
+                        wavelength-subset -f 60 -t 189 snv derivative pca -n 5
+                        -p 20)
+  -S PIXEL_SELECTORS, --pixel_selectors PIXEL_SELECTORS
+                        The pixel selectors to use. (default: simple-ps -n 32
+                        -b)
   -m CLUSTERER_METHOD, --clusterer_method CLUSTERER_METHOD
                         Clusterer name (e.g.,
                         kmeans,agglomerative,spectral,dbscan,meanshift) or

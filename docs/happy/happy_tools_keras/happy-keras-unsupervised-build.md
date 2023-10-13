@@ -1,9 +1,9 @@
 # Command-line
 
 ```
-usage: happy-keras-unsupervised-build [-h] -d DATA_FOLDER -t TARGET
-                                      [-n NUM_CLUSTERS] -s HAPPY_SPLITTER_FILE
-                                      -o OUTPUT_FOLDER
+usage: happy-keras-unsupervised-build [-h] -d DATA_FOLDER [-P PREPROCESSORS]
+                                      -t TARGET [-n NUM_CLUSTERS] -s
+                                      HAPPY_SPLITTER_FILE -o OUTPUT_FOLDER
 
 Build a Keras-based unsupervised segmentation model.
 
@@ -11,6 +11,10 @@ optional arguments:
   -h, --help            show this help message and exit
   -d DATA_FOLDER, --data_folder DATA_FOLDER
                         Path to the data folder (default: None)
+  -P PREPROCESSORS, --preprocessors PREPROCESSORS
+                        The preprocessors to apply to the data (default:
+                        wavelength-subset -f 60 -t 189 snv derivative pad -W
+                        128 -H 128 -v 0)
   -t TARGET, --target TARGET
                         Name of the target variable (default: None)
   -n NUM_CLUSTERS, --num_clusters NUM_CLUSTERS

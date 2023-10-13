@@ -2,6 +2,7 @@
 
 ```
 usage: happy-scikit-regression-build [-h] -d HAPPY_DATA_BASE_DIR
+                                     [-P PREPROCESSORS] [-S PIXEL_SELECTORS]
                                      [-m REGRESSION_METHOD]
                                      [-p REGRESSION_PARAMS] -t TARGET_VALUE -s
                                      HAPPY_SPLITTER_FILE -o OUTPUT_FOLDER
@@ -15,6 +16,12 @@ optional arguments:
   -d HAPPY_DATA_BASE_DIR, --happy_data_base_dir HAPPY_DATA_BASE_DIR
                         Directory containing the Happy Data files (default:
                         None)
+  -P PREPROCESSORS, --preprocessors PREPROCESSORS
+                        The preprocessors to apply to the data (default:
+                        wavelength-subset -f 60 -t 189 sni snv derivative -w
+                        15 pad -W 128 -H 128 -v 0)
+  -S PIXEL_SELECTORS, --pixel_selectors PIXEL_SELECTORS
+                        The pixel selectors to use. (default: simple-ps -n 64)
   -m REGRESSION_METHOD, --regression_method REGRESSION_METHOD
                         Regression method name (e.g., linearregression,ridge,l
                         ars,plsregression,plsneighbourregression,lasso,elastic
