@@ -101,7 +101,7 @@ and also load scan, black and white reference files:
 usage: happy-envi-viewer [-h] [-s SCAN] [-f BLACK_REFERENCE]
                          [-w WHITE_REFERENCE] [-r INT] [-g INT] [-b INT]
                          [--autodetect_channels] [--keep_aspectratio]
-                         [--check_scan_dimensions]
+                         [--check_scan_dimensions] [--export_to_scan_dir]
                          [--annotation_color HEXCOLOR] [--redis_host HOST]
                          [--redis_port PORT] [--redis_pw PASSWORD]
                          [--redis_in CHANNEL] [--redis_out CHANNEL]
@@ -144,6 +144,8 @@ optional arguments:
                         whether to compare the dimensions of subsequently
                         loaded scans and output a warning if they differ
                         (default: None)
+  --export_to_scan_dir  whether to export images to the scan directory rather
+                        than the last one used (default: None)
   --annotation_color HEXCOLOR
                         the color to use for the annotations like contours
                         (hex color) (default: None)
