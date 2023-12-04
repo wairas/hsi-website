@@ -21,3 +21,7 @@ the tools would be located in the following directory in the user's home folder:
 ```bash
 happy/bin
 ```
+
+Overview of available plugins and their respective parameters is located here:
+
+[https://github.com/wairas/happy-tools/blob/main/plugins/README.md](https://github.com/wairas/happy-tools/blob/main/plugins/README.md)
