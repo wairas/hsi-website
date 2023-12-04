@@ -1034,6 +1034,7 @@ and also load scan, black and white reference files:</p>
                          [--white_ref_method METHOD]
                          [--preprocessing PIPELINE]
                          [--log_timestamp_format FORMAT]
+                         [-V {DEBUG,INFO,WARNING,ERROR,CRITICAL}]
 
 ENVI Hyperspectral Image Viewer. Offers contour detection using SAM (Segment-
 Anything: https://github.com/waikato-datamining/pytorch/tree/master/segment-
@@ -1107,6 +1108,8 @@ optional arguments:
                         the format string for the logging timestamp, see: http
                         s://docs.python.org/3/library/datetime.html#strftime-
                         and-strptime-format-codes (default: [%H:%M:%S.%f])
+  -V {DEBUG,INFO,WARNING,ERROR,CRITICAL}, --logging_level {DEBUG,INFO,WARNING,ERROR,CRITICAL}
+                        The logging level to use. (default: WARN)
 </code></pre>
 
 
