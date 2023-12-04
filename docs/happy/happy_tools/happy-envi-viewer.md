@@ -113,6 +113,7 @@ usage: happy-envi-viewer [-h] [-s SCAN] [-f BLACK_REFERENCE]
                          [--white_ref_method METHOD]
                          [--preprocessing PIPELINE]
                          [--log_timestamp_format FORMAT]
+                         [-V {DEBUG,INFO,WARNING,ERROR,CRITICAL}]
 
 ENVI Hyperspectral Image Viewer. Offers contour detection using SAM (Segment-
 Anything: https://github.com/waikato-datamining/pytorch/tree/master/segment-
@@ -186,4 +187,6 @@ optional arguments:
                         the format string for the logging timestamp, see: http
                         s://docs.python.org/3/library/datetime.html#strftime-
                         and-strptime-format-codes (default: [%H:%M:%S.%f])
+  -V {DEBUG,INFO,WARNING,ERROR,CRITICAL}, --logging_level {DEBUG,INFO,WARNING,ERROR,CRITICAL}
+                        The logging level to use. (default: WARN)
 ```
