@@ -36,7 +36,7 @@ nav:
         - 'happy-hsi2rbg': happy/happy_tools/happy-hsi2rbg.md
         - 'happy-mat-info': happy/happy_tools/happy-mat-info.md
         - 'happy-opex2happy': happy/happy_tools/happy-opex2happy.md
-        - 'happy-mat-info': happy/happy_tools/happy-mat-info.md
+        - 'happy-opex-labels': happy/happy_tools/happy-opex-labels.md
         - 'happy-plot-preproc': happy/happy_tools/happy-plot-preproc.md
         - 'happy-process-data': happy/happy_tools/happy-process-data.md
         - 'happy-scikit-regression-build': happy/happy_tools/happy-scikit-regression-build.md
