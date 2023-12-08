@@ -12,6 +12,7 @@ utilities and graphical viewers for HSI files:
 * [happy-process-data](happy-process-data.md) - applies a preprocessing pipeline to the data
 * [happy-plot-preproc](happy-plot-preproc.md) - plots set of pixels using various preprocessors
 * [happy-scikit-regression-build](happy-scikit-regression-build.md) - evaluates regression models on HAPPy data
+* [happy-scikit-segmentation-build](happy-scikit-segmentation-build.md) - evaluates segmentation models on HAPPy data
 * [happy-scikit-unsupervised-build](happy-scikit-unsupervised-build.md) - evaluates cluster models on HAPPy data
 * [happy-splitter](happy-splitter.md) - for generating train/validation/test splits for HAPPy data
 
