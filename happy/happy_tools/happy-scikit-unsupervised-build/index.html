@@ -852,6 +852,7 @@
                                        [-p CLUSTERER_PARAMS] -s
                                        HAPPY_SPLITTER_FILE -o OUTPUT_FOLDER
                                        [-r REPEAT_NUM]
+                                       [-V {DEBUG,INFO,WARNING,ERROR,CRITICAL}]
 
 Evaluate clustering on hyperspectral data using specified clusterer and pixel
 selector.
@@ -870,7 +871,7 @@ optional arguments:
   -S PIXEL_SELECTORS, --pixel_selectors PIXEL_SELECTORS
                         The pixel selectors to use. Either pixel selector
                         command-line(s) or file with one pixel selector
-                        command-line per line. (default: simple-ps -n 32 -b)
+                        command-line per line. (default: ps-simple -n 32 -b)
   -m CLUSTERER_METHOD, --clusterer_method CLUSTERER_METHOD
                         Clusterer name (e.g.,
                         kmeans,agglomerative,spectral,dbscan,meanshift) or
@@ -885,6 +886,8 @@ optional arguments:
                         None)
   -r REPEAT_NUM, --repeat_num REPEAT_NUM
                         Repeat number (default: 0) (default: 0)
+  -V {DEBUG,INFO,WARNING,ERROR,CRITICAL}, --logging_level {DEBUG,INFO,WARNING,ERROR,CRITICAL}
+                        The logging level to use. (default: WARN)
 </code></pre>
 
 
