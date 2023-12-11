@@ -7,6 +7,7 @@ usage: happy-scikit-regression-build [-h] -d HAPPY_DATA_BASE_DIR
                                      [-p REGRESSION_PARAMS] -t TARGET_VALUE -s
                                      HAPPY_SPLITTER_FILE -o OUTPUT_FOLDER
                                      [-r REPEAT_NUM]
+                                     [-V {DEBUG,INFO,WARNING,ERROR,CRITICAL}]
 
 Evaluate regression model on Happy Data using specified splits and pixel
 selector.
@@ -25,7 +26,7 @@ optional arguments:
   -S PIXEL_SELECTORS, --pixel_selectors PIXEL_SELECTORS
                         The pixel selectors to use. Either pixel selector
                         command-line(s) or file with one pixel selector
-                        command-line per line. (default: simple-ps -n 64)
+                        command-line per line. (default: ps-simple -n 64)
   -m REGRESSION_METHOD, --regression_method REGRESSION_METHOD
                         Regression method name (e.g., linearregression,ridge,l
                         ars,plsregression,plsneighbourregression,lasso,elastic
@@ -43,4 +44,6 @@ optional arguments:
                         None)
   -r REPEAT_NUM, --repeat_num REPEAT_NUM
                         Repeat number (default: 0) (default: 0)
+  -V {DEBUG,INFO,WARNING,ERROR,CRITICAL}, --logging_level {DEBUG,INFO,WARNING,ERROR,CRITICAL}
+                        The logging level to use. (default: WARN)
 ```

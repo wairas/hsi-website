@@ -27,7 +27,7 @@ optional arguments:
   -S PIXEL_SELECTORS, --pixel_selectors PIXEL_SELECTORS
                         The pixel selectors to use. Either pixel selector
                         command-line(s) or file with one pixel selector
-                        command-line per line. (default: simple-ps -n 100 -b)
+                        command-line per line. (default: ps-simple -n 100 -b)
   -V {DEBUG,INFO,WARNING,ERROR,CRITICAL}, --logging_level {DEBUG,INFO,WARNING,ERROR,CRITICAL}
                         The logging level to use. (default: WARN)
 ```

@@ -4,6 +4,7 @@
 usage: happy-keras-unsupervised-build [-h] -d DATA_FOLDER [-P PREPROCESSORS]
                                       -t TARGET [-n NUM_CLUSTERS] -s
                                       HAPPY_SPLITTER_FILE -o OUTPUT_FOLDER
+                                      [-V {DEBUG,INFO,WARNING,ERROR,CRITICAL}]
 
 Build a Keras-based unsupervised segmentation model.
 
@@ -25,4 +26,6 @@ optional arguments:
                         Path to JSON file containing splits (default: None)
   -o OUTPUT_FOLDER, --output_folder OUTPUT_FOLDER
                         Path to the output folder (default: None)
+  -V {DEBUG,INFO,WARNING,ERROR,CRITICAL}, --logging_level {DEBUG,INFO,WARNING,ERROR,CRITICAL}
+                        The logging level to use. (default: WARN)
 ```
