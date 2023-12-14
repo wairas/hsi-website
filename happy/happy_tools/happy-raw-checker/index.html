@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#command-line" class="md-skip">
+        <a href="#main-window" class="md-skip">
           Skip to content
         </a>
       
@@ -460,6 +460,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#main-window" class="md-nav__link">
+    Main window
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#command-line" class="md-nav__link">
@@ -946,6 +953,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#main-window" class="md-nav__link">
+    Main window
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#command-line" class="md-nav__link">
     Command-line
   </a>
@@ -974,6 +988,19 @@
 
   <h1>happy-raw-checker</h1>
 
+<h2 id="main-window">Main window<a class="headerlink" href="#main-window" title="Permanent link">#</a></h2>
+<p>The <em>Raw checker</em> user interface performs some sanity checks on the <em>capture</em>
+folders containing the raw data. These checks are then displayed for the user,
+allowing them to check whether folders have been left out from annotating or
+whether incorrect label names were used.</p>
+<p><img alt="Raw checker - main window" src="../img/raw_checker-main.png" /></p>
+<p><em>File</em> menu:
+* <em>Select dir...</em> - the directory to analyze
+* <em>Save output...</em> - for saving an analysis to a file</p>
+<p><em>Edit</em> menu:
+* <em>Copy</em> - copies the currently displayed output to the clipboard</p>
+<p><em>View</em> menu:
+* <em>Output format...</em> - for selecting the type of output to generate</p>
 <h2 id="command-line">Command-line<a class="headerlink" href="#command-line" title="Permanent link">#</a></h2>
 <pre><code>usage: happy-raw-checker [-h] [-d RAW_DIR] [-f {text,text-compact,csv,json}]
 
