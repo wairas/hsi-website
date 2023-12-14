@@ -1,3 +1,23 @@
+# Main window
+
+The *Raw checker* user interface performs some sanity checks on the *capture*
+folders containing the raw data. These checks are then displayed for the user,
+allowing them to check whether folders have been left out from annotating or
+whether incorrect label names were used.
+
+![Raw checker - main window](img/raw_checker-main.png)
+
+*File* menu:
+* *Select dir...* - the directory to analyze
+* *Save output...* - for saving an analysis to a file
+
+*Edit* menu:
+* *Copy* - copies the currently displayed output to the clipboard
+
+*View* menu:
+* *Output format...* - for selecting the type of output to generate
+
+
 # Command-line
 
 ```
