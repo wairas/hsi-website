@@ -1,8 +1,14 @@
 [happy-tools](https://github.com/wairas/happy-tools) contains several command-line 
 utilities and graphical viewers for HSI files:
 
+User interface tools:
+
 * [happy-data-viewer](happy-data-viewer.md) - for viewing HAPPy data folders
 * [happy-envi-viewer](happy-envi-viewer.md) - for viewing ENVI HSI images
+* [happy-raw-checker](happy-raw-checker.md) - sanity checks on raw capture folders
+
+Command-line tools:
+
 * [happy-generate-image-regions-objects](happy-generate-image-regions-objects.md) - generates datasets as numpy cubes for deep learning
 * [happy-hdr-info](happy-hdr-info.md) - outputs information on ENVI HDR files
 * [happy-hsi2rbg](happy-hsi2rbg.md) - generates fake RGB PNG files from HSI images
