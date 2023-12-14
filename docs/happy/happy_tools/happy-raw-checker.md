@@ -7,14 +7,17 @@ whether incorrect label names were used.
 
 ![Raw checker - main window](img/raw_checker-main.png)
 
-*File* menu:
+**File** menu:
+
 * *Select dir...* - the directory to analyze
 * *Save output...* - for saving an analysis to a file
 
-*Edit* menu:
+**Edit** menu:
+
 * *Copy* - copies the currently displayed output to the clipboard
 
-*View* menu:
+**View** menu:
+ 
 * *Output format...* - for selecting the type of output to generate
 
 
