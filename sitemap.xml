@@ -116,6 +116,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-raw-checker/</loc>
+         <lastmod>2023-12-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-scikit-regression-build/</loc>
          <lastmod>2023-12-14</lastmod>
          <changefreq>daily</changefreq>
