@@ -9,8 +9,9 @@ utilities and graphical viewers for HSI files:
 * [happy-mat-info](happy-mat-info.md) - outputs Matlab struct information
 * [happy-opex2happy](happy-opex2happy.md) - converts OPEX JSON annotations and PNG images into happy data structures
 * [happy-opex-labels](happy-opex-labels.md) - performs actions on OPEX JSON files that it located
-* [happy-process-data](happy-process-data.md) - applies a preprocessing pipeline to the data
 * [happy-plot-preproc](happy-plot-preproc.md) - plots set of pixels using various preprocessors
+* [happy-process-data](happy-process-data.md) - applies a preprocessing pipeline to the data
+* [happy-raw-check](happy-raw-check.md) - sanity checks on raw capture folders
 * [happy-scikit-regression-build](happy-scikit-regression-build.md) - evaluates regression models on HAPPy data
 * [happy-scikit-segmentation-build](happy-scikit-segmentation-build.md) - evaluates segmentation models on HAPPy data
 * [happy-scikit-unsupervised-build](happy-scikit-unsupervised-build.md) - evaluates cluster models on HAPPy data

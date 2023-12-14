@@ -39,6 +39,7 @@ nav:
         - 'happy-opex-labels': happy/happy_tools/happy-opex-labels.md
         - 'happy-plot-preproc': happy/happy_tools/happy-plot-preproc.md
         - 'happy-process-data': happy/happy_tools/happy-process-data.md
+        - 'happy-raw-check': happy/happy_tools/happy-raw-check.md
         - 'happy-scikit-regression-build': happy/happy_tools/happy-scikit-regression-build.md
         - 'happy-scikit-segmentation-build': happy/happy_tools/happy-scikit-segmentation-build.md
         - 'happy-scikit-unsupervised-build': happy/happy_tools/happy-scikit-unsupervised-build.md
