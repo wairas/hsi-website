@@ -9,7 +9,7 @@ whether incorrect label names were used.
 
 **File** menu:
 
-* *Select dir...* - the directory to analyze
+* *Select dir...* - the directory to analyze (looks recursively for `capture` folders beneath this folder)
 * *Save output...* - for saving an analysis to a file
 
 **Edit** menu:
