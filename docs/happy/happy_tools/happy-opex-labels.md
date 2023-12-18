@@ -1,7 +1,7 @@
 # Command-line
 
 ```
-usage: happy-opex-labels [-h] -i INPUT [INPUT ...] [-r]
+usage: happy-opex-labels [-h] -i INPUT [-r]
                          [-V {DEBUG,INFO,WARNING,ERROR,CRITICAL}]
                          {list-labels,update-labels} ...
 
@@ -15,8 +15,8 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  -i INPUT [INPUT ...], --input INPUT [INPUT ...]
-                        The dir(s) with the OPEX JSON files (default: None)
+  -i INPUT, --input INPUT
+                        The dir with the OPEX JSON files (default: None)
   -r, --recursive       Whether to search the directory recursively (default:
                         False)
   -V {DEBUG,INFO,WARNING,ERROR,CRITICAL}, --logging_level {DEBUG,INFO,WARNING,ERROR,CRITICAL}
