@@ -4,7 +4,7 @@
 usage: happy-splitter [-h] -d HAPPY_BASE_FOLDER [-r NUM_REPEATS]
                       [-f NUM_FOLDS] [-t TRAIN_PERCENT]
                       [-v VALIDATION_PERCENT] [-R] [-H HOLDOUT_PERCENT] -o
-                      OUTPUT_FILE
+                      OUTPUT_FILE [-S SEED]
 
 Generate train/validation/test splits for Happy data.
 
@@ -28,4 +28,6 @@ optional arguments:
   -o OUTPUT_FILE, --output_file OUTPUT_FILE
                         Path to the output split file (default:
                         output_split.json)
+  -S SEED, --seed SEED  The seed to use for reproducible results (default:
+                        None)
 ```
