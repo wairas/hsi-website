@@ -13,7 +13,7 @@ Command-line tools:
 * [happy-hdr-info](happy-hdr-info.md) - outputs information on ENVI HDR files
 * [happy-hsi2rbg](happy-hsi2rbg.md) - generates fake RGB PNG files from HSI images
 * [happy-mat-info](happy-mat-info.md) - outputs Matlab struct information
-* [happy-opex2happy](happy-opex2happy.md) - converts OPEX JSON annotations and PNG images into happy data structures
+* [happy-ann2happy](happy-ann2happy) - converts OPEX JSON polygon, ENVI pixel annotations and PNG images into happy data structures
 * [happy-opex-labels](happy-opex-labels.md) - performs actions on OPEX JSON files that it located
 * [happy-plot-preproc](happy-plot-preproc.md) - plots set of pixels using various preprocessors
 * [happy-process-data](happy-process-data.md) - applies a preprocessing pipeline to the data
