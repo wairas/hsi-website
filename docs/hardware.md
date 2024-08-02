@@ -13,9 +13,9 @@ The hyperspectral imaging hardware available:
 * [Specim FX17 User Manual](img/fx17-user-manual.pdf)
 * [Specim RS10 User Guide](img/rotating-stage-10-user-guide-v1.0.pdf)
 * [LUMO Scanner](img/lumo_scanner.pdf)
+* [Operational procedures](files/Operational%20Procedures%20for%20HSI.docx)
 
 
 # Setup
 
 ![Hyperspectral camera setup](img/hsi_setup.jpg)
-
