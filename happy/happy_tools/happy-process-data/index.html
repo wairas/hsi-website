@@ -479,8 +479,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../happy-hdr-info/" class="md-nav__link">
-        happy-hdr-info
+      <a href="../happy-ann2happy/" class="md-nav__link">
+        happy-ann2happy
       </a>
     </li>
   
@@ -493,8 +493,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../happy-hsi2csv.md" class="md-nav__link">
-        happy-hsi2csv
+      <a href="../happy-generate-image-regions-objects/" class="md-nav__link">
+        happy-generate-image-regions-objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../happy-hdr-info/" class="md-nav__link">
+        happy-hdr-info
       </a>
     </li>
   
@@ -523,20 +537,6 @@
     <li class="md-nav__item">
       <a href="../happy-mat-info/" class="md-nav__link">
         happy-mat-info
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../happy-opex2happy.md" class="md-nav__link">
-        happy-opex2happy
       </a>
     </li>
   
@@ -610,6 +610,39 @@
   <a href="#command-line" class="md-nav__link">
     Command-line
   </a>
+  
+    <nav class="md-nav" aria-label="Command-line">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#happydata-directory-to-matlab" class="md-nav__link">
+    HappyData directory to Matlab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#envi-files-to-jpg-batch-processing" class="md-nav__link">
+    ENVI files to JPG (batch processing)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -950,6 +983,39 @@
     Command-line
   </a>
   
+    <nav class="md-nav" aria-label="Command-line">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#happydata-directory-to-matlab" class="md-nav__link">
+    HappyData directory to Matlab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#envi-files-to-jpg-batch-processing" class="md-nav__link">
+    ENVI files to JPG (batch processing)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -999,6 +1065,39 @@ optional arguments:
                         gets applied to full file path
   -V {DEBUG,INFO,WARNING,ERROR,CRITICAL}, --logging_level {DEBUG,INFO,WARNING,ERROR,CRITICAL}
                         The logging level to use. (default: WARN)
+</code></pre>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h3>
+<h4 id="happydata-directory-to-matlab">HappyData directory to Matlab<a class="headerlink" href="#happydata-directory-to-matlab" title="Permanent link">#</a></h4>
+<p>The following converts all samples in HappyData format in the <code>/some/where/happy</code>
+directory to Matlab, storing them in <code>/some/where/matlab</code>: </p>
+<pre><code class="language-bash">happy-process-data \
+  -V INFO \
+  happy-reader \
+    -V INFO \
+    -b /some/where/happy \
+  matlab-writer \
+    -V INFO \
+    -b /some/where/matlab
+</code></pre>
+<h4 id="envi-files-to-jpg-batch-processing">ENVI files to JPG (batch processing)<a class="headerlink" href="#envi-files-to-jpg-batch-processing" title="Permanent link">#</a></h4>
+<p>The following command finds all <code>.hdr</code> files recursively below the directory
+<code>/some/where/envi</code>, turns them into JPEG images and stores them in <code>/some/where/jpg</code>:  </p>
+<pre><code class="language-bash">happy-process-data \
+  -V INFO \
+  -i &quot;/some/where/envi/**/*.hdr&quot; \
+  --exclude &quot;.*DARKREF_.*&quot; &quot;.*MASK_.*&quot; \
+  envi-reader \
+    -V INFO \
+    -b . \
+    --exclude &quot;DARKREF_.*&quot; &quot;MASK_.*&quot; \
+  image-writer \
+    -V INFO \
+    -b /some/where/jpg \
+    -R 95 \
+    -G 152 \
+    -B 111 \
+    -o &quot;{BASEDIR}/{SAMPLEID}.jpg&quot; \
+    --suppress_metadata
 </code></pre>
 
 
