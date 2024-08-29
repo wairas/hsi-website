@@ -116,7 +116,7 @@ reference methods rely on
 From that menu, you can also open black and white reference ENVI files that
 get applied to the scan, according to the :
 
-![Envi Viewer - scan](img/envi_viewer-scan.png)
+![Envi Viewer - image tab](img/envi_viewer-scan.png)
 
 At the bottom of the window, you get a quick info on what dimensions the
 scan has (width, height and channels). 
@@ -135,7 +135,7 @@ file.
 On the *Info* tab, you can see what files are currently loaded and what 
 dimensions these files have:
 
-![Envi Viewer - info](img/envi_viewer-info.png)
+![Envi Viewer - info tab](img/envi_viewer-info.png)
 
 
 ## Options tab
@@ -155,7 +155,7 @@ On the *Options* tab, you can change various settings:
 * [Preprocessing](https://github.com/wairas/happy-tools/tree/main/plugins#happy-data-preprocessors) plugins
 * [Normalization](https://github.com/wairas/happy-tools/tree/main/plugins#normalizations) plugin (gets applied before creating RGB image)
 
-![Envi Viewer - options](img/envi_viewer-options.png)
+![Envi Viewer - options tab](img/envi_viewer-options.png)
 
 
 # Annotations
