@@ -26,3 +26,45 @@ optional arguments:
   -V {DEBUG,INFO,WARNING,ERROR,CRITICAL}, --logging_level {DEBUG,INFO,WARNING,ERROR,CRITICAL}
                         The logging level to use. (default: WARN)
 ```
+
+## Examples
+
+### HappyData directory to Matlab
+
+The following converts all samples in HappyData format in the `/some/where/happy`
+directory to Matlab, storing them in `/some/where/matlab`: 
+
+```bash
+happy-process-data \
+  -V INFO \
+  happy-reader \
+    -V INFO \
+    -b /some/where/happy \
+  matlab-writer \
+    -V INFO \
+    -b /some/where/matlab
+```
+
+### ENVI files to JPG (batch processing)
+
+The following command finds all `.hdr` files recursively below the directory
+`/some/where/envi`, turns them into JPEG images and stores them in `/some/where/jpg`:  
+
+```bash
+happy-process-data \
+  -V INFO \
+  -i "/some/where/envi/**/*.hdr" \
+  --exclude "DARKREF_.*" "MASK_.*" \
+  envi-reader \
+    -V INFO \
+    -b . \
+    --exclude "DARKREF_.*" "MASK_.*" \
+  image-writer \
+    -V INFO \
+    -b /some/where/jpg \
+    -R 95 \
+    -G 152 \
+    -B 111 \
+    -o "{BASEDIR}/{SAMPLEID}.jpg" \
+    --suppress_metadata
+```
