@@ -12,6 +12,7 @@ markdown_extensions:
         baselevel: 2
         permalink: "#"
     - attr_list
+    - sane_lists
 plugins:
     - search
     # https://github.com/soulless-viewer/mkdocs-video
@@ -34,11 +35,11 @@ nav:
           - 'happy-envi-viewer': happy/happy_tools/happy-envi-viewer.md
           - 'happy-raw-checker': happy/happy_tools/happy-raw-checker.md
         - 'Command-line tools':
+          - 'happy-ann2happy': happy/happy_tools/happy-ann2happy.md
+          - 'happy-generate-image-regions-objects': happy/happy_tools/happy-generate-image-regions-objects.md
           - 'happy-hdr-info': happy/happy_tools/happy-hdr-info.md
-          - 'happy-hsi2csv': happy/happy_tools/happy-hsi2csv.md
           - 'happy-hsi2rbg': happy/happy_tools/happy-hsi2rbg.md
           - 'happy-mat-info': happy/happy_tools/happy-mat-info.md
-          - 'happy-opex2happy': happy/happy_tools/happy-opex2happy.md
           - 'happy-opex-labels': happy/happy_tools/happy-opex-labels.md
           - 'happy-plot-preproc': happy/happy_tools/happy-plot-preproc.md
           - 'happy-process-data': happy/happy_tools/happy-process-data.md
