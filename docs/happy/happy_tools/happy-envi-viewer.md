@@ -58,7 +58,7 @@ In the sections below you can find short explanations of the various menu items.
 
 ## Polygons
 
-* Clear: removes all polygon annotations/markers
+* Clear: removes all polygon annotations
 * Color: sets the color for the polygon overlays
 * Modify: for deleting multiple polygons or changing multiple labels in one go
 * Add polygon: creates a polygon from the markers, if there are at least three 
@@ -66,8 +66,8 @@ In the sections below you can find short explanations of the various menu items.
 ## Pixels
 
 * Clear: removes all pixel annotations
-* Brush shape: square or round
-* Brush color: black or white
+* Brush shape: square or round shape
+* Brush color: whether the brush cursor is depicted in black or white
 * Brush size: lets the user choose the size of the brush
 * Change alpha: the alpha value to use for the annotation overlay (0: transparent, 255: oaque)
 * Select label: the label index determines the pixel value (0: background, >0: the label indices)
