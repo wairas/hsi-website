@@ -2,6 +2,7 @@ Used for viewing data that has been converted into a HAPPy folder structure.
 
 * HAPPy directories can be opened via *File -> Open dir...*
 * The currently displayed image can be exported via *File -> Export image...*
+* The menu items from the *Help* menu open browser windows with relevant pages.
 
 ![Data Viewer with sample loaded](img/data_viewer-main.png)
 
