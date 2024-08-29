@@ -1,5 +1,14 @@
 Used for viewing data that has been converted into a HAPPy folder structure.
 
+* HAPPy directories can be opened via *File -> Open dir...*
+* The currently displayed image can be exported via *File -> Export image...*
+
+![Data Viewer with sample loaded](img/data_viewer-main.png)
+
+When available, a *mask* can be overlaid with the appropriate *opacity*:
+
+![Data Viewer with mask overlaid](img/data_viewer-mask.png)
+
 # Command-line
 
 ```
