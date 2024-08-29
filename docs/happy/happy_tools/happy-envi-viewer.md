@@ -1,11 +1,120 @@
-# Usage
+# Menu
+
+In the sections below you can find short explanations of the various menu items.
+
+## File
+
+* Clear all: removes all loaded data and annotations
+* Open scan: opens an ENVI scan to view in the Image tab
+* Import
+
+    * Pixel annotations: imports pixels annotations from an ENVI file
+    * Polygon annotations: imports polygon annotations from an [OPEX JSON](https://github.com/waikato-datamining/fast-opex) file 
+
+* Clear black reference: removes any black reference scan/annotations
+* Open black reference: opens an ENVI scan to use as black reference (when using `rl-manual`)
+* Import black ref annotations: imports polygon annotations from an [OPEX JSON](https://github.com/waikato-datamining/fast-opex) file
+* Clear white reference: removes any white reference scan/annotations
+* Open white reference: opens an ENVI scan to use as white reference (when using `rl-manual`)
+* Import white ref annotations: imports polygon annotations from an [OPEX JSON](https://github.com/waikato-datamining/fast-opex) file
+* Export
+
+    * Image: exports the current as image (PNG/JPG) using the RGB slider settings
+    * Pixel annotations: exports the current pixel annotations as ENVI file
+    * Polygon annotations: exports the current polygon annotations as [OPEX JSON](https://github.com/waikato-datamining/fast-opex) file
+    * Sub-images: allows exporting parts of the scan in various formats (as determined by bounding boxes derived from polygon annotations); useful when multiple samples are present in one image 
+
+* Export options
+    
+    * Export to scan dir: uses the scan directory as initial directory when exporting annotations or images
+    * Overlay annotations: overlays the annotations onto the exported image
+    * Keep aspect ratio: keeps the aspect ratio of the scan when exporting the image
+    * Enforce MASK_ prefix: prefixes pixel annotations with MASK_ to ensure consistency
+
+* Session:
+
+    * Open: load a session JSON file
+    * Save: save the current session data to a JSON file
+
+* Close: closes the viewer application
+
+## Edit
+
+* Undo: performs an undo of markers/annotations/meta-data
+* Redo: restores the markers/annotations/meta-data
+
+## Mode
+
+* Polygons: switches to polygon annotation mode
+* Pixels: switches to pixel-wise annotation mode
+
+## Markers
+
+* Clear: clears all markers
+* Size: for setting the size of the marker circles
+* Color: the color to use for the marker circles
+
+## Polygons
+
+* Clear: removes all polygon annotations/markers
+* Color: sets the color for the polygon overlays
+* Modify: for deleting multiple polygons or changing multiple labels in one go
+* Add polygon: creates a polygon from the markers, if there are at least three 
+* Min object size: the minimum object size that objects detected by SAM must have (applied to width and height)
+* Run SAM: uses the current marker(s) as guidance point(s) for SAM to obtain outline detections 
+
+## Pixels
+
+* Clear: removes all pixel annotations
+* Brush shape: square or round
+* Brush color: black or white
+* Brush size: lets the user choose the size of the brush
+* Change alpha: the alpha value to use for the annotation overlay (0: transparent, 255: oaque)
+* Select label: the label index determines the pixel value (0: background, >0: the label indices)
+* Label key: generates a quick overview of the colors for the specified labels
+
+## Meta-data
+
+The meta-data managed with this menu will be exported with the polygon annotations.
+
+* Clear: removes all meta-data
+* Set: allows the user to enter a key-value pair
+* Remove: allows the user to remove key-value pairs one at a time 
+* View: displays the currently set meta-data in a dialog
+
+## View
+
+* Options
+
+    * Show pixel annotations: when checked any pixel annotations will be overlaid
+    * Show polygon annotations: when checked any polygon annotations will be overlaid
+
+* Display spectra (raw): displays the spectra associated with the currently selected markers
+* Display spectra (processed): displays the spectra of the processed data (after black/white ref and preprocessing has been applied)
+* Zoom: allows various zoom levels (including custom level) or best fit  
+
+## Window
+
+* New window: starts a new Viewer process, using the same options that the current one was started with
+* Half width: resizes the window to half of the screen width, useful when comparing two scans horizontally
+* Half height: resizes the window to half of the screen height, useful when comparing two scans vertically
+
+## Help
+
+The menu items will open browser windows to web pages with relevant information.
+
+
+# Overview
 
 ## Image tab
 
-Via the *File* menu, you can load an ENVI file representing a sample scan.
+Via *File -> Open scan...*, you can load an ENVI file representing a sample scan for viewing.
 
-From that menu, you can also select black and white reference ENVI files that
-get automatically applied to the scan:
+Depending on your locators for the black/white references, you may need
+to load the black/white reference ENVI files manually. Some black/white
+reference methods rely on 
+From that menu, you can also open black and white reference ENVI files that
+get applied to the scan, according to the :
 
 ![Envi Viewer - scan](img/envi_viewer-scan.png)
 
@@ -31,50 +140,79 @@ dimensions these files have:
 
 ## Options tab
 
-On the *Options* tab, you can change various view settings, how to connect
-to [SAM](../sam.md) and how annotations appear:
+On the *Options* tab, you can change various settings:
+
+* General
+  
+    * Auto-detect channels: uses any suggested channels from the meta-data of a scan
+    * Keep aspect ratio: whether to maintain width/height ratio of the scan or let the image fill the available canvas space
+    * Check scan dimensions: when checked and the dimensions of a subsequently loaded scan differs, a warning dialog will be displayed
+    * Predefined labels: comma-separated list of labels to use in the annotation process 
+
+* [SAM](../sam.md) connection parameters
+* black reference [location](https://github.com/wairas/happy-tools/tree/main/plugins#reference-locators) and [method](https://github.com/wairas/happy-tools/tree/main/plugins#black-reference-methods) plugin
+* white reference [location](https://github.com/wairas/happy-tools/tree/main/plugins#reference-locators) and [method](https://github.com/wairas/happy-tools/tree/main/plugins#white-reference-methods) plugin
+* [Preprocessing](https://github.com/wairas/happy-tools/tree/main/plugins#happy-data-preprocessors) plugins
+* [Normalization](https://github.com/wairas/happy-tools/tree/main/plugins#normalizations) plugin (gets applied before creating RGB image)
 
 ![Envi Viewer - options](img/envi_viewer-options.png)
 
 
-## Annotations
+# Annotations
 
-The envi-viewer also allows you to annotate images and then export them.
-The image will be exported as PNG using the currently selected channels.
-Any annotations present will get exported as JSON, using the 
-[OPEX format](https://github.com/WaikatoLink2020/objdet-predictions-exchange-format). 
-Such annotations in OPEX format can be viewed in the ADAMS *Preview browser*.
+The Envi Viewer supports two types of annotations that can be exported:
 
-General mouse usage:
+* pixel-level: for disjointed/scattered regions of interest, e.g., ragged outlines of plants
+* polygon-based: for well-defined shapes, like white references or shards of materials
 
-* Left-clicking on the image sets a marker point.
-* Left-clicking while holding the CTRL key removes any marker points.
-* Left-clicking on an existing annotation shape while holding the SHIFT key
-  allows you to enter a label for that shape (e.g., `white_ref` or `leaf`).
+What type of annotations is active is managed via the *Mode* menu, where you
+can choose between *Pixels* and *Polygons*.
 
-Tools menu:
+## Markers
 
-* *Clear annotations* - removes any annotations
-* *Clear markers* - removes all marker points
-* *Remove last annotation* - removes the most recent annotation that was added 
-  (can be repeated till there are no more annotations)
-* *Polygon* - turns current marker points into polygon
-* *SAM* - uses current marker points as prompt points for [SAM](../sam.md)
+Regardless of annotation mode, *markers* can be set on the scan image, as these
+markers are used as points of interest for displaying raw/processed spectra.
 
-### Polygons
-
-The simplest way of annotating that does not require any further tools is by
-using polygons. First define the outline of the object with marker points: 
-
-![Envi Viewer - polygon markers](img/envi_viewer-polygon1.png)
-
-Once at least three marker points have been put on the image, selecting 
-*Polygon* from the *Tools* menu turns them into a polygon annotation:
-
-![Envi Viewer - polygon annotation](img/envi_viewer-polygon2.png)
+* left-clicking on the image sets a marker point.
+* left-clicking while holding the CTRL key removes any marker points.
 
 
-### SAM
+## Pixels
+
+Ensure that you have switched to *Pixels* mode.
+
+TODO
+
+## Polygons
+
+Ensure that you have switched to *Polygons* mode.
+
+Polygons get created from markers as follows:
+
+1. Add markers in clockwise order where the vertices of the polygon should be, 
+   e.g., for outlining the white reference in the scan below:
+
+   ![Envi Viewer - polygon markers](img/envi_viewer-polygon1.png)
+
+2. With at least three markers present, press CTRL+P or choose *Add polygon* 
+   from the *Polygons* menu to turn the markers into a polygon:
+
+   ![Envi Viewer - polygon annotation](img/envi_viewer-polygon2.png)
+
+3. You can assign a label to a polygon by left-clicking on the polygon while
+   holding the SHIFT key. The labels `whiteref` and `blackref` are reserved
+   keywords and used for white/black reference annotations. The labels available
+   from the dropdown list are based on the predefined labels from the *Options* tab.
+
+   ![Envi Viewer - label dialog](img/envi_viewer-polygon3.png)
+
+4. Once a label has been selected and the dialog accepted, the label will be displayed
+   in the center of the polygon:
+
+   ![Envi Viewer - labelled polygon](img/envi_viewer-polygon4.png)
+
+
+## SAM
 
 Using [SAM](../sam.md), you can easily annotate complex shapes accurately.
 Though SAM can run on a CPU, it is recommended to use a computer with a
@@ -90,7 +228,6 @@ may have to provide more than one marker point to better guide the detection:
 The result looks then like this:
 
 ![Envi Viewer - polygon markers](img/envi_viewer-sam2.png)
-
 
 # Command-line
 
