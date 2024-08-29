@@ -53,6 +53,8 @@ In the sections below you can find short explanations of the various menu items.
 * Clear: clears all markers
 * Size: for setting the size of the marker circles
 * Color: the color to use for the marker circles
+* Min object size: the minimum object size that objects detected by SAM must have (applied to width and height)
+* Run SAM: uses the current marker(s) as guidance point(s) for SAM to obtain outline detections 
 
 ## Polygons
 
@@ -60,8 +62,6 @@ In the sections below you can find short explanations of the various menu items.
 * Color: sets the color for the polygon overlays
 * Modify: for deleting multiple polygons or changing multiple labels in one go
 * Add polygon: creates a polygon from the markers, if there are at least three 
-* Min object size: the minimum object size that objects detected by SAM must have (applied to width and height)
-* Run SAM: uses the current marker(s) as guidance point(s) for SAM to obtain outline detections 
 
 ## Pixels
 
@@ -227,7 +227,12 @@ may have to provide more than one marker point to better guide the detection:
 
 The result looks then like this:
 
-![Envi Viewer - polygon markers](img/envi_viewer-sam2.png)
+![Envi Viewer - detected polygon](img/envi_viewer-sam2.png)
+
+When in *Pixels* annotation mode, the polygons detected by SAM will be 
+drawn as pixels:
+
+![Envi Viewer - detected pixels](img/envi_viewer-sam3.png)
 
 # Command-line
 
