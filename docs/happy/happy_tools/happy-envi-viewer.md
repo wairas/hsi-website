@@ -100,15 +100,17 @@ and also load scan, black and white reference files:
 ```
 usage: happy-envi-viewer [-h] [-s SCAN] [-f BLACK_REFERENCE]
                          [-w WHITE_REFERENCE] [-r INT] [-g INT] [-b INT]
-                         [--autodetect_channels] [--keep_aspectratio]
-                         [--check_scan_dimensions] [--export_to_scan_dir]
+                         [--autodetect_channels] [--no_autodetect_channels]
+                         [--keep_aspectratio] [--no_keep_aspectratio]
+                         [--check_scan_dimensions]
+                         [--no_check_scan_dimensions] [--export_to_scan_dir]
                          [--annotation_color HEXCOLOR]
                          [--predefined_labels LIST] [--redis_host HOST]
                          [--redis_port PORT] [--redis_pw PASSWORD]
                          [--redis_in CHANNEL] [--redis_out CHANNEL]
-                         [--redis_connect] [--marker_size INT]
-                         [--marker_color HEXCOLOR] [--min_obj_size INT]
-                         [--black_ref_locator LOCATOR]
+                         [--redis_connect] [--no_redis_connect]
+                         [--marker_size INT] [--marker_color HEXCOLOR]
+                         [--min_obj_size INT] [--black_ref_locator LOCATOR]
                          [--black_ref_method METHOD]
                          [--white_ref_locator LOCATOR]
                          [--white_ref_method METHOD]
@@ -143,9 +145,18 @@ optional arguments:
                         whether to determine the channels from the meta-data
                         (overrides the manually specified channels) (default:
                         None)
+  --no_autodetect_channels
+                        whether to turn off auto-detection of channels from
+                        meta-data (default: None)
   --keep_aspectratio    whether to keep the aspect ratio (default: None)
+  --no_keep_aspectratio
+                        whether to not keep the aspect ratio (default: None)
   --check_scan_dimensions
                         whether to compare the dimensions of subsequently
+                        loaded scans and output a warning if they differ
+                        (default: None)
+  --no_check_scan_dimensions
+                        whether to not compare the dimensions of subsequently
                         loaded scans and output a warning if they differ
                         (default: None)
   --export_to_scan_dir  whether to export images to the scan directory rather
@@ -167,6 +178,8 @@ optional arguments:
   --redis_out CHANNEL   The channel that SAM is broadcasting the detections on
                         (default: None)
   --redis_connect       whether to immediately connect to the Redis host
+                        (default: None)
+  --no_redis_connect    whether to not immediately connect to the Redis host
                         (default: None)
   --marker_size INT     The size in pixels for the SAM points (default: None)
   --marker_color HEXCOLOR
