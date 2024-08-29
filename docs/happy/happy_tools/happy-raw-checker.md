@@ -20,6 +20,8 @@ whether incorrect label names were used.
  
 * *Output format...* - for selecting the type of output to generate
 
+Menu items from the **Help** menu open browser windows with relevant web pages.
+
 
 # Command-line
 
