@@ -54,7 +54,7 @@ The following command finds all `.hdr` files recursively below the directory
 happy-process-data \
   -V INFO \
   -i "/some/where/envi/**/*.hdr" \
-  --exclude "DARKREF_.*" "MASK_.*" \
+  --exclude ".*DARKREF_.*" ".*MASK_.*" \
   envi-reader \
     -V INFO \
     -b . \
