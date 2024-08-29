@@ -181,7 +181,32 @@ markers are used as points of interest for displaying raw/processed spectra.
 
 Ensure that you have switched to *Pixels* mode.
 
-TODO
+Annotating pixels is done with two mouse actions:
+
+* SHIFT+left-click: paints the pixels at the current location using the current 
+  brush and label; you can also drag the mouse while holding the keys to keep painting.
+* CTRL+SHIFT+left-click: acts as *eraser*, removing any differently colored pixels 
+  at the current location
+
+Before you start annotating, you should consider:
+
+* Whether the cursor is better to see in black or white (*Pixels > Brush color*).
+* Whether the cursor shape should be round or square (*Pixels > Brush shape*).
+* What size the cursor should be (*Pixels > Brush size*; use an odd number as size to 
+  have a center from which to paint). Filling out centers of objects tends to 
+  be easier with a larger brush, before filling in the edges with a smaller one.
+* Select the correct label for your annotations (*Pixels > Select label*). Using
+  *Pixels > Label key* you can view a chart with the labels associated with their
+  colors.
+
+Below is an annotation in progress:
+
+![Envi Viewer - pixel annotation in progress](img/envi_viewer-pixels1.png)
+
+Once you are finished with the annotations, you can export them as ENVI file via:
+
+*File > Export > Pixel annotations*
+
 
 ## Polygons
 
@@ -210,6 +235,11 @@ Polygons get created from markers as follows:
    in the center of the polygon:
 
    ![Envi Viewer - labelled polygon](img/envi_viewer-polygon4.png)
+
+Once you are finished with the annotations, you can export them as 
+[OPEX JSON](https://github.com/waikato-datamining/fast-opex) file via:
+
+*File > Export > Polygon annotations*
 
 
 ## SAM
