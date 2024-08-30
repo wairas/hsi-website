@@ -237,6 +237,10 @@ Polygons get created from markers as follows:
 
    ![Envi Viewer - labelled polygon](img/envi_viewer-polygon4.png)
 
+Apart from polygons, you can also create rectangles by using two markers for 
+the top-left and bottom-right corners and then select *Polygons > Add rectangle*
+from the menu (or Ctrl+R). A useful feature when planning on exporting sub-images.
+
 Once you are finished with the annotations, you can export them as 
 [OPEX JSON](https://github.com/waikato-datamining/fast-opex) file via:
 
