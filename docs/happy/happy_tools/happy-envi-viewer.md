@@ -62,6 +62,7 @@ In the sections below you can find short explanations of the various menu items.
 * Color: sets the color for the polygon overlays
 * Modify: for deleting multiple polygons or changing multiple labels in one go
 * Add polygon: creates a polygon from the markers, if there are at least three 
+* Add rectangle: creates a rectangular polygon from two markers (top-left and bottom-right) 
 
 ## Pixels
 
