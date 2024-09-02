@@ -182,12 +182,14 @@ markers are used as points of interest for displaying raw/processed spectra.
 
 Ensure that you have switched to *Pixels* mode.
 
-Annotating pixels is done with two mouse actions:
+Annotating pixels is done with these mouse actions:
 
 * SHIFT+left-click: paints the pixels at the current location using the current 
   brush and label; you can also drag the mouse while holding the keys to keep painting.
 * CTRL+SHIFT+left-click: acts as *eraser*, removing any differently colored pixels 
   at the current location
+* SHIFT+right-click: performs flood fill at the current location, e.g., for filling
+  in the center of an object after tracing the outline
 
 Before you start annotating, you should consider:
 
