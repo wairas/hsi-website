@@ -2,172 +2,172 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/hardware/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/publications/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/team/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/adams/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/docker/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/installation/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/sam-hq/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/sam/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/wsl2/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-ann2happy/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-data-viewer/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-envi-viewer/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-generate-image-regions-objects/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-hdr-info/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-hsi2rbg/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-mat-info/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-opex-labels/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-plot-preproc/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-process-data/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-raw-check/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-raw-checker/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-scikit-regression-build/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-scikit-segmentation-build/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-scikit-unsupervised-build/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/happy-splitter/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools/installation/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools_keras/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools_keras/happy-keras-pixel-regression-build/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools_keras/happy-keras-segmentation-build/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools_keras/happy-keras-unsupervised-build/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hsi.eng.waikato.ac.nz/happy/happy_tools_keras/installation/</loc>
-         <lastmod>2024-08-30</lastmod>
+         <lastmod>2024-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
