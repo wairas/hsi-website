@@ -269,6 +269,51 @@ drawn as pixels:
 
 ![Envi Viewer - detected pixels](img/envi_viewer-sam3.png)
 
+
+# Sub-images export
+
+When imaging multiple samples within a single scan, you can use the
+*Sub-images* export facility to separate out the sub-samples.
+
+The export requires the sub-samples to be annotated. Therefore, you need to:
+
+* annotate each sub-sample with a rectangle: mark top-left and bottom-right corner
+  and then select *Add rectangle* from the *Polygons* menu (or use CTRL+R shortcut)
+* use the ID of the sub-sample as the label for the rectangle (SHIFT+left-click)
+
+Once all sub-samples have been annotate, export the polygon annotations and
+select *File > Export > Sub-images* from the menu:
+
+* Select the directory to export the sub-samples to
+* The *Label regexp* is a [regular expression](https://docs.python.org/3/library/re.html#re.search) 
+  for identifying the labels in your annotations that represent the sub-samples. 
+  If you have no other annotations present, you can simply leave it empty. 
+  If that is not the case and your sub-samples are label with integers, you can use `[0-9]+`.
+* If you want to export the *raw* data, i.e., the original scan data, then tick
+  the *Use raw data* checkbox. Otherwise, any changes from applying black/white
+  reference and preprocessors will get output.
+* Specify the [writer](https://github.com/wairas/happy-tools/tree/main/plugins#happy-data-writers)
+  and its parameters that you want to use for the export. See section *Writer examples* 
+  below the screenshot for some examples.
+
+The following screenshot exports the spectral data from the annotated sub-samples
+as CSV:
+
+![Envi Viewer - sub-images export dialog](img/envi_viewer-subimages_export.png)
+
+## Writer examples
+
+**Note:** the `{BASEDIR}` placeholder used in `-o` parameters will get replaced
+by the selected output directory.
+
+* Happy data: `happy-writer`
+* ENVI: `envi-writer`
+* PNG: `png-writer`
+* JPG: `image-writer -o {BASEDIR}/{SAMPLEID}.{REGIONID}.jpg`
+* CSV: `csv-writer -o {BASEDIR}/{SAMPLEID}.{REGIONID}.csv`
+* CSV (combined sub-samples): `csv-writer -o {BASEDIR}/{SAMPLEID}.csv`
+
+
 # Command-line
 
 Using the command-line options, you can preset the options in the user interface
