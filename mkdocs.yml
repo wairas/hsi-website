@@ -48,6 +48,7 @@ nav:
           - 'happy-scikit-segmentation-build': happy/happy_tools/happy-scikit-segmentation-build.md
           - 'happy-scikit-unsupervised-build': happy/happy_tools/happy-scikit-unsupervised-build.md
           - 'happy-splitter': happy/happy_tools/happy-splitter.md
+          - 'happy-sub-images': happy/happy_tools/happy-sub-images.md
       - 'happy-tools-keras':
         - 'Overview': happy/happy_tools_keras/index.md
         - 'Installation': happy/happy_tools_keras/installation.md

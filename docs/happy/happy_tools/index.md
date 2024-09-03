@@ -22,6 +22,7 @@ Command-line tools:
 * [happy-scikit-segmentation-build](happy-scikit-segmentation-build.md) - evaluates segmentation models on HAPPy data
 * [happy-scikit-unsupervised-build](happy-scikit-unsupervised-build.md) - evaluates cluster models on HAPPy data
 * [happy-splitter](happy-splitter.md) - for generating train/validation/test splits for HAPPy data
+* [happy-sub-images](happy-sub-images.md) - for exporting annotated sub-samples into separate files
 
 These tools are available from the Python virtual environment that they were
 installed. E.g., when following the installation instructions on this website,
