@@ -1,7 +1,7 @@
 # Command-line
 
 ```
-usage: happy-ann2happy [-h] -i DIR [DIR ...]
+usage: happy-ann2happy [-h] -i DIR [DIR ...] [--regexp REGEXP]
                        [-c {pixels,polygons,pixels_then_polygons,polygons_then_pixels}]
                        [-r] [-o DIR] -f {flat,dir-tree,dir-tree-with-data} -l
                        LABELS [-N] [-u UNLABELLED]
@@ -21,6 +21,8 @@ optional arguments:
   -h, --help            show this help message and exit
   -i DIR [DIR ...], --input_dir DIR [DIR ...]
                         Path to the PNG/OPEX/ENVI files (default: None)
+  --regexp REGEXP       The regexp for matching the ENVI base files (name
+                        only), e.g., for selecting a subset. (default: None)
   -c {pixels,polygons,pixels_then_polygons,polygons_then_pixels}, --conversion {pixels,polygons,pixels_then_polygons,polygons_then_pixels}
                         What annotations and in what order to apply
                         (subsequent overlays can overwrite annotations).
