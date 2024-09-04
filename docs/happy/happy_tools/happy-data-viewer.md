@@ -1,17 +1,39 @@
 Used for viewing data that has been converted into a HAPPy folder structure.
 
-* HAPPy directories can be opened via *File > Open dir...*
-* The currently displayed image can be exported via *File > Export image...*
-* With *View > Normalization...* you can enter the command-line of another
-  [normalization](https://github.com/wairas/happy-tools/tree/main/plugins#normalizations) 
-  plugin to change how the fake RGB is being generated.
-* The menu items from the *Help* menu open browser windows with relevant pages.
+# Menu
+
+* File 
+
+    * Open dir: for opening HAPPy directories
+    * Export image: for exporting the currently displayed image
+    * Close: closes the application
+
+* View
+
+    * Normalization: allows entering the command-line of another
+      [normalization](https://github.com/wairas/happy-tools/tree/main/plugins#normalizations) 
+      plugin to change how the fake RGB is being generated.
+    * Zoom: allows the setting of the zoom level
+
+* Window
+
+    * New window: starts a new Viewer process, using the same options that the current one was started with
+    * Half width: resizes the window to half of the screen width, useful when comparing two scans horizontally
+    * Half height: resizes the window to half of the screen height, useful when comparing two scans vertically
+
+* Help: These menu items open browser windows with relevant pages.
+
+
+# Screenshots
+
+Here is an example of a directory containing several samples: 
 
 ![Data Viewer with sample loaded](img/data_viewer-main.png)
 
 When available, a *mask* can be overlaid with the appropriate *opacity*:
 
 ![Data Viewer with mask overlaid](img/data_viewer-mask.png)
+
 
 # Command-line
 
@@ -20,7 +42,7 @@ usage: happy-data-viewer [-h] [--base_folder BASE_FOLDER] [--sample SAMPLE]
                          [--region REGION] [-r INT] [-g INT] [-b INT] [-o INT]
                          [--listbox_selectbackground LISTBOX_SELECTBACKGROUND]
                          [--listbox_selectforeground LISTBOX_SELECTFOREGROUND]
-                         [--normalization PLUGIN]
+                         [--normalization PLUGIN] [--zoom PERCENT]
                          [-V {DEBUG,INFO,WARNING,ERROR,CRITICAL}]
 
 Viewer for HAPPy data folder structures.
@@ -51,6 +73,8 @@ optional arguments:
   --normalization PLUGIN
                         the normalization plugin and its options to use
                         (default: norm-simple)
+  --zoom PERCENT        the initial zoom to use (%) or -1 for automatic fit
+                        (default: -1)
   -V {DEBUG,INFO,WARNING,ERROR,CRITICAL}, --logging_level {DEBUG,INFO,WARNING,ERROR,CRITICAL}
                         The logging level to use. (default: WARN)
 ```
