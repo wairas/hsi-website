@@ -1,29 +1,34 @@
 # Command-line
 
 ```
-usage: happy-sub-images [-h] -i DIR [DIR ...] [--regexp REGEXP] [-r] [-o DIR]
+usage: happy-sub-images [-h] -i DIR [DIR ...] [-e REGEXP] [-r]
+                        [-o DIR [DIR ...]] [-w CMDLINE [CMDLINE ...]]
                         [-l LABELS] [--black_ref_locator LOCATOR]
                         [--black_ref_method METHOD]
                         [--white_ref_locator LOCATOR]
                         [--white_ref_method METHOD]
-                        [--white_ref_annotations FILE] [--writer CMDLINE] [-n]
-                        [--resume_from DIR] [--run_info FILE]
+                        [--white_ref_annotations FILE] [-n] [-R DIR] [-I FILE]
                         [-V {DEBUG,INFO,WARNING,ERROR,CRITICAL}]
 
 Exports sub-images from ENVI files annotated with OPEX JSON files. Used for
-extracting sub-samples.
+extracting sub-samples. Multiple output/writer pairs can be specified to
+output in multiple formats in one go.
 
 optional arguments:
   -h, --help            show this help message and exit
   -i DIR [DIR ...], --input_dir DIR [DIR ...]
                         Path to the files to generate sub-images from
                         (default: None)
-  --regexp REGEXP       The regexp for matching the ENVI base files (name
+  -e REGEXP, --regexp REGEXP
+                        The regexp for matching the ENVI base files (name
                         only), e.g., for selecting a subset. (default: None)
   -r, --recursive       whether to look for files recursively (default: False)
-  -o DIR, --output_dir DIR
-                        The directory to store the generated sub-images in.
+  -o DIR [DIR ...], --output_dir DIR [DIR ...]
+                        The dir(s) to store the generated sub-images in.
                         (default: None)
+  -w CMDLINE [CMDLINE ...], --writer CMDLINE [CMDLINE ...]
+                        the writer(s) to use for saving the generated sub-
+                        images (default: happy-writer)
   -l LABELS, --labels LABELS
                         The regexp for the labels to export. (default: None)
   --black_ref_locator LOCATOR
@@ -42,14 +47,14 @@ optional arguments:
                         the OPEX JSON file with the annotated white reference
                         if it cannot be determined automatically (default:
                         None)
-  --writer CMDLINE      the writer to use for saving the generated sub-images
-                        (default: happy-writer)
   -n, --dry_run         whether to omit generating any data or creating
                         directories (default: False)
-  --resume_from DIR     The directory to restart the processing with (all
+  -R DIR, --resume_from DIR
+                        The directory to restart the processing with (all
                         determined dirs preceding this one get skipped)
                         (default: None)
-  --run_info FILE       The JSON file to store some run information in.
+  -I FILE, --run_info FILE
+                        The JSON file to store some run information in.
                         (default: None)
   -V {DEBUG,INFO,WARNING,ERROR,CRITICAL}, --logging_level {DEBUG,INFO,WARNING,ERROR,CRITICAL}
                         The logging level to use. (default: WARN)
@@ -77,8 +82,8 @@ happy-sub-images \
   -r \
   --black_ref_locator "rl-file-pattern -p \"{PATH}/DARKREF_{NAME}.hdr\"" \
   --black_ref_method br-col-avg \
-  -o /some/where/csv/ \
   -l "[0-9]+" \
+  -o /some/where/csv/ \
   --writer "csv-writer -o {BASEDIR}/{SAMPLEID}.csv" 
 ```
 
@@ -95,8 +100,8 @@ happy-sub-images \
   -r \
   --black_ref_locator "rl-file-pattern -p \"{PATH}/DARKREF_{NAME}.hdr\"" \
   --black_ref_method br-col-avg \
-  -o /some/where/envi/ \
   -l "[0-9]+" \
+  -o /some/where/envi/ \
   --writer envi-writer 
 ```
 
@@ -122,8 +127,8 @@ happy-sub-images \
   --white_ref_locator "rl-fixed -f \"/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.hdr\"" \
   --white_ref_method wr-annotation-avg \
   --white_ref_annotations "/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.json" \
-  -o /some/where/happy/ \
   -l "[0-9]+" \
+  -o /some/where/happy/ \
   --writer happy-writer
 ```
 
@@ -142,8 +147,8 @@ happy-sub-images \
   --white_ref_locator "rl-fixed -f \"/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.hdr\"" \
   --white_ref_method wr-annotation-avg \
   --white_ref_annotations "/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.json" \
-  -o /some/where/happy/ \
   -l "[0-9]+" \
+  -o /some/where/matlab/ \
   --writer matlab-writer
 ```
 
@@ -161,7 +166,30 @@ happy-sub-images \
   -r \
   --black_ref_locator "rl-file-pattern -p \"{PATH}/DARKREF_{NAME}.hdr\"" \
   --black_ref_method br-col-avg \
-  -o /some/where/png/ \
   -l "[0-9]+" \
+  -o /some/where/png/ \
   --writer "image-writer --suppress_metadata -R 95 -G 152 -B 111 -o {BASEDIR}/{SAMPLEID}.{REGION}.png" 
+```
+
+## Multiple output formats
+
+By supplying multiple output/writer pairs, multiple output formats can be generated
+with a single pass. The following command generates CSV, Matlab and PNG output:
+
+```bash
+happy-sub-images \
+  -V INFO \
+  -i "/some/where/raw/" \
+  -r \
+  --black_ref_locator "rl-file-pattern -p \"{PATH}/DARKREF_{NAME}.hdr\"" \
+  --black_ref_method br-col-avg \
+  -l "[0-9]+" \
+  -o \
+    /some/where/csv/ \
+    /some/where/matlab/ \
+    /some/where/png/ \
+  --writer \
+    "csv-writer -o {BASEDIR}/{SAMPLEID}.csv" \
+    matlab-writer \
+    "image-writer --suppress_metadata -R 95 -G 152 -B 111 -o {BASEDIR}/{SAMPLEID}.{REGION}.png"
 ```
