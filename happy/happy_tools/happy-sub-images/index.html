@@ -727,6 +727,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#matlab" class="md-nav__link">
+    Matlab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#png" class="md-nav__link">
     PNG
   </a>
@@ -1037,6 +1044,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#matlab" class="md-nav__link">
+    Matlab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#png" class="md-nav__link">
     PNG
   </a>
@@ -1181,6 +1195,22 @@ reference has been applied:</p>
   -o /some/where/happy/ \
   -l &quot;[0-9]+&quot; \
   --writer happy-writer
+</code></pre>
+<h3 id="matlab">Matlab<a class="headerlink" href="#matlab" title="Permanent link">#</a></h3>
+<p>The same command, but this time generating Matlab files using the <code>matlab-writer</code>:</p>
+<pre><code class="language-bash">happy-sub-images \
+  -V INFO \
+  -i &quot;/some/where/raw/&quot; \
+  --regexp &quot;A_1_1.*&quot; \
+  -r \
+  --black_ref_locator &quot;rl-file-pattern -p \&quot;{PATH}/DARKREF_{NAME}.hdr\&quot;&quot; \
+  --black_ref_method br-col-avg \
+  --white_ref_locator &quot;rl-fixed -f \&quot;/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.hdr\&quot;&quot; \
+  --white_ref_method wr-annotation-avg \
+  --white_ref_annotations &quot;/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.json&quot; \
+  -o /some/where/happy/ \
+  -l &quot;[0-9]+&quot; \
+  --writer matlab-writer
 </code></pre>
 <h3 id="png">PNG<a class="headerlink" href="#png" title="Permanent link">#</a></h3>
 <p>Images can be generated with the <code>image-writer</code>, with the extension defined in 
