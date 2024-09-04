@@ -1,7 +1,10 @@
 Used for viewing data that has been converted into a HAPPy folder structure.
 
-* HAPPy directories can be opened via *File -> Open dir...*
-* The currently displayed image can be exported via *File -> Export image...*
+* HAPPy directories can be opened via *File > Open dir...*
+* The currently displayed image can be exported via *File > Export image...*
+* With *View > Normalization...* you can enter the command-line of another
+  [normalization](https://github.com/wairas/happy-tools/tree/main/plugins#normalizations) 
+  plugin to change how the fake RGB is being generated.
 * The menu items from the *Help* menu open browser windows with relevant pages.
 
 ![Data Viewer with sample loaded](img/data_viewer-main.png)
