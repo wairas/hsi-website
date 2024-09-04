@@ -127,6 +127,26 @@ happy-sub-images \
   --writer happy-writer
 ```
 
+## Matlab
+
+The same command, but this time generating Matlab files using the `matlab-writer`:
+
+```bash
+happy-sub-images \
+  -V INFO \
+  -i "/some/where/raw/" \
+  --regexp "A_1_1.*" \
+  -r \
+  --black_ref_locator "rl-file-pattern -p \"{PATH}/DARKREF_{NAME}.hdr\"" \
+  --black_ref_method br-col-avg \
+  --white_ref_locator "rl-fixed -f \"/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.hdr\"" \
+  --white_ref_method wr-annotation-avg \
+  --white_ref_annotations "/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.json" \
+  -o /some/where/happy/ \
+  -l "[0-9]+" \
+  --writer matlab-writer
+```
+
 ## PNG
 
 Images can be generated with the `image-writer`, with the extension defined in 
