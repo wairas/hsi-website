@@ -1211,7 +1211,9 @@ The command below only processes samples that match the regular expression
 separate scan folder (<code>--white_ref_locator "rl-fixed ...</code>) and has its
 own OPEX JSON file with a single <code>whiteref</code> annotation 
 (<code>--white_ref_annotations "/some...</code>) which gets applied after the black
-reference has been applied:</p>
+reference has been applied. Since the white ref is a separate scan,
+a black reference can be applied as well using the options 
+<code>--black_ref_locator_for_white_ref</code> and <code>--black_ref_method_for_white_ref</code>:</p>
 <pre><code class="language-bash">happy-sub-images \
   -V INFO \
   -i &quot;/some/where/raw/&quot; \
@@ -1222,6 +1224,8 @@ reference has been applied:</p>
   --white_ref_locator &quot;rl-fixed -f \&quot;/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.hdr\&quot;&quot; \
   --white_ref_method wr-annotation-avg \
   --white_ref_annotations &quot;/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.json&quot; \
+  --black_ref_locator_for_white_ref &quot;rl-fixed -f \&quot;/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/DARKREF_A_White_Ref_2024-08-19_22-11-04.hdr\&quot;&quot; \
+  --black_ref_method_for_white_ref br-col-avg \
   -l &quot;[0-9]+&quot; \
   -o /some/where/happy/ \
   --writer happy-writer
@@ -1238,6 +1242,8 @@ reference has been applied:</p>
   --white_ref_locator &quot;rl-fixed -f \&quot;/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.hdr\&quot;&quot; \
   --white_ref_method wr-annotation-avg \
   --white_ref_annotations &quot;/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.json&quot; \
+  --black_ref_locator_for_white_ref &quot;rl-fixed -f \&quot;/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/DARKREF_A_White_Ref_2024-08-19_22-11-04.hdr\&quot;&quot; \
+  --black_ref_method_for_white_ref br-col-avg \
   -l &quot;[0-9]+&quot; \
   -o /some/where/matlab/ \
   --writer matlab-writer
