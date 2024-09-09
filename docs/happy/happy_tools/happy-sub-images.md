@@ -125,7 +125,9 @@ The command below only processes samples that match the regular expression
 separate scan folder (`--white_ref_locator "rl-fixed ...`) and has its
 own OPEX JSON file with a single `whiteref` annotation 
 (`--white_ref_annotations "/some...`) which gets applied after the black
-reference has been applied:
+reference has been applied. Since the white ref is a separate scan,
+a black reference can be applied as well using the options 
+`--black_ref_locator_for_white_ref` and `--black_ref_method_for_white_ref`:
 
 ```bash
 happy-sub-images \
@@ -138,6 +140,8 @@ happy-sub-images \
   --white_ref_locator "rl-fixed -f \"/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.hdr\"" \
   --white_ref_method wr-annotation-avg \
   --white_ref_annotations "/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.json" \
+  --black_ref_locator_for_white_ref "rl-fixed -f \"/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/DARKREF_A_White_Ref_2024-08-19_22-11-04.hdr\"" \
+  --black_ref_method_for_white_ref br-col-avg \
   -l "[0-9]+" \
   -o /some/where/happy/ \
   --writer happy-writer
@@ -158,6 +162,8 @@ happy-sub-images \
   --white_ref_locator "rl-fixed -f \"/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.hdr\"" \
   --white_ref_method wr-annotation-avg \
   --white_ref_annotations "/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/A_White_Ref_2024-08-19_22-11-04.json" \
+  --black_ref_locator_for_white_ref "rl-fixed -f \"/some/where/raw/A_White_Ref_2024-08-19_22-11-04/capture/DARKREF_A_White_Ref_2024-08-19_22-11-04.hdr\"" \
+  --black_ref_method_for_white_ref br-col-avg \
   -l "[0-9]+" \
   -o /some/where/matlab/ \
   --writer matlab-writer
