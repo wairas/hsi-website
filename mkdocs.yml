@@ -30,11 +30,7 @@ nav:
       - 'happy-tools':
         - 'Overview': happy/happy_tools/index.md
         - 'Installation': happy/happy_tools/installation.md
-        - 'User interface tools':
-          - 'happy-data-viewer': happy/happy_tools/happy-data-viewer.md
-          - 'happy-envi-viewer': happy/happy_tools/happy-envi-viewer.md
-          - 'happy-raw-checker': happy/happy_tools/happy-raw-checker.md
-        - 'Command-line tools':
+        - 'Core command-line tools':
           - 'happy-ann2happy': happy/happy_tools/happy-ann2happy.md
           - 'happy-generate-image-regions-objects': happy/happy_tools/happy-generate-image-regions-objects.md
           - 'happy-hdr-info': happy/happy_tools/happy-hdr-info.md
@@ -49,6 +45,11 @@ nav:
           - 'happy-scikit-unsupervised-build': happy/happy_tools/happy-scikit-unsupervised-build.md
           - 'happy-splitter': happy/happy_tools/happy-splitter.md
           - 'happy-sub-images': happy/happy_tools/happy-sub-images.md
+      - 'happy-tools-tkinter':
+        - 'Overview': happy/happy_tools_tkinter/index.md
+        - 'happy-data-viewer': happy/happy_tools_tkinter/happy-data-viewer.md
+        - 'happy-envi-viewer': happy/happy_tools_tkinter/happy-envi-viewer.md
+        - 'happy-raw-checker': happy/happy_tools_tkinter/happy-raw-checker.md
       - 'happy-tools-keras':
         - 'Overview': happy/happy_tools_keras/index.md
         - 'Installation': happy/happy_tools_keras/installation.md

@@ -121,7 +121,7 @@ happy-sub-images \
 ## HappyData
 
 By converting the scans into the HappyData format, you can view them later
-in the [Data Viewer](happy-data-viewer.md) and then also build models.
+in the [Data Viewer](../happy_tools_tkinter/happy-data-viewer.md) and then also build models.
 The command below only processes samples that match the regular expression
 `"A_1_1.*"`. The white reference for this subset of scans is stored in a 
 separate scan folder (`--white_ref_locator "rl-fixed ...`) and has its

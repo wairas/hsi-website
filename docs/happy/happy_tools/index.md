@@ -1,13 +1,5 @@
 [happy-tools](https://github.com/wairas/happy-tools) contains several command-line 
-utilities and graphical viewers for HSI files:
-
-User interface tools:
-
-* [happy-data-viewer](happy-data-viewer.md) - for viewing HAPPy data folders
-* [happy-envi-viewer](happy-envi-viewer.md) - for viewing ENVI HSI images
-* [happy-raw-checker](happy-raw-checker.md) - sanity checks on raw capture folders
-
-Command-line tools:
+utilities:
 
 * [happy-generate-image-regions-objects](happy-generate-image-regions-objects.md) - generates datasets as numpy cubes for deep learning
 * [happy-hdr-info](happy-hdr-info.md) - outputs information on ENVI HDR files
@@ -24,8 +16,14 @@ Command-line tools:
 * [happy-splitter](happy-splitter.md) - for generating train/validation/test splits for HAPPy data
 * [happy-sub-images](happy-sub-images.md) - for exporting annotated sub-samples into separate files
 
-These tools are available from the Python virtual environment that they were
-installed. E.g., when following the installation instructions on this website,
+Graphical user interface tools using the tkinter widgets have been moved to the 
+[happy-tools-tkinter](https://github.com/wairas/happy-tools-tkinter) library.
+You can find the documentation on these tools here:
+
+[happy-tools-tkinter](../happy_tools_tkinter/index.md)
+
+Command-line and graphical tools are available from the Python virtual environment 
+that they were installed in. E.g., when following the installation instructions on this website,
 the tools would be located in the following directory in the user's home folder:
 
 ```bash
