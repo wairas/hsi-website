@@ -29,7 +29,6 @@ nav:
       - 'ADAMS': happy/adams.md
       - 'happy-tools':
         - 'Overview': happy/happy_tools/index.md
-        - 'Installation': happy/happy_tools/installation.md
         - 'Core command-line tools':
           - 'happy-ann2happy': happy/happy_tools/happy-ann2happy.md
           - 'happy-generate-image-regions-objects': happy/happy_tools/happy-generate-image-regions-objects.md
@@ -52,7 +51,6 @@ nav:
         - 'happy-raw-checker': happy/happy_tools_tkinter/happy-raw-checker.md
       - 'happy-tools-keras':
         - 'Overview': happy/happy_tools_keras/index.md
-        - 'Installation': happy/happy_tools_keras/installation.md
         - 'Command-line tools':
           - 'happy-keras-pixel-regression-build': happy/happy_tools_keras/happy-keras-pixel-regression-build.md
           - 'happy-keras-segmentation-build': happy/happy_tools_keras/happy-keras-segmentation-build.md
