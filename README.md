@@ -1,7 +1,7 @@
 # hsi-website
 Website for the Hyperspectral Imaging Group at the University of Waikato.
 
-(25 July 2925) Broadened to Vision-Based Measurement Systems
+(25 July 2025) Broadened to Vision-Based Measurement Systems
 
 ## Content
 
