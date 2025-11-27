@@ -4,6 +4,7 @@
   *Proximal near-infrared hyperspectral imaging dataset for identifying epicuticular 
   wax loss in Masena blueberries to evaluate post-harvest quality*. Data in Brief.
   [10.1016/j.dib.2025.111946](https://dx.doi.org/10.1016/j.dib.2025.111946)
+  [dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ENJYTC)
 
 * Faisal S, Ooi M, Kuang YC, Thawdar Y, Abeysekera S, Reutemann P, 
   Fletcher D, Fleming R, McClelland H, 2025. 
