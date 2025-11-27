@@ -14,6 +14,7 @@ The hyperspectral imaging hardware available:
 * [Specim RS10 User Guide](img/rotating-stage-10-user-guide-v1.0.pdf)
 * [LUMO Scanner](img/lumo_scanner.pdf)
 * [Operational procedures](files/Operational%20Procedures%20for%20HSI.docx)
+* [User Guide for Testing Rig](files/User%20Guide%20for%20Testing%20Rig.pdf)
 
 
 # Setup
