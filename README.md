@@ -1,6 +1,8 @@
 # hsi-website
 Website for the Hyperspectral Imaging Group at the University of Waikato.
 
+(25 July 2925) Broadened to Vision-Based Measurement Systems
+
 ## Content
 
 The content for the website lives in the [docs](docs) sub-folder and consists
