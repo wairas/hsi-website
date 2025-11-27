@@ -1,3 +1,25 @@
+# 2025
+
+* Faisal S, Thawdar Y, Ooi MPL, Reutemann P, Fletcher D, Kuang YC, Abeysekera SK, 2025. 
+  *Proximal near-infrared hyperspectral imaging dataset for identifying epicuticular 
+  wax loss in Masena blueberries to evaluate post-harvest quality*. Data in Brief.
+  [10.1016/j.dib.2025.111946](https://dx.doi.org/10.1016/j.dib.2025.111946)
+
+* Faisal S, Ooi M, Kuang YC, Thawdar Y, Abeysekera S, Reutemann P, 
+  Fletcher D, Fleming R, McClelland H, 2025. 
+  *Identifying Biological Fluids using Hyperspectral Near-infrared Imaging and 
+  Machine Learning for Forensics Analysis*. In IEEE International Instrumentation 
+  and Measurement Technology Conference (I2MTC).
+  [10.1109/I2MTC62753.2025.11078980](https://dx.doi.org/10.1109/I2MTC62753.2025.11078980)
+
+# 2024
+
+* Pearse J, Thawdar Y, Sim A, Ooi M, Mcguinness B, Reutemann P, Fletcher D, Duke M, 2024.
+  *Hyperspectral imaging and machine learning to identify epicuticular wax loss 
+  in Masena Blueberries for post-harvest freshness.* In IEEE 20th International 
+  Conference on Automation Science and Engineering (CASE), 2793-2798. IEEE.
+  [10.1109/CASE59546.2024.10711590](https://dx.doi.org/10.1109/CASE59546.2024.10711590)
+
 # 2023
 
 * Holmes, W.S., Ooi, M.P.L., Abeysekera, S., Kuang, Y.C., Simpkin, R., 
