@@ -1,9 +1,22 @@
-# Some information about group
-Here will be some detailed information about group
+# Our Groups
 
-# Images
-Here will be some images related to the group projects
-![Imaging](IMG_20231108_154059.jpg)
+- LakeCast
+- RuralAI
+
+Our Group members you can see in the [Team](teamruralai.md)
+
+# What we are working on
+
+<table>
+<tr>
+<td style = "text-align:center;">
+<img src = '/ruralai/IMG_20231108_154059.jpg' alt = 'image1' width = '500'/>
+</td>
+<td style = "text-align:center;">
+<img src = '/ruralai/IMG_20231114_153644.jpg' alt = 'image2' width = '106'/>
+</td>
+</tr>
+</table>
 
 
 # Publications

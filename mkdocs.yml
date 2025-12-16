@@ -1,4 +1,4 @@
-site_name: Some name
+site_name: WAI2M
 site_url: https://hsi.eng.waikato.ac.nz/
 site_description: Website for the Hyperspectral Imaging Group at the University of Waikato.
 repo_url: https://github.com/wairas/hsi-website
@@ -65,8 +65,10 @@ nav:
       - 'Team': team.md
     - 'WAILight':
       - 'Home': wailight/homewailight.md
+      - 'Team': wailight/teamwailight.md
       - 'Publications': wailight/pubwailight.md
     - 'RuralAI':
       - 'Home': ruralai/homeruralai.md
+      - 'Team': ruralai/teamruralai.md
       - 'Publications': ruralai/pubruralai.md
 
