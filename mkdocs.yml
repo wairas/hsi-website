@@ -65,6 +65,7 @@ nav:
       - 'Team': team.md
     - 'WAILight':
       - 'Home': wailight/homewailight.md
+      - 'Documentation': wailight/docswailight.md
       - 'Team': wailight/teamwailight.md
       - 'Publications': wailight/pubwailight.md
     - 'RuralAI':
