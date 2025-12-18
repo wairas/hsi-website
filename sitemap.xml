@@ -191,6 +191,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://hsi.eng.waikato.ac.nz/wailight/docswailight/</loc>
+         <lastmod>2025-12-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://hsi.eng.waikato.ac.nz/wailight/homewailight/</loc>
          <lastmod>2025-12-18</lastmod>
          <changefreq>daily</changefreq>
