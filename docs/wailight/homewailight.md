@@ -1,10 +1,12 @@
+<img src = '/wailight/2025 WAILightOnFrame.jpeg' alt = 'image11' width = '700'/>
+
 # WAILight: Spectrally Tunable Illumination System
 
 The **WAILight** is a custom-built, spectrally tunable luminaire designed to bridge the gap between computational imaging and physical illumination. Unlike standard lighting systems, WAILight can algorithmically optimize its output to maximize contrast for machine vision applications.
 
-<img src = '/wailight/2025 WAILightOnFrame.jpeg' alt = 'image11' width = '700'/>
-
 ## System Overview
+
+<img src = '/wailight/WhatsApp Image 2025-12-19 at 10.36.01.jpeg' alt = 'image11' width = '700'/>
 
 The core of the WAILight system is a programmable array of monochromatic LED channels covering the visible spectrum. By precisely modulating the brightness of each channel, the system can:
 
