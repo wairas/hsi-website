@@ -91,7 +91,7 @@ Our Group members you can see in the [Team](team.md)
 
 <img src = '/HSI/IMG_20240821_115205.jpg' alt = 'image5' width = '700'/>
 <center>
-Our HSI Team
+Our Forensic Team
 </center>
 
 # Publications

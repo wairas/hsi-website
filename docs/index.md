@@ -1,8 +1,8 @@
 # About WAI2M
 
-- HSI Group
-- WAILight
-- RuralAI
+- [HSI Group](homehsi.md)
+- [WAILight](wailight/homewailight.md)
+- [RuralAI](ruralai/homeruralai.md)
 	- RuralAI
 	- LakeCast
 

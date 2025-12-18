@@ -1,9 +1,14 @@
-# Our Team
+## Investigators
 
+- Sanush Abeysekera
 - Melanie Ooi
 - Ye Chow Kuang
-- Sanush Abeysekera
-- Nil Shihora
-- Allan Donald Tirkey
 
+## Students
 
+- Mohammed Al-Rashdi (BE - Graduated)
+- Allan Donald Tirkey (MEP)
+- Nil Shihora (MEP)
+- Minu Joy (MEP)
+- Biyu Guo (MEP)
+- Jinyu Wang (MEP)
