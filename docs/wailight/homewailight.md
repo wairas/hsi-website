@@ -1,4 +1,16 @@
-<img src = '/wailight/2025 WAILightOnFrame.jpeg' alt = 'image11' width = '700'/>
+<table>
+<tr>
+<td style = 'text-align:center;'>
+<img src = '/wailight/2025 WAILightOnFrame.jpeg' alt = 'image11' width = '640'/>
+</td>
+<td style = 'text-align:center;'>
+<video controls>
+<source src = '/wailight/Actual WAILight Video 2025.mp4' type='video/mp4'>
+</video>
+</td>
+</tr>
+</table>
+
 
 # WAILight: Spectrally Tunable Illumination System
 
@@ -45,12 +57,6 @@ Integrated with our HAPPy software platform for automated spectral sweeping and 
 </td>
 </tr>
 </table>
-
-<center>
-<video controls>
-<source src = '/wailight/Actual WAILight Video 2025.mp4' type='video/mp4'>
-</video>
-</center>
 
 ## Applications
 ### Forensic Imaging
