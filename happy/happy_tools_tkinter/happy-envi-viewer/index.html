@@ -12,8 +12,18 @@
       
         <link rel="canonical" href="https://hsi.eng.waikato.ac.nz/happy/happy_tools_tkinter/happy-envi-viewer/">
       
+      
+        <link rel="prev" href="../happy-data-viewer/">
+      
+      
+        <link rel="next" href="../happy-raw-checker/">
+      
+      
+        
+      
+      
       <link rel="icon" href="../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -21,15 +31,14 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
-      
-        
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
-        
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
+
     
+    
+      
     
     
       
@@ -41,24 +50,17 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-    
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+    <body dir="ltr">
   
-    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -78,7 +80,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="WAI2M" class="md-header__button md-logo" aria-label="WAI2M" data-md-component="logo">
       
@@ -86,7 +90,8 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -106,46 +111,56 @@
     </div>
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
         <a href="https://github.com/wairas/hsi-website" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -175,6 +190,7 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="WAI2M" class="md-nav__button md-logo" aria-label="WAI2M" data-md-component="logo">
@@ -189,7 +205,7 @@
       <a href="https://github.com/wairas/hsi-website" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -201,14 +217,26 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Home
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
@@ -216,526 +244,1001 @@
     
       
       
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Menu
+  
 
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
     
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2">
-          Menu
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Menu" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Menu
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
           
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
-              
   
   
+  <span class="md-ellipsis">
     
   
+    HSI
   
+
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_1">
-          HSI
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="HSI" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
-          <span class="md-nav__icon md-icon"></span>
-          HSI
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    HSI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../homehsi/" class="md-nav__link">
-        Home
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
     
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_1_2">
-          HAPPy
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="HAPPy" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_1_2">
-          <span class="md-nav__icon md-icon"></span>
-          HAPPy
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" checked>
+        
           
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HAPPy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    HAPPy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../" class="md-nav__link">
-        Introduction
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../wsl2/" class="md-nav__link">
-        WSL2
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WSL2
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../installation/" class="md-nav__link">
-        Installation
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../docker/" class="md-nav__link">
-        Docker
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../adams/" class="md-nav__link">
-        ADAMS
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADAMS
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2_6" type="checkbox" id="__nav_2_1_2_6" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_1_2_6">
-          happy-tools
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="happy-tools" data-md-level="4">
-        <label class="md-nav__title" for="__nav_2_1_2_6">
-          <span class="md-nav__icon md-icon"></span>
-          happy-tools
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_6" >
+        
           
+          <label class="md-nav__link" for="__nav_2_1_2_6" id="__nav_2_1_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    happy-tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools/" class="md-nav__link">
-        Overview
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2_6_2" type="checkbox" id="__nav_2_1_2_6_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_1_2_6_2">
-          Core command-line tools
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Core command-line tools" data-md-level="5">
-        <label class="md-nav__title" for="__nav_2_1_2_6_2">
-          <span class="md-nav__icon md-icon"></span>
-          Core command-line tools
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_6_2" >
+        
           
+          <label class="md-nav__link" for="__nav_2_1_2_6_2" id="__nav_2_1_2_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core command-line tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_1_2_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Core command-line tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools/happy-ann2happy/" class="md-nav__link">
-        happy-ann2happy
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-ann2happy
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools/happy-generate-image-regions-objects/" class="md-nav__link">
-        happy-generate-image-regions-objects
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-generate-image-regions-objects
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools/happy-hdr-info/" class="md-nav__link">
-        happy-hdr-info
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-hdr-info
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools/happy-hsi2rbg/" class="md-nav__link">
-        happy-hsi2rbg
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-hsi2rbg
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools/happy-mat-info/" class="md-nav__link">
-        happy-mat-info
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-mat-info
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools/happy-opex-labels/" class="md-nav__link">
-        happy-opex-labels
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-opex-labels
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools/happy-plot-preproc/" class="md-nav__link">
-        happy-plot-preproc
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-plot-preproc
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools/happy-process-data/" class="md-nav__link">
-        happy-process-data
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-process-data
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools/happy-raw-check/" class="md-nav__link">
-        happy-raw-check
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-raw-check
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools/happy-scikit-regression-build/" class="md-nav__link">
-        happy-scikit-regression-build
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-scikit-regression-build
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools/happy-scikit-segmentation-build/" class="md-nav__link">
-        happy-scikit-segmentation-build
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-scikit-segmentation-build
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools/happy-scikit-unsupervised-build/" class="md-nav__link">
-        happy-scikit-unsupervised-build
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-scikit-unsupervised-build
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools/happy-splitter/" class="md-nav__link">
-        happy-splitter
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-splitter
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools/happy-sub-images/" class="md-nav__link">
-        happy-sub-images
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-sub-images
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
     
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2_7" type="checkbox" id="__nav_2_1_2_7" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_1_2_7">
-          happy-tools-tkinter
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="happy-tools-tkinter" data-md-level="4">
-        <label class="md-nav__title" for="__nav_2_1_2_7">
-          <span class="md-nav__icon md-icon"></span>
-          happy-tools-tkinter
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_7" checked>
+        
           
+          <label class="md-nav__link" for="__nav_2_1_2_7" id="__nav_2_1_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-tools-tkinter
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    happy-tools-tkinter
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../" class="md-nav__link">
-        Overview
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../happy-data-viewer/" class="md-nav__link">
-        happy-data-viewer
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-data-viewer
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
     
   
   
+  
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          happy-envi-viewer
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-envi-viewer
+  
+
+    
+  </span>
+  
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        happy-envi-viewer
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-envi-viewer
+  
+
+    
+  </span>
+  
+  
+
       </a>
       
         
@@ -753,7 +1256,11 @@
       
         <li class="md-nav__item">
   <a href="#menu" class="md-nav__link">
-    Menu
+    <span class="md-ellipsis">
+      
+        Menu
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Menu">
@@ -761,70 +1268,110 @@
         
           <li class="md-nav__item">
   <a href="#file" class="md-nav__link">
-    File
+    <span class="md-ellipsis">
+      
+        File
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#edit" class="md-nav__link">
-    Edit
+    <span class="md-ellipsis">
+      
+        Edit
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#mode" class="md-nav__link">
-    Mode
+    <span class="md-ellipsis">
+      
+        Mode
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#markers" class="md-nav__link">
-    Markers
+    <span class="md-ellipsis">
+      
+        Markers
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#polygons" class="md-nav__link">
-    Polygons
+    <span class="md-ellipsis">
+      
+        Polygons
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#pixels" class="md-nav__link">
-    Pixels
+    <span class="md-ellipsis">
+      
+        Pixels
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#meta-data" class="md-nav__link">
-    Meta-data
+    <span class="md-ellipsis">
+      
+        Meta-data
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#view" class="md-nav__link">
-    View
+    <span class="md-ellipsis">
+      
+        View
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#window" class="md-nav__link">
-    Window
+    <span class="md-ellipsis">
+      
+        Window
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#help" class="md-nav__link">
-    Help
+    <span class="md-ellipsis">
+      
+        Help
+      
+    </span>
   </a>
   
 </li>
@@ -836,7 +1383,11 @@
       
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
-    Overview
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Overview">
@@ -844,21 +1395,33 @@
         
           <li class="md-nav__item">
   <a href="#image-tab" class="md-nav__link">
-    Image tab
+    <span class="md-ellipsis">
+      
+        Image tab
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#info-tab" class="md-nav__link">
-    Info tab
+    <span class="md-ellipsis">
+      
+        Info tab
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#options-tab" class="md-nav__link">
-    Options tab
+    <span class="md-ellipsis">
+      
+        Options tab
+      
+    </span>
   </a>
   
 </li>
@@ -870,7 +1433,11 @@
       
         <li class="md-nav__item">
   <a href="#annotations" class="md-nav__link">
-    Annotations
+    <span class="md-ellipsis">
+      
+        Annotations
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Annotations">
@@ -878,28 +1445,44 @@
         
           <li class="md-nav__item">
   <a href="#markers_1" class="md-nav__link">
-    Markers
+    <span class="md-ellipsis">
+      
+        Markers
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#pixels_1" class="md-nav__link">
-    Pixels
+    <span class="md-ellipsis">
+      
+        Pixels
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#polygons_1" class="md-nav__link">
-    Polygons
+    <span class="md-ellipsis">
+      
+        Polygons
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sam" class="md-nav__link">
-    SAM
+    <span class="md-ellipsis">
+      
+        SAM
+      
+    </span>
   </a>
   
 </li>
@@ -911,7 +1494,11 @@
       
         <li class="md-nav__item">
   <a href="#sub-images-export" class="md-nav__link">
-    Sub-images export
+    <span class="md-ellipsis">
+      
+        Sub-images export
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Sub-images export">
@@ -919,7 +1506,11 @@
         
           <li class="md-nav__item">
   <a href="#writer-examples" class="md-nav__link">
-    Writer examples
+    <span class="md-ellipsis">
+      
+        Writer examples
+      
+    </span>
   </a>
   
 </li>
@@ -931,7 +1522,11 @@
       
         <li class="md-nav__item">
   <a href="#command-line" class="md-nav__link">
-    Command-line
+    <span class="md-ellipsis">
+      
+        Command-line
+      
+    </span>
   </a>
   
 </li>
@@ -943,401 +1538,731 @@
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../happy-raw-checker/" class="md-nav__link">
-        happy-raw-checker
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-raw-checker
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2_8" type="checkbox" id="__nav_2_1_2_8" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_1_2_8">
-          happy-tools-keras
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="happy-tools-keras" data-md-level="4">
-        <label class="md-nav__title" for="__nav_2_1_2_8">
-          <span class="md-nav__icon md-icon"></span>
-          happy-tools-keras
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_8" >
+        
           
+          <label class="md-nav__link" for="__nav_2_1_2_8" id="__nav_2_1_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-tools-keras
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    happy-tools-keras
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools_keras/" class="md-nav__link">
-        Overview
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2_8_2" type="checkbox" id="__nav_2_1_2_8_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_1_2_8_2">
-          Command-line tools
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Command-line tools" data-md-level="5">
-        <label class="md-nav__title" for="__nav_2_1_2_8_2">
-          <span class="md-nav__icon md-icon"></span>
-          Command-line tools
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_8_2" >
+        
           
+          <label class="md-nav__link" for="__nav_2_1_2_8_2" id="__nav_2_1_2_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command-line tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_1_2_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Command-line tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools_keras/happy-keras-pixel-regression-build/" class="md-nav__link">
-        happy-keras-pixel-regression-build
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-keras-pixel-regression-build
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools_keras/happy-keras-segmentation-build/" class="md-nav__link">
-        happy-keras-segmentation-build
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-keras-segmentation-build
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../happy_tools_keras/happy-keras-unsupervised-build/" class="md-nav__link">
-        happy-keras-unsupervised-build
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    happy-keras-unsupervised-build
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../sam/" class="md-nav__link">
-        SAM
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SAM
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../sam-hq/" class="md-nav__link">
-        SAM-HQ
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SAM-HQ
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../hardware/" class="md-nav__link">
-        Hardware
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../publications/" class="md-nav__link">
-        Publications
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publications
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../team/" class="md-nav__link">
-        Team
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_2">
-          WAILight
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="WAILight" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
-          <span class="md-nav__icon md-icon"></span>
-          WAILight
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
           
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WAILight
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WAILight
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../wailight/homewailight/" class="md-nav__link">
-        Home
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../wailight/docswailight/" class="md-nav__link">
-        Documentation
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../wailight/teamwailight/" class="md-nav__link">
-        Team
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../wailight/pubwailight/" class="md-nav__link">
-        Publications
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publications
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_3">
-          RuralAI
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="RuralAI" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_3">
-          <span class="md-nav__icon md-icon"></span>
-          RuralAI
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
           
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RuralAI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RuralAI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../ruralai/homeruralai/" class="md-nav__link">
-        Home
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../ruralai/teamruralai/" class="md-nav__link">
-        Team
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../ruralai/pubruralai/" class="md-nav__link">
-        Publications
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publications
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1368,7 +2293,11 @@
       
         <li class="md-nav__item">
   <a href="#menu" class="md-nav__link">
-    Menu
+    <span class="md-ellipsis">
+      
+        Menu
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Menu">
@@ -1376,70 +2305,110 @@
         
           <li class="md-nav__item">
   <a href="#file" class="md-nav__link">
-    File
+    <span class="md-ellipsis">
+      
+        File
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#edit" class="md-nav__link">
-    Edit
+    <span class="md-ellipsis">
+      
+        Edit
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#mode" class="md-nav__link">
-    Mode
+    <span class="md-ellipsis">
+      
+        Mode
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#markers" class="md-nav__link">
-    Markers
+    <span class="md-ellipsis">
+      
+        Markers
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#polygons" class="md-nav__link">
-    Polygons
+    <span class="md-ellipsis">
+      
+        Polygons
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#pixels" class="md-nav__link">
-    Pixels
+    <span class="md-ellipsis">
+      
+        Pixels
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#meta-data" class="md-nav__link">
-    Meta-data
+    <span class="md-ellipsis">
+      
+        Meta-data
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#view" class="md-nav__link">
-    View
+    <span class="md-ellipsis">
+      
+        View
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#window" class="md-nav__link">
-    Window
+    <span class="md-ellipsis">
+      
+        Window
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#help" class="md-nav__link">
-    Help
+    <span class="md-ellipsis">
+      
+        Help
+      
+    </span>
   </a>
   
 </li>
@@ -1451,7 +2420,11 @@
       
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
-    Overview
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Overview">
@@ -1459,21 +2432,33 @@
         
           <li class="md-nav__item">
   <a href="#image-tab" class="md-nav__link">
-    Image tab
+    <span class="md-ellipsis">
+      
+        Image tab
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#info-tab" class="md-nav__link">
-    Info tab
+    <span class="md-ellipsis">
+      
+        Info tab
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#options-tab" class="md-nav__link">
-    Options tab
+    <span class="md-ellipsis">
+      
+        Options tab
+      
+    </span>
   </a>
   
 </li>
@@ -1485,7 +2470,11 @@
       
         <li class="md-nav__item">
   <a href="#annotations" class="md-nav__link">
-    Annotations
+    <span class="md-ellipsis">
+      
+        Annotations
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Annotations">
@@ -1493,28 +2482,44 @@
         
           <li class="md-nav__item">
   <a href="#markers_1" class="md-nav__link">
-    Markers
+    <span class="md-ellipsis">
+      
+        Markers
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#pixels_1" class="md-nav__link">
-    Pixels
+    <span class="md-ellipsis">
+      
+        Pixels
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#polygons_1" class="md-nav__link">
-    Polygons
+    <span class="md-ellipsis">
+      
+        Polygons
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sam" class="md-nav__link">
-    SAM
+    <span class="md-ellipsis">
+      
+        SAM
+      
+    </span>
   </a>
   
 </li>
@@ -1526,7 +2531,11 @@
       
         <li class="md-nav__item">
   <a href="#sub-images-export" class="md-nav__link">
-    Sub-images export
+    <span class="md-ellipsis">
+      
+        Sub-images export
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Sub-images export">
@@ -1534,7 +2543,11 @@
         
           <li class="md-nav__item">
   <a href="#writer-examples" class="md-nav__link">
-    Writer examples
+    <span class="md-ellipsis">
+      
+        Writer examples
+      
+    </span>
   </a>
   
 </li>
@@ -1546,7 +2559,11 @@
       
         <li class="md-nav__item">
   <a href="#command-line" class="md-nav__link">
-    Command-line
+    <span class="md-ellipsis">
+      
+        Command-line
+      
+    </span>
   </a>
   
 </li>
@@ -1561,19 +2578,19 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
-  <a href="https://github.com/wairas/hsi-website/edit/main/docs/happy/happy_tools_tkinter/happy-envi-viewer.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+
+  
+  
 
 
   <h1>happy-envi-viewer</h1>
 
-<h2 id="menu">Menu<a class="headerlink" href="#menu" title="Permanent link">#</a></h2>
+<div><h2 id="menu">Menu<a class="headerlink" href="#menu" title="Permanent link">#</a></h2>
 <p>In the sections below you can find short explanations of the various menu items.</p>
 <h3 id="file">File<a class="headerlink" href="#file" title="Permanent link">#</a></h3>
 <ul>
@@ -1698,7 +2715,7 @@ to load the black/white reference ENVI files manually. Some black/white
 reference methods rely on 
 From that menu, you can also open black and white reference ENVI files that
 get applied to the scan, according to the :</p>
-<p><img alt="Envi Viewer - image tab" src="../img/envi_viewer-scan.png" /></p>
+<p><img alt="Envi Viewer - image tab" src="../img/envi_viewer-scan.png"></p>
 <p>At the bottom of the window, you get a quick info on what dimensions the
 scan has (width, height and channels). </p>
 <p>The three sliders allow you to select the channels from the hyperspectral 
@@ -1711,7 +2728,7 @@ file.</p>
 <h3 id="info-tab">Info tab<a class="headerlink" href="#info-tab" title="Permanent link">#</a></h3>
 <p>On the <em>Info</em> tab, you can see what files are currently loaded and what 
 dimensions these files have:</p>
-<p><img alt="Envi Viewer - info tab" src="../img/envi_viewer-info.png" /></p>
+<p><img alt="Envi Viewer - info tab" src="../img/envi_viewer-info.png"></p>
 <h3 id="options-tab">Options tab<a class="headerlink" href="#options-tab" title="Permanent link">#</a></h3>
 <p>On the <em>Options</em> tab, you can change various settings:</p>
 <ul>
@@ -1733,7 +2750,7 @@ dimensions these files have:</p>
 <li><a href="https://github.com/wairas/happy-tools/tree/main/plugins#happy-data-preprocessors">Preprocessing</a> plugins</li>
 <li><a href="https://github.com/wairas/happy-tools/tree/main/plugins#normalizations">Normalization</a> plugin (gets applied before creating RGB image)</li>
 </ul>
-<p><img alt="Envi Viewer - options tab" src="../img/envi_viewer-options.png" /></p>
+<p><img alt="Envi Viewer - options tab" src="../img/envi_viewer-options.png"></p>
 <h2 id="annotations">Annotations<a class="headerlink" href="#annotations" title="Permanent link">#</a></h2>
 <p>The Envi Viewer supports two types of annotations that can be exported:</p>
 <ul>
@@ -1772,7 +2789,7 @@ markers are used as points of interest for displaying raw/processed spectra.</p>
   colors.</li>
 </ul>
 <p>Below is an annotation in progress:</p>
-<p><img alt="Envi Viewer - pixel annotation in progress" src="../img/envi_viewer-pixels1.png" /></p>
+<p><img alt="Envi Viewer - pixel annotation in progress" src="../img/envi_viewer-pixels1.png"></p>
 <p>Once you are finished with the annotations, you can export them as ENVI file via:</p>
 <p><em>File &gt; Export &gt; Pixel annotations</em></p>
 <h3 id="polygons_1">Polygons<a class="headerlink" href="#polygons_1" title="Permanent link">#</a></h3>
@@ -1782,24 +2799,24 @@ markers are used as points of interest for displaying raw/processed spectra.</p>
 <li>Add markers in clockwise order where the vertices of the polygon should be, 
    e.g., for outlining the white reference in the scan below:</li>
 </ol>
-<p><img alt="Envi Viewer - polygon markers" src="../img/envi_viewer-polygon1.png" /></p>
+<p><img alt="Envi Viewer - polygon markers" src="../img/envi_viewer-polygon1.png"></p>
 <ol start="2">
 <li>With at least three markers present, press CTRL+P or choose <em>Add polygon</em> 
    from the <em>Polygons</em> menu to turn the markers into a polygon:</li>
 </ol>
-<p><img alt="Envi Viewer - polygon annotation" src="../img/envi_viewer-polygon2.png" /></p>
+<p><img alt="Envi Viewer - polygon annotation" src="../img/envi_viewer-polygon2.png"></p>
 <ol start="3">
 <li>You can assign a label to a polygon by left-clicking on the polygon while
    holding the SHIFT key. The labels <code>whiteref</code> and <code>blackref</code> are reserved
    keywords and used for white/black reference annotations. The labels available
    from the dropdown list are based on the predefined labels from the <em>Options</em> tab.</li>
 </ol>
-<p><img alt="Envi Viewer - label dialog" src="../img/envi_viewer-polygon3.png" /></p>
+<p><img alt="Envi Viewer - label dialog" src="../img/envi_viewer-polygon3.png"></p>
 <ol start="4">
 <li>Once a label has been selected and the dialog accepted, the label will be displayed
    in the center of the polygon:</li>
 </ol>
-<p><img alt="Envi Viewer - labelled polygon" src="../img/envi_viewer-polygon4.png" /></p>
+<p><img alt="Envi Viewer - labelled polygon" src="../img/envi_viewer-polygon4.png"></p>
 <p>Apart from polygons, you can also create rectangles by using two markers for 
 the top-left and bottom-right corners and then select <em>Polygons &gt; Add rectangle</em>
 from the menu (or Ctrl+R). A useful feature when planning on exporting sub-images.</p>
@@ -1814,12 +2831,12 @@ NVIDIA GPU as it will speed up the detection process by at least 10 times.</p>
 want to trace the shape for. Depending on the object and how well it is 
 separated from the background, how much the colors on the object change, you
 may have to provide more than one marker point to better guide the detection:</p>
-<p><img alt="Envi Viewer - polygon markers" src="../img/envi_viewer-sam1.png" /></p>
+<p><img alt="Envi Viewer - polygon markers" src="../img/envi_viewer-sam1.png"></p>
 <p>The result looks then like this:</p>
-<p><img alt="Envi Viewer - detected polygon" src="../img/envi_viewer-sam2.png" /></p>
+<p><img alt="Envi Viewer - detected polygon" src="../img/envi_viewer-sam2.png"></p>
 <p>When in <em>Pixels</em> annotation mode, the polygons detected by SAM will be 
 drawn as pixels:</p>
-<p><img alt="Envi Viewer - detected pixels" src="../img/envi_viewer-sam3.png" /></p>
+<p><img alt="Envi Viewer - detected pixels" src="../img/envi_viewer-sam3.png"></p>
 <h2 id="sub-images-export">Sub-images export<a class="headerlink" href="#sub-images-export" title="Permanent link">#</a></h2>
 <p>When imaging multiple samples within a single scan, you can use the
 <em>Sub-images</em> export facility to separate out the sub-samples.</p>
@@ -1846,7 +2863,7 @@ select <em>File &gt; Export &gt; Sub-images</em> from the menu:</p>
 </ul>
 <p>The following screenshot exports the spectral data from the annotated sub-samples
 as CSV:</p>
-<p><img alt="Envi Viewer - sub-images export dialog" src="../img/envi_viewer-subimages_export.png" /></p>
+<p><img alt="Envi Viewer - sub-images export dialog" src="../img/envi_viewer-subimages_export.png"></p>
 <h3 id="writer-examples">Writer examples<a class="headerlink" href="#writer-examples" title="Permanent link">#</a></h3>
 <p><strong>Note:</strong> the <code>{BASEDIR}</code> placeholder used in <code>-o</code> parameters will get replaced
 by the selected output directory.</p>
@@ -1861,139 +2878,146 @@ by the selected output directory.</p>
 <h2 id="command-line">Command-line<a class="headerlink" href="#command-line" title="Permanent link">#</a></h2>
 <p>Using the command-line options, you can preset the options in the user interface
 and also load scan, black and white reference files:</p>
-<pre><code>usage: happy-envi-viewer [-h] [-s SCAN] [-f BLACK_REFERENCE]
-                         [-w WHITE_REFERENCE] [-r INT] [-g INT] [-b INT]
-                         [--autodetect_channels] [--no_autodetect_channels]
-                         [--keep_aspectratio] [--no_keep_aspectratio]
-                         [--check_scan_dimensions]
-                         [--no_check_scan_dimensions]
-                         [--auto_load_annotations]
-                         [--no_auto_load_annotations] [--export_to_scan_dir]
-                         [--annotation_color HEXCOLOR]
-                         [--predefined_labels LIST] [--redis_host HOST]
-                         [--redis_port PORT] [--redis_pw PASSWORD]
-                         [--redis_in CHANNEL] [--redis_out CHANNEL]
-                         [--redis_connect] [--no_redis_connect]
-                         [--marker_size INT] [--marker_color HEXCOLOR]
-                         [--min_obj_size INT] [--black_ref_locator LOCATOR]
-                         [--black_ref_method METHOD]
-                         [--white_ref_locator LOCATOR]
-                         [--white_ref_method METHOD]
-                         [--black_ref_locator_for_white_ref LOCATOR]
-                         [--black_ref_method_for_white_ref METHOD]
-                         [--preprocessing PIPELINE]
-                         [--log_timestamp_format FORMAT] [--zoom PERCENT]
-                         [--normalization PLUGIN]
-                         [-V {DEBUG,INFO,WARNING,ERROR,CRITICAL}]
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>usage: happy-envi-viewer [-h] [-s SCAN] [-f BLACK_REFERENCE]
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                         [-w WHITE_REFERENCE] [-r INT] [-g INT] [-b INT]
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                         [--autodetect_channels] [--no_autodetect_channels]
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                         [--keep_aspectratio] [--no_keep_aspectratio]
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                         [--check_scan_dimensions]
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                         [--no_check_scan_dimensions]
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                         [--auto_load_annotations]
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                         [--no_auto_load_annotations] [--export_to_scan_dir]
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>                         [--annotation_color HEXCOLOR]
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                         [--predefined_labels LIST] [--redis_host HOST]
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                         [--redis_port PORT] [--redis_pw PASSWORD]
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                         [--redis_in CHANNEL] [--redis_out CHANNEL]
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>                         [--redis_connect] [--no_redis_connect]
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>                         [--marker_size INT] [--marker_color HEXCOLOR]
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                         [--min_obj_size INT] [--black_ref_locator LOCATOR]
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>                         [--black_ref_method METHOD]
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>                         [--white_ref_locator LOCATOR]
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                         [--white_ref_method METHOD]
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>                         [--black_ref_locator_for_white_ref LOCATOR]
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>                         [--black_ref_method_for_white_ref METHOD]
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>                         [--preprocessing PIPELINE]
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>                         [--log_timestamp_format FORMAT] [--zoom PERCENT]
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>                         [--normalization PLUGIN]
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>                         [-V {DEBUG,INFO,WARNING,ERROR,CRITICAL}]
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>ENVI Hyperspectral Image Viewer. Offers contour detection using SAM (Segment-
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>Anything: https://github.com/waikato-datamining/pytorch/tree/master/segment-
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>anything)
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>optional arguments:
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>  -h, --help            show this help message and exit
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>  -s SCAN, --scan SCAN  Path to the scan file (ENVI format) (default: None)
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>  -f BLACK_REFERENCE, --black_reference BLACK_REFERENCE
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>                        Path to the black reference file (ENVI format)
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>                        (default: None)
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>  -w WHITE_REFERENCE, --white_reference WHITE_REFERENCE
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>                        Path to the white reference file (ENVI format)
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>                        (default: None)
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>  -r INT, --scale_r INT
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>                        the wave length to use for the red channel (default:
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>                        None)
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>  -g INT, --scale_g INT
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>                        the wave length to use for the green channel (default:
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>                        None)
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>  -b INT, --scale_b INT
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>                        the wave length to use for the blue channel (default:
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>                        None)
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>  --autodetect_channels
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>                        whether to determine the channels from the meta-data
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>                        (overrides the manually specified channels) (default:
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>                        None)
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>  --no_autodetect_channels
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>                        whether to turn off auto-detection of channels from
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>                        meta-data (default: None)
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>  --keep_aspectratio    whether to keep the aspect ratio (default: None)
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>  --no_keep_aspectratio
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>                        whether to not keep the aspect ratio (default: None)
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>  --check_scan_dimensions
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>                        whether to compare the dimensions of subsequently
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>                        loaded scans and output a warning if they differ
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>                        (default: None)
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>  --no_check_scan_dimensions
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>                        whether to not compare the dimensions of subsequently
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>                        loaded scans and output a warning if they differ
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>                        (default: None)
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>  --auto_load_annotations
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>                        whether to automatically load any annotations when
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>                        loading a scan, black or white ref (default: None)
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>  --no_auto_load_annotations
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>                        whether to not automatically load any annotations when
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>                        loading a scan, black or white ref (default: None)
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>  --export_to_scan_dir  whether to export images to the scan directory rather
+</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>                        than the last one used (default: None)
+</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>  --annotation_color HEXCOLOR
+</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>                        the color to use for the annotations like contours
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>                        (hex color) (default: None)
+</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>  --predefined_labels LIST
+</span><span id="__span-0-78"><a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>                        the comma-separated list of labels to use (default:
+</span><span id="__span-0-79"><a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>                        None)
+</span><span id="__span-0-80"><a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>  --redis_host HOST     The Redis host to connect to (IP or hostname)
+</span><span id="__span-0-81"><a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>                        (default: None)
+</span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>  --redis_port PORT     The port the Redis server is listening on (default:
+</span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a>                        None)
+</span><span id="__span-0-84"><a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>  --redis_pw PASSWORD   The password to use with the Redis server (default:
+</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>                        None)
+</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>  --redis_in CHANNEL    The channel that SAM is receiving images on (default:
+</span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>                        None)
+</span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>  --redis_out CHANNEL   The channel that SAM is broadcasting the detections on
+</span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>                        (default: None)
+</span><span id="__span-0-90"><a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>  --redis_connect       whether to immediately connect to the Redis host
+</span><span id="__span-0-91"><a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>                        (default: None)
+</span><span id="__span-0-92"><a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>  --no_redis_connect    whether to not immediately connect to the Redis host
+</span><span id="__span-0-93"><a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>                        (default: None)
+</span><span id="__span-0-94"><a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a>  --marker_size INT     The size in pixels for the SAM points (default: None)
+</span><span id="__span-0-95"><a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>  --marker_color HEXCOLOR
+</span><span id="__span-0-96"><a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a>                        the color to use for the SAM points (hex color)
+</span><span id="__span-0-97"><a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a>                        (default: None)
+</span><span id="__span-0-98"><a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>  --min_obj_size INT    The minimum size that SAM contours need to have (&lt;= 0
+</span><span id="__span-0-99"><a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>                        for no minimum) (default: None)
+</span><span id="__span-0-100"><a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a>  --black_ref_locator LOCATOR
+</span><span id="__span-0-101"><a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a>                        the reference locator scheme to use for locating black
+</span><span id="__span-0-102"><a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a>                        references, eg rl-manual (default: None)
+</span><span id="__span-0-103"><a id="__codelineno-0-103" name="__codelineno-0-103" href="#__codelineno-0-103"></a>  --black_ref_method METHOD
+</span><span id="__span-0-104"><a id="__codelineno-0-104" name="__codelineno-0-104" href="#__codelineno-0-104"></a>                        the black reference method to use for applying black
+</span><span id="__span-0-105"><a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a>                        references, eg br-same-size (default: None)
+</span><span id="__span-0-106"><a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a>  --white_ref_locator LOCATOR
+</span><span id="__span-0-107"><a id="__codelineno-0-107" name="__codelineno-0-107" href="#__codelineno-0-107"></a>                        the reference locator scheme to use for locating
+</span><span id="__span-0-108"><a id="__codelineno-0-108" name="__codelineno-0-108" href="#__codelineno-0-108"></a>                        whites references, eg rl-manual (default: None)
+</span><span id="__span-0-109"><a id="__codelineno-0-109" name="__codelineno-0-109" href="#__codelineno-0-109"></a>  --white_ref_method METHOD
+</span><span id="__span-0-110"><a id="__codelineno-0-110" name="__codelineno-0-110" href="#__codelineno-0-110"></a>                        the white reference method to use for applying white
+</span><span id="__span-0-111"><a id="__codelineno-0-111" name="__codelineno-0-111" href="#__codelineno-0-111"></a>                        references, eg wr-same-size (default: None)
+</span><span id="__span-0-112"><a id="__codelineno-0-112" name="__codelineno-0-112" href="#__codelineno-0-112"></a>  --black_ref_locator_for_white_ref LOCATOR
+</span><span id="__span-0-113"><a id="__codelineno-0-113" name="__codelineno-0-113" href="#__codelineno-0-113"></a>                        the reference locator scheme to use for locating black
+</span><span id="__span-0-114"><a id="__codelineno-0-114" name="__codelineno-0-114" href="#__codelineno-0-114"></a>                        references to apply to the white reference scans, eg
+</span><span id="__span-0-115"><a id="__codelineno-0-115" name="__codelineno-0-115" href="#__codelineno-0-115"></a>                        rl-manual (default: None)
+</span><span id="__span-0-116"><a id="__codelineno-0-116" name="__codelineno-0-116" href="#__codelineno-0-116"></a>  --black_ref_method_for_white_ref METHOD
+</span><span id="__span-0-117"><a id="__codelineno-0-117" name="__codelineno-0-117" href="#__codelineno-0-117"></a>                        the black reference method to use for applying the
+</span><span id="__span-0-118"><a id="__codelineno-0-118" name="__codelineno-0-118" href="#__codelineno-0-118"></a>                        black reference to the white reference scans, eg br-
+</span><span id="__span-0-119"><a id="__codelineno-0-119" name="__codelineno-0-119" href="#__codelineno-0-119"></a>                        same-size (default: None)
+</span><span id="__span-0-120"><a id="__codelineno-0-120" name="__codelineno-0-120" href="#__codelineno-0-120"></a>  --preprocessing PIPELINE
+</span><span id="__span-0-121"><a id="__codelineno-0-121" name="__codelineno-0-121" href="#__codelineno-0-121"></a>                        the preprocessors to apply to the scan (default: None)
+</span><span id="__span-0-122"><a id="__codelineno-0-122" name="__codelineno-0-122" href="#__codelineno-0-122"></a>  --log_timestamp_format FORMAT
+</span><span id="__span-0-123"><a id="__codelineno-0-123" name="__codelineno-0-123" href="#__codelineno-0-123"></a>                        the format string for the logging timestamp, see: http
+</span><span id="__span-0-124"><a id="__codelineno-0-124" name="__codelineno-0-124" href="#__codelineno-0-124"></a>                        s://docs.python.org/3/library/datetime.html#strftime-
+</span><span id="__span-0-125"><a id="__codelineno-0-125" name="__codelineno-0-125" href="#__codelineno-0-125"></a>                        and-strptime-format-codes (default: [%H:%M:%S.%f])
+</span><span id="__span-0-126"><a id="__codelineno-0-126" name="__codelineno-0-126" href="#__codelineno-0-126"></a>  --zoom PERCENT        the initial zoom to use (%) or -1 for automatic fit
+</span><span id="__span-0-127"><a id="__codelineno-0-127" name="__codelineno-0-127" href="#__codelineno-0-127"></a>                        (default: -1)
+</span><span id="__span-0-128"><a id="__codelineno-0-128" name="__codelineno-0-128" href="#__codelineno-0-128"></a>  --normalization PLUGIN
+</span><span id="__span-0-129"><a id="__codelineno-0-129" name="__codelineno-0-129" href="#__codelineno-0-129"></a>                        the normalization plugin and its options to use
+</span><span id="__span-0-130"><a id="__codelineno-0-130" name="__codelineno-0-130" href="#__codelineno-0-130"></a>                        (default: norm-simple)
+</span><span id="__span-0-131"><a id="__codelineno-0-131" name="__codelineno-0-131" href="#__codelineno-0-131"></a>  -V {DEBUG,INFO,WARNING,ERROR,CRITICAL}, --logging_level {DEBUG,INFO,WARNING,ERROR,CRITICAL}
+</span><span id="__span-0-132"><a id="__codelineno-0-132" name="__codelineno-0-132" href="#__codelineno-0-132"></a>                        The logging level to use. (default: WARN)
+</span></code></pre></div></div>
 
-ENVI Hyperspectral Image Viewer. Offers contour detection using SAM (Segment-
-Anything: https://github.com/waikato-datamining/pytorch/tree/master/segment-
-anything)
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -s SCAN, --scan SCAN  Path to the scan file (ENVI format) (default: None)
-  -f BLACK_REFERENCE, --black_reference BLACK_REFERENCE
-                        Path to the black reference file (ENVI format)
-                        (default: None)
-  -w WHITE_REFERENCE, --white_reference WHITE_REFERENCE
-                        Path to the white reference file (ENVI format)
-                        (default: None)
-  -r INT, --scale_r INT
-                        the wave length to use for the red channel (default:
-                        None)
-  -g INT, --scale_g INT
-                        the wave length to use for the green channel (default:
-                        None)
-  -b INT, --scale_b INT
-                        the wave length to use for the blue channel (default:
-                        None)
-  --autodetect_channels
-                        whether to determine the channels from the meta-data
-                        (overrides the manually specified channels) (default:
-                        None)
-  --no_autodetect_channels
-                        whether to turn off auto-detection of channels from
-                        meta-data (default: None)
-  --keep_aspectratio    whether to keep the aspect ratio (default: None)
-  --no_keep_aspectratio
-                        whether to not keep the aspect ratio (default: None)
-  --check_scan_dimensions
-                        whether to compare the dimensions of subsequently
-                        loaded scans and output a warning if they differ
-                        (default: None)
-  --no_check_scan_dimensions
-                        whether to not compare the dimensions of subsequently
-                        loaded scans and output a warning if they differ
-                        (default: None)
-  --auto_load_annotations
-                        whether to automatically load any annotations when
-                        loading a scan, black or white ref (default: None)
-  --no_auto_load_annotations
-                        whether to not automatically load any annotations when
-                        loading a scan, black or white ref (default: None)
-  --export_to_scan_dir  whether to export images to the scan directory rather
-                        than the last one used (default: None)
-  --annotation_color HEXCOLOR
-                        the color to use for the annotations like contours
-                        (hex color) (default: None)
-  --predefined_labels LIST
-                        the comma-separated list of labels to use (default:
-                        None)
-  --redis_host HOST     The Redis host to connect to (IP or hostname)
-                        (default: None)
-  --redis_port PORT     The port the Redis server is listening on (default:
-                        None)
-  --redis_pw PASSWORD   The password to use with the Redis server (default:
-                        None)
-  --redis_in CHANNEL    The channel that SAM is receiving images on (default:
-                        None)
-  --redis_out CHANNEL   The channel that SAM is broadcasting the detections on
-                        (default: None)
-  --redis_connect       whether to immediately connect to the Redis host
-                        (default: None)
-  --no_redis_connect    whether to not immediately connect to the Redis host
-                        (default: None)
-  --marker_size INT     The size in pixels for the SAM points (default: None)
-  --marker_color HEXCOLOR
-                        the color to use for the SAM points (hex color)
-                        (default: None)
-  --min_obj_size INT    The minimum size that SAM contours need to have (&lt;= 0
-                        for no minimum) (default: None)
-  --black_ref_locator LOCATOR
-                        the reference locator scheme to use for locating black
-                        references, eg rl-manual (default: None)
-  --black_ref_method METHOD
-                        the black reference method to use for applying black
-                        references, eg br-same-size (default: None)
-  --white_ref_locator LOCATOR
-                        the reference locator scheme to use for locating
-                        whites references, eg rl-manual (default: None)
-  --white_ref_method METHOD
-                        the white reference method to use for applying white
-                        references, eg wr-same-size (default: None)
-  --black_ref_locator_for_white_ref LOCATOR
-                        the reference locator scheme to use for locating black
-                        references to apply to the white reference scans, eg
-                        rl-manual (default: None)
-  --black_ref_method_for_white_ref METHOD
-                        the black reference method to use for applying the
-                        black reference to the white reference scans, eg br-
-                        same-size (default: None)
-  --preprocessing PIPELINE
-                        the preprocessors to apply to the scan (default: None)
-  --log_timestamp_format FORMAT
-                        the format string for the logging timestamp, see: http
-                        s://docs.python.org/3/library/datetime.html#strftime-
-                        and-strptime-format-codes (default: [%H:%M:%S.%f])
-  --zoom PERCENT        the initial zoom to use (%) or -1 for automatic fit
-                        (default: -1)
-  --normalization PLUGIN
-                        the normalization plugin and its options to use
-                        (default: norm-simple)
-  -V {DEBUG,INFO,WARNING,ERROR,CRITICAL}, --logging_level {DEBUG,INFO,WARNING,ERROR,CRITICAL}
-                        The logging level to use. (default: WARN)
-</code></pre>
+
+
+
+
+
 
 
 
@@ -2004,47 +3028,12 @@ optional arguments:
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../happy-data-viewer/" class="md-footer__link md-footer__link--prev" aria-label="Previous: happy-data-viewer" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              happy-data-viewer
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../happy-raw-checker/" class="md-footer__link md-footer__link--next" aria-label="Next: happy-raw-checker" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              happy-raw-checker
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2067,10 +3056,14 @@ optional arguments:
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
