@@ -1,5 +1,5 @@
 Additional tools utilizing the [Keras](https://keras.io) deep learning library,
-available through [happy-tools-keras]([happy-tools](https://github.com/wairas/happy-tools-keras)):
+available through [happy-tools-keras](https://github.com/wairas/happy-tools-keras):
 
 * [happy-keras-pixel-regression-build](happy-keras-pixel-regression-build.md) - evaluate a Keras-based pixel regression model
 * [happy-keras-segmentation-build](happy-keras-segmentation-build.md) - builds a Keras-based pixel segmentation model
