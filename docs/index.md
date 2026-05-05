@@ -1,30 +1,38 @@
-![Cannabis buds](img/cannabis_buds.jpg)
+# About WAI2M
 
-Welcome to the Hyperspectral Imaging Group at the University of Waikato. We are 
-a team of engineers and computer scientists working on computational imaging 
-methods for  hyperspectral imaging (HSI) technology through open-source platforms. 
-We prioritise software-hardware integrated methods with machine learning and 
-AI-informed image acquisition protocols. Our website serves as a hub for our 
-software, hardware and hyperspectral database.
+- [HSI Group](homehsi.md)
+- [WAILight](wailight/homewailight.md)
+- [RuralAI](ruralai/homeruralai.md)
+	- RuralAI
+	- LakeCast
 
-![Imaging](img/DSCN3213.JPG)
+# Photos from conferences
 
-# HAPPy Software
-We have developed an in-house [HAPPy software](happy/index.md), which is 
-abbreviation for *Hyperspectral Applications Platform in Python*. This is a 
-platform that streamlines the workflow for hyperspectral data acquisition, 
-annotation, analysis, and the exploration of machine learning algorithms. 
-HAPPy is intended to allow non-experts to interface easily with our specialised 
-toolboxes, models and algorithms to facilitate quicker experimentation and 
-innovation in HSI.
-
-# Our Hardware
-We have [2 hyperspectral cameras](hardware.md) alongside a custom multi-instrument 
-laboratory system for these cameras, and portable in-field imaging. Our hardware 
-includes the Specim IQ camera (400-1000nm), the Specim FX-17 camera (900-1700nm), 
-a rotary stage, and multiple halogen lighitng systems to capture high-quality 
-hyperspectral data. 
-
-# Publications
-Explore our [publications](publications.md) to access the detailed findings and 
-contributions from our team. 
+<table>
+<tr>
+<td style = "text-align:center;">
+<img src = 'IMG-20250522-WA0033.jpg' alt = 'Sanush Abeysekera & Shah Faisal' width = '500'/>
+</td>
+<td style = "text-align:center;">
+<img src = 'IMG_1581.jpg' alt = 'Sanush Abeysekera, Shah Faisal & Melanie Ooi' width = '500'/>
+</td>
+</tr>
+<tr>
+<td style = "text-align:center;">
+Sanush Abeysekera & Shah Faisal
+</td>
+<td style = "text-align:center;">
+Sanush Abeysekera, Shah Faisal & Melanie Ooi
+</td>
+</tr>
+<tr>
+<td colspan='2' style = "text-align:center;">
+<img src = 'IMG_20250520_174212.jpg' alt = 'Sanush Abeysekera, Shah Faisal & Melanie Ooi' width = '1000'/>
+</td>
+</tr>
+<td colspan='2' style = "text-align:center;">
+Sanush Abeysekera, Shah Faisal & Melanie Ooi
+<td>
+</td>
+</tr>
+</table>
